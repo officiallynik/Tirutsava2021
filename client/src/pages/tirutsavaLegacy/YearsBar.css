@@ -1,15 +1,37 @@
+.YearsBar{
+  padding: 10px;
+
+}
+
 .menu-item {
-  padding: 0 40px;
-  margin: 5px 10px;
+  margin: 5px 40px;
+  border-radius: 27px;
   user-select: none;
   cursor: pointer;
   border: none;
+  font-weight: 600;
+  position: relative;
+  border-radius: 27px;
+    border:2px solid transparent;
+    border-radius:27px;
+    background-image:linear-gradient(#42455a,#42455a),
+    radial-gradient(circle at top left,#fd00da,#19d7f8);
+    background-origin:border-box;
+    background-clip:content-box,border-box;
 }
-.menu-item-wrapper.active {
-  transform: scale(1);
-  background: linear-gradient(120deg, #505add 0%, #df42b1 100%);
-  border-radius: 2rem;
+
+.menu-item-inner{
+  padding: 10px;
+  padding-left: 60px;
+  padding-right: 60px;
+  font-size: 30px;
+  background: linear-gradient(45deg, #f3ec78, #af4261);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+ 
 }
+
+
 .menu-item.active {
   font-size: 2rem;
   color: #fff;

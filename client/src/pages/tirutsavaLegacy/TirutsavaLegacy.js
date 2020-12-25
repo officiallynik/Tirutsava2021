@@ -4,6 +4,7 @@ import Navbar from "../../components/navbar/Navbar";
 import YearsBar from "./YearsBar";
 
 import "./TirutsavaLegacy.css";
+import Stats from './stats';
 
 class TirutsavaLegacy extends Component {
     render() {
@@ -14,6 +15,7 @@ class TirutsavaLegacy extends Component {
                 <YearsBar />
 
                 {/* stats of that year */}
+                <Stats></Stats>
 
                 {/* video and content */}
 

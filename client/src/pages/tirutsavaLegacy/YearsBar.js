@@ -16,7 +16,8 @@ const list = [
 const MenuItem = ({text, selected}) => {
   return <div
     className={`menu-item ${selected ? 'active' : ''}`}
-    >{text}</div>;
+    >
+     <div className="menu-item-inner">{text}</div></div>;
 };
  
 // All items component
