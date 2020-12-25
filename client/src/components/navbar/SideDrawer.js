@@ -7,15 +7,18 @@ const SideDrawer = props => {
   if (props.show) {
     drawerClasses = "side-drawer open";
   }
+  
   const navLinks = document.querySelectorAll("li.move");
 
   navLinks.forEach((link, index) => {
-    if (link.style.animation) {
-      link.style.animation = "";
-    } else {
-      link.style.animation = `linkFade 0.3s ease forwards ${index / 15 + 0.1}s`;
-    }
+    link.style.animation = `linkFade 0.2s ease forwards ${index / 15 + 0.1}s`;
   });
+
+  if(!props.show) {
+    navLinks.forEach((link, index) => {
+      link.style.animation = "";
+    });
+  }
 
   return (
     <nav className={drawerClasses}>
