@@ -26,6 +26,18 @@
 
 .side-drawer li {
   margin: 0.5rem 1.5rem;
+  /* animation: linkFade 0.4s ease forwards 0.5s; */
+}
+
+@keyframes linkFade {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
 .side-drawer a {
@@ -66,17 +78,6 @@
 
 .link-tab li {
   opacity: 0;
-}
-
-@keyframes linkFade {
-  from {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
 }
 
 .move {
