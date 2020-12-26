@@ -1,0 +1,11 @@
+.legacy_gallery {
+  padding-top: 10%;
+  padding-left: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+  .legacy_gallery {
+    padding-left: 0%;
+    padding-top: 5%;
+  }
+}
