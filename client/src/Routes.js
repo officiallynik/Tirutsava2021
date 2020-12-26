@@ -1,9 +1,9 @@
 // react-router and react-router-dom logic goes here
 // separate routes file will help in ssr later (if implemented)
 
-import { BrowserRouter, Route, Redirect } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 
-import Legacy from "./pages/tirutsavaLegacy/TirutsavaLegacy";
+// import Legacy from "./pages/tirutsavaLegacy/TirutsavaLegacy";
 
 function Routes() {
     return (
@@ -12,7 +12,7 @@ function Routes() {
                 <Redirect to="/Home" />
             </Route>
 
-            <Route path="/aboutus" component={Legacy} />
+            {/* <Route path="/aboutus" component={Legacy} /> */}
         </div>
     )
 }
