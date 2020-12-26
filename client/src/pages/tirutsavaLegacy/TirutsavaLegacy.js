@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Navbar from "../../components/navbar/Navbar";
+import Gallery from "./gallery/Gallery";
 import YearsBar from "./YearsBar";
 
 import "./TirutsavaLegacy.css";
@@ -16,6 +16,7 @@ class TirutsavaLegacy extends Component {
                 {/* stats of that year */}
 
                 {/* video and content */}
+                <Gallery />
 
             </div>
         )

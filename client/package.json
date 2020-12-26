@@ -11,6 +11,8 @@
     "classnames": "^2.2.6",
     "mdbreact": "^5.0.1",
     "node-sass": "^5.0.0",
+    "nuka-carousel": "^4.7.4",
+    "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.0",
     "react-countup": "^4.3.3",
@@ -24,6 +26,8 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "react-scroll": "^1.8.1",
+    "react-spring": "^7.2.11",
+    "react-with-gesture": "^4.0.8",
     "react-youtube": "^7.13.0",
     "sweetalert2": "^10.12.6",
     "web-vitals": "^1.0.1"
