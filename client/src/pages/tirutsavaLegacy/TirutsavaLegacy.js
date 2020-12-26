@@ -9,7 +9,7 @@ import Stats from './stats';
 class TirutsavaLegacy extends Component {
     render() {
         return(
-            <div className="triutsavaLegacy">
+            <div className="tirutsavaLegacy">
 
                 {/* Years bar */}
                 <YearsBar />
