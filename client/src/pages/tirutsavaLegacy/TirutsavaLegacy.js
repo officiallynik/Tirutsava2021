@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Navbar from "../../components/navbar/Navbar";
+import Gallery from "./gallery/Gallery";
 import YearsBar from "./YearsBar";
 
 import "./TirutsavaLegacy.css";
@@ -215,6 +215,7 @@ class TirutsavaLegacy extends Component {
                 <div className={this.state.classmovie} style={{zIndex:this.state.zindexmovie}}> <Movieafter currentPage={this.state.currentPage}Handlehome={this.clickedHome} HandleStats={this.clickedStats} HandleGallery={this.clickedGallery} HandleAfterMovie={this.clickedMovie}></Movieafter></div> 
 
                
+                <Gallery />
 
             </div>
         )
