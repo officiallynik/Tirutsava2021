@@ -1,12 +1,16 @@
 import React, { Component } from 'react'
 import CountUp from 'react-countup';
 import './stats.css'
+import Hamburger from './Hamburger';
 
 export default class Stats extends Component {
+ 
     render() {
+      
         return (
             <div>
                       <div  className="footer-abouts ">
+                        <div className="instats-button"><Hamburger currentpage={this.props.currentPage} Handlehomess={this.props.Handlehome} HandleStatss={this.props.HandleStats} HandleGallerys={this.props.Handlegallery} HandleAfterMovies={this.props.HandleAfterMovie}></Hamburger></div>
         <div className="events ">
           <div className="events-gif"><img src="https://media.giphy.com/media/fxTqfhCjfQC03qBVch/giphy.gif"></img></div>
           <div className="events-heading">

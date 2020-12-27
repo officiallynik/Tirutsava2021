@@ -2,17 +2,19 @@
   
   .footer-abouts{
     width: 100%;
-    position: relative;
-    top:10px;
+    height: 90vh;
     display:flex;
     justify-content: center;
-    
+    background-color: rgb(30,21,52);
+
   }
   
   .events{
     margin: 0;
     position: relative;
-    height: 120px;
+    top:10%;
+    width:400px;
+    height: 500px;
     background-color: black;
   }
   
@@ -109,6 +111,13 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
    
+  }
+
+  .instats-button{
+    position: absolute;
+    right:0;
+    top:50%;
+    z-index: 10000000;
   }
 
   @media(max-width:505px){

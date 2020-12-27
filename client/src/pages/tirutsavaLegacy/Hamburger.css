@@ -1,0 +1,73 @@
+
+.button-info{
+    color: white;
+    font-size: 20px;
+    display: none;
+    
+}
+
+.stats-button{
+    align-items: flex-end;
+    justify-content: flex-end;
+    display: flex;
+
+}
+
+.Home-button{
+    align-items: flex-end;
+    justify-content: flex-end;
+    display: flex;
+
+}
+
+.gallery-button{
+    align-items: flex-end;
+    justify-content: flex-end;
+    display: flex;
+  
+}
+
+.after-movie-button{
+    align-items: flex-end;
+    justify-content: flex-end;
+    display: flex;
+   
+}
+
+.button-bar{
+    width:25px;
+    border-radius: 27px;
+    height:5px;
+    background: white;
+    position: relative;
+    bottom:9px;
+}
+
+.button-mg{
+    margin: 12px;
+}
+
+.stats-button:hover .button-info{
+    display: block;
+}
+
+.gallery-button:hover .button-info{
+    display: block;
+}
+
+.after-movie-button:hover .button-info{
+    display: block;
+}
+
+.Home-button:hover .button-info{
+    display: block;
+}
+
+.activebutton{
+    width:40px;
+    border-radius: 27px;
+    height:5px;
+    background: pink;
+    position: relative;
+    bottom:9px;
+}

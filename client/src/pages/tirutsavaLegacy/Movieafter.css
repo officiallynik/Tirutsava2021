@@ -1,10 +1,15 @@
+.movie-after-whole{
+  background-color: rgb(30,21,52);
+  height: 90vh;
 
+}
 .video-box{
     position: relative;
     top:50px;
     left:50px;
-      width:450px;
-      height: 450px;
+      width:600px;
+      height: 600px;
+      margin: auto;
       border-radius:10px;
       padding: 25px;
       background:linear-gradient(0deg,#000,#262626);
@@ -58,5 +63,12 @@
     .bi-youtube path{
       font-size: 10px;
       color: red;
+    }
+
+    .inmovie-button{
+      position: absolute;
+      right:0;
+      top:50%;
+      z-index: 10000000;
     }
     
