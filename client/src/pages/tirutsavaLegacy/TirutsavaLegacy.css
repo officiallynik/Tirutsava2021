@@ -1,10 +1,59 @@
 .tirutsavaLegacy{
     overflow:hidden;
     height: 90vh;
+    width: 100%;
+    display: flex;
+}
 
+.legacy-90{
+    width: 95%;
+    height: 100%;
 }
 
 .hide{
+    display: none;
+}
+
+.legacy-10{
+    width: 5%;
+    height: 100%;
+    background-color: rgb(30,21,52);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000000;
+}
+
+
+.hide2020{
+    position: relative;
+    animation-name:example;
+    animation-duration: 2s; 
+    bottom: -90vh;
+    
+}
+.hide2019{
+    position: relative;
+    animation-name:example;
+    animation-duration: 2s; 
+    bottom: -90vh;
+    
+}
+.hide2018{
+    position: relative;
+    animation-name:example;
+    animation-duration: 2s; 
+    bottom: -90vh;
+    
+}
+.hide2017{
+    position: relative;
+    animation-name:example;
+    animation-duration: 2s; 
+    bottom: -90vh;
+    
+}
+.hide2016{
     position: relative;
     animation-name:example;
     animation-duration: 2s; 
@@ -12,85 +61,43 @@
     
 }
 
-.hometostats{
-    position: relative;
-    animation-name:example;
-    animation-duration: 2s; 
-    bottom: -90vh;
-    
-}
 
-.statstohome{
-    position: relative;
-    animation-name:example;
-    animation-duration: 2s; 
-    bottom: -90vh;
-    
-}
-
-.hidemovie{
-    position: relative;
-    animation-name:example1;
-    animation-duration: 2s;
-     bottom: -90vh;
-}
-
-.hidestats{
-    position: relative;
-    animation-name:example1;
-    animation-duration: 2s;
-     bottom: -90vh;
-}
-
-.statsTohome{
-    position: relative;
-    animation-name:example;
-    animation-duration: 2s; 
-    bottom: -90vh;
-    
-}
-
-.movietohome{
-    position: relative;
-    animation-name:example1;
-    animation-duration: 2s; 
-    bottom: -90vh;
-    
-}
-
-.statstomovie{
-    position: relative;
-    animation-name:example1;
-    animation-duration: 2s; 
-    bottom: -90vh;
-    
-}
-
-.hometomovie{
-    position: relative;
-    animation-name:example;
-    animation-duration: 2s; 
-    bottom: -90vh;
-    
-}
-
-.showstats{
+.show2020{
  position: absolute;
  top:10vh;
- width: 100%;
+ width: 95%;
+ border: 2px solid red;
 }
 
-.showhome{
+.show2019{
+    position: absolute;
+    top:10vh;
+    width: 95%;
+    border: 2px solid red;
+   }
+   
+
+.show2018{
  position: absolute;
  top:10vh;
- width: 100%;
+ width: 95%;
+ border: 2px solid red;
 }
 
-.showmovie{
+.show2017{
  position: absolute;
  top:10vh;
- width: 100%;
+ width: 95%;
+ border: 2px solid red;
 }
+
+.show2016{
+ position: absolute;
+ top:10vh;
+ width: 95%;
+ border: 2px solid red;
+}
+
 
 @keyframes example {
     0%   {  bottom:0vh;}

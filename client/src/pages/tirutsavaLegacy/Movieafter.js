@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Gallery from './gallery/Gallery';
 import Hamburger from './Hamburger';
 import './Movieafter.css'
 
@@ -6,7 +7,7 @@ export default class Movieafter extends Component {
     render() {
         return (
             <div className="movie-after-whole">
-                 <div className="inmovie-button"><Hamburger currentpage={this.props.currentPage} Handlehomess={this.props.Handlehome} HandleStatss={this.props.HandleStats} HandleGallerys={this.props.Handlegallery} HandleAfterMovies={this.props.HandleAfterMovie}></Hamburger></div>
+                
                     <div className="video-box">
                    
                         <div className="video-icon">
@@ -15,6 +16,10 @@ export default class Movieafter extends Component {
                             </svg>
                         </div>
                         <div className="video-heading">After Movie</div>
+                    </div>
+
+                    <div className="after-gallery">
+                        <Gallery></Gallery>
                     </div>
             </div>
         )

@@ -8,7 +8,7 @@ export default class Legacyhome extends Component {
             <div>
                 <div className="legacy-home">
                     <div className="legacy-buttons">
-                     <Hamburger currentpage={this.props.currentPage} HandleHomess={this.props.Handlehome} HandleStatss={this.props.HandleStats} HandleGallerys={this.props.Handlegallery} HandleAfterMovies={this.props.HandleAfterMovie}></Hamburger>
+                
                     </div>
                 </div>
             </div>

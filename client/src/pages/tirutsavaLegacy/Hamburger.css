@@ -1,36 +1,47 @@
-
+*{margin:0;padding: 0;}
 .button-info{
-    color: white;
+    color: red;
     font-size: 20px;
     display: none;
-    
 }
 
-.stats-button{
-    align-items: flex-end;
-    justify-content: flex-end;
-    display: flex;
-
-}
-
-.Home-button{
-    align-items: flex-end;
-    justify-content: flex-end;
-    display: flex;
-
-}
-
-.gallery-button{
+.button-2020{
     align-items: flex-end;
     justify-content: flex-end;
     display: flex;
   
+
 }
 
-.after-movie-button{
+.button-2019{
     align-items: flex-end;
     justify-content: flex-end;
     display: flex;
+    
+
+}
+
+.button-2018{
+    align-items: flex-end;
+    justify-content: flex-end;
+    display: flex;
+ 
+  
+}
+
+.button-2017{
+    align-items: flex-end;
+    justify-content: flex-end;
+    display: flex;
+  
+   
+}
+
+.button-2016{
+    align-items: flex-end;
+    justify-content: flex-end;
+    display: flex;
+   
    
 }
 
@@ -47,20 +58,25 @@
     margin: 12px;
 }
 
-.stats-button:hover .button-info{
-    display: block;
+.button-2020:hover .button-info{
+    display: flex;
+ 
 }
 
-.gallery-button:hover .button-info{
-    display: block;
+.button-2019:hover .button-info{
+    display: flex;
 }
 
-.after-movie-button:hover .button-info{
-    display: block;
+.button-2018:hover .button-info{
+    display: flex;
 }
 
-.Home-button:hover .button-info{
-    display: block;
+.button-2017:hover .button-info{
+    display: flex;
+}
+
+.button-2016:hover .button-info{
+    display: flex;
 }
 
 .activebutton{
@@ -70,4 +86,10 @@
     background: pink;
     position: relative;
     bottom:9px;
+}
+
+.hamburger-whole{
+    position: absolute;
+    right:0;
+    top:50%;
 }

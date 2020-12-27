@@ -5,50 +5,62 @@ export default class Hamburger extends Component {
 
     render() {
         let activepage = this.props.currentpage;
-        let classhome='button-bar button-mg';
-        let classstats='button-bar button-mg';
-        let classmovie='button-bar button-mg';
-        let classgallery='button-bar button-mg';
+        let class2020='button-bar button-mg';
+        let class2019='button-bar button-mg';
+        let class2018='button-bar button-mg';
+        let class2017='button-bar button-mg';
+        let class2016='button-bar button-mg';
 
-        if(activepage === 'stats'){
-            classstats='button-mg activebutton'
+        if(activepage === '2020'){
+            class2020='button-mg activebutton';
         }
 
-        if(activepage === 'home'){
-            classhome='button-mg activebutton'
+        if(activepage === '2019'){
+            class2019='button-mg activebutton'
         }
 
-        if(activepage === 'Movie'){
-            classmovie='button-mg activebutton'
+        if(activepage === '2018'){
+            class2018='button-mg activebutton'
         }
 
-        if(activepage === 'gallery'){
-            classgallery='button-mg activebutton'
+        if(activepage === '2017'){
+            class2017='button-mg activebutton'
+        }
+
+        if(activepage === '2016'){
+            class2016='button-mg activebutton'
         }
 
         return (
             <div>
-                        <div className="Home-button">
-                            <div className="button-info button-mg">Home</div>
-                            <div className={classhome} onClick={this.props.Handlehomess} ></div>
+                <div className="hamburger-whole">
+                        <div className="button-2020">
+                            <div className="button-info button-mg">2020</div>
+                            <div className={class2020} onClick={this.props.Handle2020} ></div>
                             
                         </div>
-                        <div className="stats-button">
-                            <div className="button-info button-mg">Stats</div>
-                            <div className={classstats} onClick={this.props.HandleStatss} ></div>
-                            
-                        </div>
-
-                        <div className="gallery-button">
-                            <div className="button-info button-mg">Gallery</div>
-                            <div className={classgallery} onClick={this.props.HandleGallerys}></div>
+                        <div className="button-2019">
+                            <div className="button-info button-mg">2019</div>
+                            <div className={class2019} onClick={this.props.Handle2019} ></div>
                             
                         </div>
 
-                        <div className="after-movie-button">
-                            <div className="button-info button-mg">After-Movie</div>
-                            <div className={classmovie} onClick={this.props.HandleAfterMovies}></div> 
+                        <div className="button-2018">
+                            <div className="button-info button-mg">2018</div>
+                            <div className={class2018} onClick={this.props.Handle2018}></div>
+                            
                         </div>
+
+                        <div className="button-2017">
+                            <div className="button-info button-mg">2017</div>
+                            <div className={class2017} onClick={this.props.Handle2017}></div> 
+                        </div>
+
+                        <div className="button-2016">
+                            <div className="button-info button-mg">2016</div>
+                            <div className={class2016} onClick={this.props.Handle2016}></div> 
+                        </div>
+</div>
             </div>
         )
     }
