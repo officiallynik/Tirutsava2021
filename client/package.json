@@ -17,6 +17,7 @@
     "react-bootstrap": "^1.4.0",
     "react-countup": "^4.3.3",
     "react-coverflow": "^0.2.20",
+    "react-device-detect": "^1.15.0",
     "react-dom": "^16.14.0",
     "react-google-login": "^5.2.1",
     "react-horizontal-scrolling-menu": "^0.7.8",
