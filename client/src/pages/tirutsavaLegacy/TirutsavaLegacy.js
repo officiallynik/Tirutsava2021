@@ -558,12 +558,12 @@ class TirutsavaLegacy extends Component {
 
 
                 {/* stats of that year */}
-                    <div className={this.state.class2019} style={{zIndex:value2019}} > <Year2019></Year2019></div> 
+                    <div className={this.state.class2019} style={{zIndex:value2019}} > <Year2020></Year2020></div> 
 
                 {/* video and content */}
-                    <div className={this.state.class2018} style={{zIndex:value2018}}> <Year2018></Year2018></div> 
-                    <div className={this.state.class2017} style={{zIndex:value2017}}> <Year2017></Year2017></div> 
-                    <div className={this.state.class2016} style={{zIndex:value2016}}> <Year2016></Year2016></div> 
+                    <div className={this.state.class2018} style={{zIndex:value2018}}> <Year2020></Year2020></div> 
+                    <div className={this.state.class2017} style={{zIndex:value2017}}> <Year2020></Year2020></div> 
+                    <div className={this.state.class2016} style={{zIndex:value2016}}> <Year2020></Year2020></div> 
              </div>
              <div className="legacy-10"><Hamburger currentpage={this.state.currentPage} Handle2020={this.clicked2020}  Handle2019={this.clicked2019}  Handle2018={this.clicked2018}   Handle2017={this.clicked2017}  Handle2016={this.clicked2016}></Hamburger></div>
 

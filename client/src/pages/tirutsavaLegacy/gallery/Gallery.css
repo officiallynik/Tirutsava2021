@@ -1,11 +1,29 @@
-.legacy_gallery {
-  padding-top: 10%;
-  padding-left: 50%;
+.deck {
+  position: fixed;
+  overflow: hidden;
+  width: 50%;
+  height: 80%;
+  cursor: url("https://uploads.codesandbox.io/uploads/user/b3e56831-8b98-4fee-b941-0e27f39883ab/Ad1_-cursor.png")
+      39 39,
+    auto;
+  z-index: 0;
+  background-color: rgb(30, 21, 52);
 }
 
 @media only screen and (max-width: 600px) {
   .legacy_gallery {
     padding-left: 0%;
-    padding-top: 5%;
+    padding-top: 0%;
+  }
+
+  .deck > div {
+    width: 100vw;
+    height: 400px;
+    padding-left: 14%;
+  }
+
+  .deck {
+    width: 100%;
+    margin-top: 5rem;
   }
 }

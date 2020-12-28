@@ -26,7 +26,7 @@ const Card = ({ i, x, y, rot, scale, trans, bind, data }) => {
             ))}
           </Carousel>
           <h2>{title}</h2>
-          <h5>{text}</h5>
+          <p>{text}</p>
         </div>
       </animated.div>
     </animated.div>
