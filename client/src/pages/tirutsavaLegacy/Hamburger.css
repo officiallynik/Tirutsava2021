@@ -38,15 +38,6 @@
   display: flex;
 }
 
-<<<<<<< HEAD
-.button-bar{
-    width:25px;
-    border-radius: 27px;
-    height:5px;
-    background-image:  linear-gradient(45deg, #f3ec78, #af4261);
-    position: relative;
-    bottom:9px;
-=======
 .button-bar {
   width: 25px;
   border-radius: 27px;
@@ -54,7 +45,6 @@
   background: white;
   position: relative;
   bottom: 9px;
->>>>>>> 48f37ea3268fe41b5bd39ec70e59b92deba79cd3
 }
 
 .button-mg {
@@ -81,15 +71,6 @@
   opacity: 1;
 }
 
-<<<<<<< HEAD
-.activebutton{
-    width:40px;
-    border-radius: 27px;
-    height:5px;
-    background: white;
-    position: relative;
-    bottom:9px;
-=======
 .activebutton {
   width: 40px;
   border-radius: 27px;
@@ -97,7 +78,6 @@
   background: pink;
   position: relative;
   bottom: 9px;
->>>>>>> 48f37ea3268fe41b5bd39ec70e59b92deba79cd3
 }
 
 .hamburger-whole {

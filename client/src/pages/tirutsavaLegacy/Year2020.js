@@ -26,7 +26,7 @@ export default function CenteredGrid() {
   }
 
   return (
-    <div className={classes.root}>
+    <div className="Year2020">
       <Grid container spacing={3} direction="column">
         <Grid item container spacing={2}>
             <Grid item md={6} xs={12}>

@@ -25,80 +25,6 @@
   z-index: 10000000;
 }
 
-<<<<<<< HEAD
-
-.hide2020{
-    position: relative;
-    bottom: -90vh;
-    transform: translate3d(0px,-90vh,0px);
-    
-}
-.hide2019{
-    position: relative;
-    transform: translate3d(0px,-90vh,0px); 
-    bottom: -90vh;
-    
-}
-.hide2018{
-    position: relative;
-    transform: translate3d(0px,-90vh,0px); 
-    bottom: -90vh;
-    
-}
-.hide2017{
-    position: relative;
-    transform: translate3d(0px,-90vh,0px);
-    bottom: -90vh;
-    
-}
-.hide2016{
-    position: relative;
-    transform: translate3d(0px,-90vh,0px);
-    bottom: -90vh;
-    
-}
-
-
-.show2020{
- position: absolute;
- transform: translate3d(0px,0px,0px);
- transition: transform 2s ease-out;
- width: 95%;
- border: 2px solid red;
-}
-
-.show2019{
-    position: absolute;
-    transform: translate3d(0px,0px,0px);
-    transition: transform 2s ease-out;
-    width: 95%;
-    border: 2px solid red;
-   }
-   
-
-.show2018{
- position: absolute;
- transform: translate3d(0px,0px,0px);
- transition: transform 2s ease-out;
- width: 95%;
- border: 2px solid red;
-}
-
-.show2017{
- position: absolute;
- transform: translate3d(0px,0px,0px);
- transition: transform 2s ease-out;
- width: 95%;
- border: 2px solid red;
-}
-
-.show2016{
- position: absolute;
- transform: translate3d(0px,0px,0px);
- transition: transform 2s ease-out;
- width: 95%;
- border: 2px solid red;
-=======
 .hide2020 {
   position: relative;
   animation-name: example;
@@ -157,7 +83,6 @@
   top: 10vh;
   width: 95%;
   border: 2px solid red;
->>>>>>> 48f37ea3268fe41b5bd39ec70e59b92deba79cd3
 }
 
 .show2016 {
