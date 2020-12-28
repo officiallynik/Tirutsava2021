@@ -27,37 +27,31 @@
 
 .hide2020{
     position: relative;
-    animation-name:example;
-    animation-duration: 2s; 
     bottom: -90vh;
-    transition:ease-out;
+    transform: translate3d(0px,-90vh,0px);
     
 }
 .hide2019{
     position: relative;
-    animation-name:example;
-    animation-duration: 2s; 
+    transform: translate3d(0px,-90vh,0px); 
     bottom: -90vh;
     
 }
 .hide2018{
     position: relative;
-    animation-name:example;
-    animation-duration: 2s; 
+    transform: translate3d(0px,-90vh,0px); 
     bottom: -90vh;
     
 }
 .hide2017{
     position: relative;
-    animation-name:example;
-    animation-duration: 2s; 
+    transform: translate3d(0px,-90vh,0px);
     bottom: -90vh;
     
 }
 .hide2016{
     position: relative;
-    animation-name:example;
-    animation-duration: 2s; 
+    transform: translate3d(0px,-90vh,0px);
     bottom: -90vh;
     
 }
@@ -65,14 +59,16 @@
 
 .show2020{
  position: absolute;
- top:10vh;
+ transform: translate3d(0px,0px,0px);
+ transition: transform 2s ease-out;
  width: 95%;
  border: 2px solid red;
 }
 
 .show2019{
     position: absolute;
-    top:10vh;
+    transform: translate3d(0px,0px,0px);
+    transition: transform 2s ease-out;
     width: 95%;
     border: 2px solid red;
    }
@@ -80,21 +76,24 @@
 
 .show2018{
  position: absolute;
- top:10vh;
+ transform: translate3d(0px,0px,0px);
+ transition: transform 2s ease-out;
  width: 95%;
  border: 2px solid red;
 }
 
 .show2017{
  position: absolute;
- top:10vh;
+ transform: translate3d(0px,0px,0px);
+ transition: transform 2s ease-out;
  width: 95%;
  border: 2px solid red;
 }
 
 .show2016{
  position: absolute;
- top:10vh;
+ transform: translate3d(0px,0px,0px);
+ transition: transform 2s ease-out;
  width: 95%;
  border: 2px solid red;
 }
