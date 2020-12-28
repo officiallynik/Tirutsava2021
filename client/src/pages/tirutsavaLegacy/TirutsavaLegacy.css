@@ -9,6 +9,10 @@
 .legacy-90 {
   width: 95%;
   height: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #1e1534;
 }
 
 .hide {
@@ -61,35 +65,34 @@
   position: absolute;
   top: 10vh;
   width: 95%;
-  border: 2px solid red;
+ 
 }
 
 .show2019 {
   position: absolute;
   top: 10vh;
   width: 95%;
-  border: 2px solid red;
+
 }
 
 .show2018 {
   position: absolute;
   top: 10vh;
   width: 95%;
-  border: 2px solid red;
+
 }
 
 .show2017 {
   position: absolute;
   top: 10vh;
   width: 95%;
-  border: 2px solid red;
 }
 
 .show2016 {
   position: absolute;
   top: 10vh;
   width: 95%;
-  border: 2px solid red;
+  
 }
 
 @keyframes example {
@@ -118,3 +121,5 @@
     bottom: 0vh;
   }
 }
+
+

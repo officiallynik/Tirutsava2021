@@ -1,39 +1,15 @@
 .footer-abouts {
   width: 100%;
   display: flex;
-  justify-content: center;
-  background-color: rgb(30, 21, 52);
+  height: 100%;
+  justify-content: space-evenly;
 }
 
 .events {
   margin: 0;
-  position: relative;
-  width: 400px;
-  height: 200px;
-  background-color: black;
-}
 
-.events-gif {
-  width: 100%;
-  margin: auto;
-  height: 100%;
-}
-
-.events-gif img {
-  width: 100%;
-  height: 100%;
-  opacity: 0.7;
-}
-
-.events-gif-prize {
-  width: 100%;
-  height: 100%;
-  margin: auto;
-}
-
-.events-gif-prize img {
-  width: 100%;
-  height: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .events:hover .events-heading p {
@@ -54,15 +30,7 @@
 }
 
 .events-heading {
-  font-size: 30px;
-  width: 80%;
-  height: 100%;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 10%;
-  justify-content: center;
-  text-align: center;
+
   font-weight: 700;
   color: white;
   letter-spacing: 3px;
@@ -72,35 +40,25 @@
 }
 
 .events-count {
-  font-size: 30px;
-  width: 80%;
-  margin: auto;
-  justify-content: center;
-  text-align: center;
-  font-weight: 700;
-  letter-spacing: 3px;
-  z-index: 100;
-  font-size: 30px;
   background: linear-gradient(to right, #30cfd0 0%, #330867 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  justify-content: center;
+  text-align: center;
+font-size: 20px;
+}
+
+.heading-mg{
+  margin:0
 }
 
 .events-heading p {
-  font-size: 30px;
-  width: 100%;
-  margin: auto;
-  justify-content: center;
-  text-align: center;
-  font-weight: 700;
-  color: white;
-  letter-spacing: 3px;
-  opacity: 0;
   z-index: 100;
-  font-size: 30px;
   background: linear-gradient(45deg, #f3ec78, #af4261);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+ letter-spacing: 3px;
+ font-size: 22px;
 }
 
 @media (max-width: 505px) {

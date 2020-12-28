@@ -6,7 +6,7 @@ import './Movieafter.css'
 export default class Movieafter extends Component {
     render() {
         return (
-                
+                <div className="movie-after-whole">
             <div className="video-box">
             
                 <div className="video-icon">
@@ -15,8 +15,10 @@ export default class Movieafter extends Component {
                     </svg>
                 </div>
                 <div className="video-heading">After Movie</div>
+
+            </div>
             </div>
 
         )
-    }
+    }                                                             
 }

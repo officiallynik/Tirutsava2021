@@ -1,12 +1,38 @@
-import React, { Component } from 'react'
-import './Year2019.css'
+import React from "react";
+import { isMobile } from "react-device-detect";
+import Stats from "./stats";
+import Movieafter from "./Movieafter";
+import MobileView from "./mobileView/Year2020MobileView";
+import "./Year2020.css";
+import Newgallery from "./Newgallery"
 
-export default class Year2019 extends Component {
-    render() {
-        return (
-            <div className="Year-2019-whole">
-                <h1>2019</h1>
-            </div>
-        )
-    }
+export default function CenteredGrid() {
+  
+
+  if(isMobile) {
+      return (
+        <MobileView />
+      )
+  }
+
+  return (
+    <div className="Year2020">
+      <div className="year-head">2019</div>
+      <div className="year-cont row">
+        <div className="col-md-6 movie">
+          <div className="movie-cont">
+            <Movieafter></Movieafter>
+          </div>
+        </div>
+        <div className="col-md-6 gallery">
+          <div className="gallery-cont">
+            <Newgallery></Newgallery>
+          </div>
+          </div>  
+      </div>
+      <div className="stats-foot">
+        <Stats></Stats>
+        </div>     
+    </div>
+  );
 }

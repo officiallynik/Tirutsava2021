@@ -1,3 +1,8 @@
+.legacy_gallery{
+  border:2px solid yellow;
+}
+
+
 .deck {
   position: fixed;
   overflow: hidden;

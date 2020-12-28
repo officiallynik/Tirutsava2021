@@ -28,6 +28,7 @@
     "react-scripts": "4.0.1",
     "react-scroll": "^1.8.1",
     "react-spring": "^7.2.11",
+    "react-swipeable-views": "^0.13.9",
     "react-with-gesture": "^4.0.8",
     "react-youtube": "^7.13.0",
     "styled-components": "^5.2.1",
