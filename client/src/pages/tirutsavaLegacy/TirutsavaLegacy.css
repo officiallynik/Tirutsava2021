@@ -30,6 +30,7 @@
     animation-name:example;
     animation-duration: 2s; 
     bottom: -90vh;
+    transition:ease-out;
     
 }
 .hide2019{
@@ -100,10 +101,7 @@
 
 
 @keyframes example {
-    0%   {  bottom:0vh;}
-    25%  {  bottom:50vh;}
-    50%  {  bottom:70vh;}
-    75%  { bottom:80vh;}
+    0%   {  bottom:10vh;}
     100% {  bottom:90vh;}
   }
 

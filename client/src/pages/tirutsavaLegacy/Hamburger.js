@@ -36,29 +36,29 @@ export default class Hamburger extends Component {
                 <div className="hamburger-whole">
                         <div className="button-2020">
                             <div className="button-info button-mg">2020</div>
-                            <div className={class2020} onClick={this.props.Handle2020} ></div>
+                            <div className={class2020} onMouseOver={this.props.Handle2020} ></div>
                             
                         </div>
                         <div className="button-2019">
                             <div className="button-info button-mg">2019</div>
-                            <div className={class2019} onClick={this.props.Handle2019} ></div>
+                            <div className={class2019} onMouseOver={this.props.Handle2019} ></div>
                             
                         </div>
 
                         <div className="button-2018">
                             <div className="button-info button-mg">2018</div>
-                            <div className={class2018} onClick={this.props.Handle2018}></div>
+                            <div className={class2018} onMouseOver={this.props.Handle2018}></div>
                             
                         </div>
 
                         <div className="button-2017">
                             <div className="button-info button-mg">2017</div>
-                            <div className={class2017} onClick={this.props.Handle2017}></div> 
+                            <div className={class2017} onMouseOver={this.props.Handle2017}></div> 
                         </div>
 
                         <div className="button-2016">
                             <div className="button-info button-mg">2016</div>
-                            <div className={class2016} onClick={this.props.Handle2016}></div> 
+                            <div className={class2016} onMouseOver={this.props.Handle2016}></div> 
                         </div>
 </div>
             </div>

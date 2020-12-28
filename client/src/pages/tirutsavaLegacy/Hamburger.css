@@ -2,47 +2,37 @@
 .button-info{
     color: red;
     font-size: 20px;
-    display: none;
+    opacity: 0;
 }
 
 .button-2020{
     align-items: flex-end;
     justify-content: flex-end;
     display: flex;
-  
-
 }
 
 .button-2019{
     align-items: flex-end;
     justify-content: flex-end;
     display: flex;
-    
-
 }
 
 .button-2018{
     align-items: flex-end;
     justify-content: flex-end;
-    display: flex;
- 
-  
+    display: flex; 
 }
 
 .button-2017{
     align-items: flex-end;
     justify-content: flex-end;
     display: flex;
-  
-   
 }
 
 .button-2016{
     align-items: flex-end;
     justify-content: flex-end;
-    display: flex;
-   
-   
+    display: flex; 
 }
 
 .button-bar{
@@ -59,24 +49,24 @@
 }
 
 .button-2020:hover .button-info{
-    display: flex;
+    opacity: 1;
  
 }
 
 .button-2019:hover .button-info{
-    display: flex;
+    opacity: 1;
 }
 
 .button-2018:hover .button-info{
-    display: flex;
+    opacity: 1;
 }
 
 .button-2017:hover .button-info{
-    display: flex;
+    opacity: 1;
 }
 
 .button-2016:hover .button-info{
-    display: flex;
+    opacity: 1;
 }
 
 .activebutton{
@@ -91,5 +81,5 @@
 .hamburger-whole{
     position: absolute;
     right:0;
-    top:50%;
+    top:40%;
 }

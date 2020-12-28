@@ -55,13 +55,13 @@ class TirutsavaLegacy extends Component {
 
         indexarray.map( (keyindex,value) => 
           {  
-            if((keyindex.name)==changeindex || (keyindex.name)=='zindex2019'){
+            if((keyindex.name)===changeindex || (keyindex.name)==='zindex2019'){
 
-            if((keyindex.name)==changeindex){
+            if((keyindex.name)===changeindex){
                 keyindex.values=this.state.currentindex+1;
             }
            
-            if((keyindex.name)=="zindex2019"){
+            if((keyindex.name)==="zindex2019"){
                 keyindex.values=this.state.currentindex;
                 currentindexvalue=this.state.currentindex
             }
@@ -141,13 +141,13 @@ class TirutsavaLegacy extends Component {
 
         indexarray.map( (keyindex,value) => 
           {  
-            if((keyindex.name)==changeindex || (keyindex.name)=='zindex2020'){
+            if((keyindex.name)===changeindex || (keyindex.name)==='zindex2020'){
 
-            if((keyindex.name)==changeindex){
+            if((keyindex.name)===changeindex){
                 keyindex.values=this.state.currentindex+1;
             }
            
-            if((keyindex.name)=="zindex2020"){
+            if((keyindex.name)==="zindex2020"){
                 keyindex.values=this.state.currentindex;
                 currentindexvalue=this.state.currentindex
             }
@@ -237,13 +237,13 @@ class TirutsavaLegacy extends Component {
 
         indexarray.map( (keyindex,value) => 
           {  
-            if((keyindex.name)==changeindex || (keyindex.name)=='zindex2018'){
+            if((keyindex.name)===changeindex || (keyindex.name)==='zindex2018'){
 
-            if((keyindex.name)==changeindex){
+            if((keyindex.name)===changeindex){
                 keyindex.values=this.state.currentindex+1;
             }
            
-            if((keyindex.name)=="zindex2018"){
+            if((keyindex.name)==="zindex2018"){
                 keyindex.values=this.state.currentindex;
                 currentindexvalue=this.state.currentindex
             }
@@ -331,13 +331,13 @@ class TirutsavaLegacy extends Component {
 
         indexarray.map( (keyindex,value) => 
           {  
-            if((keyindex.name)==changeindex || (keyindex.name)=='zindex2017'){
+            if((keyindex.name)===changeindex || (keyindex.name)==='zindex2017'){
 
-            if((keyindex.name)==changeindex){
+            if((keyindex.name)===changeindex){
                 keyindex.values=this.state.currentindex+1;
             }
            
-            if((keyindex.name)=="zindex2017"){
+            if((keyindex.name)==="zindex2017"){
                 keyindex.values=this.state.currentindex;
                 currentindexvalue=this.state.currentindex
             }
@@ -424,13 +424,13 @@ class TirutsavaLegacy extends Component {
         console.log("changeindex",changeindex)
         indexarray.map( (keyindex,value) => 
           {  
-            if((keyindex.name)==changeindex || (keyindex.name)=='zindex2016'){
+            if((keyindex.name)===changeindex || (keyindex.name)==='zindex2016'){
 
-            if((keyindex.name)==changeindex){
+            if((keyindex.name)===changeindex){
                 keyindex.values=this.state.currentindex+1;
             }
            
-            if((keyindex.name)=="zindex2016"){
+            if((keyindex.name)==="zindex2016"){
                 keyindex.values=this.state.currentindex;
                 currentindexvalue=this.state.currentindex
             }
