@@ -1,12 +1,12 @@
-.newgallery{
-    width:90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.newgallery {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.gallery-img{
-    width:100%;
+.gallery-img {
+  width: 100%;
 
-    margin:auto;
+  margin: auto;
 }
