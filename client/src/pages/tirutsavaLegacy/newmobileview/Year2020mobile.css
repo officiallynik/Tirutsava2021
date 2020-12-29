@@ -2,7 +2,7 @@
     width:100%;
     height: 150vh;
     color: white;
-    background-color: black;
+    background-color: #1e1534;
     padding: 0;
 }
 
@@ -48,7 +48,6 @@
 }
 
 .mobile-stats-foot{
-    border:2px solid red;
     height:10%;
     width:100%;
 }
@@ -62,7 +61,6 @@
 .mobile-gallery-cont{
     width:100%;
     height: 100%;
-    border:2px solid red;
 }
 
 .mobile-movie-cont{

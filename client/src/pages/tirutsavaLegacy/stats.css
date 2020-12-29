@@ -66,3 +66,22 @@ font-size: 20px;
     font-size: 20px;
   }
 }
+
+@media (max-width: 400px) {
+  .events .events-heading p {
+    font-size: 18px;
+    position: relative;
+    top:20px;
+  }
+
+  .events-count {
+    background: linear-gradient(to right, #30cfd0 0%, #330867 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    top:15px;
+    justify-content: center;
+    text-align: center;
+  font-size: 20px;
+  }
+}

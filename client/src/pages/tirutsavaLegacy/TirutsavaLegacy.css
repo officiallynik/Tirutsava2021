@@ -137,18 +137,16 @@
 
   .mobile-view{
     display: block;
-    border:2px solid red;
     width:100%;
     height: 100%;
   }
 
   .legacy-90{
     width:100%;
-    border:2px solid yellow;
   }
 
   .tirutsavaLegacy{
-    height: 180vh;
+    height: 150vh;
 }
 }
 

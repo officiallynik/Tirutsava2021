@@ -1,19 +1,11 @@
 import React from "react";
-import { isMobile } from "react-device-detect";
 import Stats from "./stats";
 import Movieafter from "./Movieafter";
-import MobileView from "./mobileView/Year2020MobileView";
 import "./Year2020.css";
 import Newgallery from "./Newgallery"
 
 export default function CenteredGrid() {
   
-
-  if(isMobile) {
-      return (
-        <MobileView />
-      )
-  }
 
   return (
     <div className="Year2020">

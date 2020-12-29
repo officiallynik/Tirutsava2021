@@ -7,13 +7,6 @@ import "./Year2020.css";
 import Newgallery from "./Newgallery";
 export default function CenteredGrid() {
  
-
-  if(isMobile) {
-      return (
-        <MobileView />
-      )
-  }
-
   return (
     <div className="Year2020">
       <div className="year-head">
