@@ -7,6 +7,26 @@
   height: 10%;
   width:100%;
   color: white;
+ display: flex;
+ justify-content: center;
+}
+
+.head-line{
+  width:30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.line-color{
+  width:70%;
+  position: relative;
+  bottom:4px;
+  height: 3px;
+background-color: rgb(178,34,34);
+}
+
+.head-name{
   background: linear-gradient(45deg, #f3ec78, #af4261);
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -37,8 +57,19 @@
 .gallery-cont{
   width:100%;
   height: 100%;
- 
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media(max-width:768px){
+  .Year2020{
+    display: none;
+  }
+
+  .year-cont{
+  border:2px solid green;
+  }
+
+  
 }

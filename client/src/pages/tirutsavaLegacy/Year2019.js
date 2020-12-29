@@ -17,7 +17,11 @@ export default function CenteredGrid() {
 
   return (
     <div className="Year2020">
-      <div className="year-head">2019</div>
+      <div className="year-head">
+      <div className="head-line"><div className="line-color"></div></div>
+        <div className="head-name">2019</div>
+        <div className="head-line"><div className="line-color"></div></div>
+      </div>
       <div className="year-cont row">
         <div className="col-md-6 movie">
           <div className="movie-cont">

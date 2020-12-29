@@ -5,7 +5,6 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import {Typography, Box} from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
-
 import Gallery from "../gallery/Gallery";
 import Movieafter from "../Movieafter";
 import Stats from "../stats";

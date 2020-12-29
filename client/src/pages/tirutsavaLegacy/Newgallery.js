@@ -7,9 +7,10 @@ export default class Newgallery extends Component {
         return (
             <div className="newgallery" >
                 <SwipeableViews enableMouseEvents>
-                    <img className="gallery-img" src="./newgallery1.jpg"></img>
-                    <img className="gallery-img" src="./newgallery2.jpg"></img>
-                    <img className="gallery-img" src="./newgallery3.jpg"></img>
+                    <div className="gallery-img"> <img  src="./newgallery1.jpg"></img></div>
+                    <div className="gallery-img"> <img  src="./newgallery2.jpg"></img></div>
+                    <div className="gallery-img"> <img  src="./newgallery3.jpg"></img></div>
+                   
                 </SwipeableViews>
             </div>
         )

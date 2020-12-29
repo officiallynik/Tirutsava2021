@@ -9,15 +9,13 @@ import Newgallery from "./Newgallery";
 export default function CenteredGrid() {
  
 
-  if(isMobile) {
-      return (
-        <MobileView />
-      )
-  }
-
   return (
     <div className="Year2020">
-      <div className="year-head">2020</div>
+      <div className="year-head">
+        <div className="head-line"><div className="line-color"></div></div>
+        <div className="head-name">2020</div>
+        <div className="head-line"><div className="line-color"></div></div>
+      </div>
       <div className="year-cont row">
         <div className="col-md-6 movie">
           <div className="movie-cont">

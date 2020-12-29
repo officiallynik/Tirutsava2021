@@ -6,6 +6,12 @@ import Year2016 from './Year2016';
 import Year2020 from './Year2020';
 import Year2019 from './Year2019';
 import Year2018 from './Year2018';
+import SwipeableViews from 'react-swipeable-views';
+import Year2020mobile from './newmobileview/Year2020mobile';
+import Year2019mobile from './newmobileview/Year2019mobile';
+import Year2018mobile from './newmobileview/Year2018mobile';
+import Year2017mobile from './newmobileview/Year2017mobile';
+import Year2016mobile from './newmobileview/Year2016mobile';
 
 
 class TirutsavaLegacy extends Component {
@@ -552,25 +558,34 @@ class TirutsavaLegacy extends Component {
 
             <div className="tirutsavaLegacy">
                 <div className="legacy-90">
-                    <div className={this.state.class2020} style={{zIndex:value2020}}> <Year2020></Year2020></div>
+                    <div className="Large-width-view">
+                        <div className={this.state.class2020} style={{zIndex:value2020}}> <Year2020></Year2020></div>
 
                 {/* Years bar */}
 
 
                 {/* stats of that year */}
-                    <div className={this.state.class2019} style={{zIndex:value2019}} > <Year2019></Year2019></div> 
+                        <div className={this.state.class2019} style={{zIndex:value2019}} > <Year2019></Year2019></div> 
 
                 {/* video and content */}
-                    <div className={this.state.class2018} style={{zIndex:value2018}}> <Year2018></Year2018></div> 
-                    <div className={this.state.class2017} style={{zIndex:value2017}}> <Year2017></Year2017></div> 
-                    <div className={this.state.class2016} style={{zIndex:value2016}}> <Year2016></Year2016></div> 
+                        <div className={this.state.class2018} style={{zIndex:value2018}}> <Year2018></Year2018></div> 
+                        <div className={this.state.class2017} style={{zIndex:value2017}}> <Year2017></Year2017></div> 
+                        <div className={this.state.class2016} style={{zIndex:value2016}}> <Year2016></Year2016></div> 
+                </div>
+
+                <div className="mobile-view">
+                    <SwipeableViews enableMouseEvents>
+                        <Year2020mobile></Year2020mobile>
+                        <Year2019mobile></Year2019mobile>
+                        <Year2018mobile></Year2018mobile>
+                        <Year2017mobile></Year2017mobile>
+                        <Year2016mobile></Year2016mobile>
+                    </SwipeableViews>
+                </div>
+
+                 
              </div>
-             <div className="legacy-10"><Hamburger currentpage={this.state.currentPage} Handle2020={this.clicked2020}  Handle2019={this.clicked2019}  Handle2018={this.clicked2018}   Handle2017={this.clicked2017}  Handle2016={this.clicked2016}></Hamburger></div>
-
-             
-
-              
-
+             <div className="legacy-10"><Hamburger currentpage={this.state.currentPage} Handle2020={this.clicked2020}  Handle2019={this.clicked2019}  Handle2018={this.clicked2018}   Handle2017={this.clicked2017}  Handle2016={this.clicked2016}></Hamburger></div> 
             </div>
         )
     }
