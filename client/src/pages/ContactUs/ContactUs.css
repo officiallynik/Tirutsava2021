@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Maven+Pro:wght@700&display=swap');
 
 .image-div{
-    height: 80vh;
+    height: auto;
     align-items: center;
     display: flex;
-    padding: 0 10%;
+    padding:  10%;
     flex-direction: column;
     justify-content: center;
-    border: 3px solid white;
+    
 }
 
 
@@ -54,9 +54,16 @@
     
 }
 
+
 .team-heading-ContactUs{
     width: fit-content;
     padding: 3vh 7vw;
     margin: 0;
     font-family: 'Maven Pro', sans-serif;
+}
+
+@media (max-width:990px){
+    .scroll-spy-ContactUs{
+        display: none;
+    }
 }

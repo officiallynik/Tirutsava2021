@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,600&family=Roboto+Slab:wght@600&display=swap');
+
+.root-MemberImage{
+    background-color: #faf9f9;
+    padding-bottom: 2%;
+    margin-top: 12%;
+}
+
+.mask-MemberImage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.name-MemberImage{
+    
+
+    font-family: 'Roboto Slab', serif;
+
+    text-transform: uppercase;
+   
+    color: #f45b69;
+
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+.email-MemberImage{
+    
+
+    font-family: 'Nunito', sans-serif;
+
+
+    text-transform: lowercase;
+   
+    color: white;
+
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+
+.position-MemberImage{
+    
+
+    font-family: 'Roboto Slab', serif;
+
+    text-transform: uppercase;
+   
+    color: #456990;
+
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
