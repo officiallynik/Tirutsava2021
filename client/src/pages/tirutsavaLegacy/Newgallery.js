@@ -22,7 +22,7 @@ class Newgallery extends React.Component {
     return (
       <div className="newgallery">
           <div className="autoplay">
-          <AutoPlaySwipeableViews index={index} onChangeIndex={this.handleChangeIndex}>
+          <AutoPlaySwipeableViews index={index} onChangeIndex={this.handleChangeIndex} className="swipable_box">
           <div className="gallery-img"><img src="newgallery1.jpg"></img></div>
           <div className="gallery-img"><img src="newgallery2.jpg"></img></div>
           <div className="gallery-img"><img src="newgallery3.jpg"></img></div>

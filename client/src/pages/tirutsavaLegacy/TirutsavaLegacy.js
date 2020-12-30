@@ -47,6 +47,10 @@ class TirutsavaLegacy extends Component {
         class2017:'hide',
         class2016:'hide',
         currentindex:100,
+        currentMode: ((new Date()).getHours() < 18 &&
+                      (new Date()).getHours() >= 6) ? 
+                      'day-mode' : 
+                      'night-mode',
     }
 
    
@@ -516,6 +520,9 @@ class TirutsavaLegacy extends Component {
     
     }
 
+    // Setting day and night mode
+
+
     render() {
         var value2020 ;
         var value2019;
@@ -551,41 +558,41 @@ class TirutsavaLegacy extends Component {
           );
 
          
-          console.log("state",this.state)
-     
-        return(
-            
+        console.log("state",this.state);
 
-            <div className="tirutsavaLegacy">
+     
+        return(            
+
+            <div className={`tirutsavaLegacy ${this.state.currentMode}`}>
                 <div className="legacy-90">
                     <div className="Large-width-view">
-                        <div className={this.state.class2020} style={{zIndex:value2020}}> <Year2020></Year2020></div>
+                        <div className={this.state.class2020} style={{zIndex:value2020}}> <Year2020 currentMode={this.state.currentMode}></Year2020></div>
 
                 {/* Years bar */}
 
 
                 {/* stats of that year */}
-                        <div className={this.state.class2019} style={{zIndex:value2019}} > <Year2019></Year2019></div> 
+                        <div className={this.state.class2019} style={{zIndex:value2019}} > <Year2019 currentMode={this.state.currentMode}></Year2019></div> 
 
                 {/* video and content */}
-                        <div className={this.state.class2018} style={{zIndex:value2018}}> <Year2018></Year2018></div> 
-                        <div className={this.state.class2017} style={{zIndex:value2017}}> <Year2017></Year2017></div> 
-                        <div className={this.state.class2016} style={{zIndex:value2016}}> <Year2016></Year2016></div> 
+                        <div className={this.state.class2018} style={{zIndex:value2018}}> <Year2018 currentMode={this.state.currentMode}></Year2018></div> 
+                        <div className={this.state.class2017} style={{zIndex:value2017}}> <Year2017 currentMode={this.state.currentMode}></Year2017></div> 
+                        <div className={this.state.class2016} style={{zIndex:value2016}}> <Year2016 currentMode={this.state.currentMode}></Year2016></div> 
                 </div>
 
                 <div className="mobile-view">
                     <SwipeableViews enableMouseEvents>
-                        <Year2020mobile></Year2020mobile>
-                        <Year2019mobile></Year2019mobile>
-                        <Year2018mobile></Year2018mobile>
-                        <Year2017mobile></Year2017mobile>
-                        <Year2016mobile></Year2016mobile>
+                        <Year2020mobile currentMode={this.state.currentMode}></Year2020mobile>
+                        <Year2019mobile currentMode={this.state.currentMode}></Year2019mobile>
+                        <Year2018mobile currentMode={this.state.currentMode}></Year2018mobile>
+                        <Year2017mobile currentMode={this.state.currentMode}></Year2017mobile>
+                        <Year2016mobile currentMode={this.state.currentMode}></Year2016mobile>
                     </SwipeableViews>
                 </div>
 
                  
              </div>
-             <div className="legacy-10"><Hamburger currentpage={this.state.currentPage} Handle2020={this.clicked2020}  Handle2019={this.clicked2019}  Handle2018={this.clicked2018}   Handle2017={this.clicked2017}  Handle2016={this.clicked2016}></Hamburger></div> 
+             <div className={`legacy-10 ${this.state.currentMode}`}><Hamburger currentpage={this.state.currentPage} Handle2020={this.clicked2020}  Handle2019={this.clicked2019}  Handle2018={this.clicked2018}   Handle2017={this.clicked2017}  Handle2016={this.clicked2016} currentMode={this.state.currentMode}></Hamburger></div> 
             </div>
         )
     }

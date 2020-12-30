@@ -1,7 +1,14 @@
-.year-2019-mobile{
-    width:100%;
-    height: 150vh;
-    color: white;
-    background-color: #1e1534;
-    padding: 0;
+.year-2019-mobile {
+  width: 100%;
+  height: 150vh;
+  color: white;
+  padding: 0;
+}
+
+.year-2019-mobile.day-mode {
+  background-color: #26e0fc;
+}
+
+.year-2019-mobile.night-mode {
+  background-color: #1e1534;
 }

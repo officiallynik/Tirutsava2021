@@ -3,9 +3,9 @@
   padding: 0;
 }
 .button-info {
-  color: #fff;
   font-size: 20px;
   opacity: 0;
+  color: #df42b1;
 }
 
 .button-2020 {
@@ -47,6 +47,14 @@
   bottom: 9px;
 }
 
+.button-bar.day-mode {
+  background: #1e1534;
+}
+
+.button-bar.night-mode {
+  background: #fff;
+}
+
 .button-mg {
   margin: 12px;
 }
@@ -75,7 +83,7 @@
   width: 40px;
   border-radius: 27px;
   height: 5px;
-  background: pink;
+  background: #df42b1;
   position: relative;
   bottom: 9px;
 }

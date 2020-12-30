@@ -6,12 +6,12 @@ import Stats from './../stats';
 export default class Year2017mobile extends Component {
     render() {
         return (
-            <div className="year-2017-mobile">
+            <div className={`year-2017-mobile ${this.props.currentMode}}`}>
                  <div className="mobile-year-head">
                     <div className="mobile-head-line">
                         <div className="mobile-line-color"></div>
                     </div>
-                    <div className="mobile-head-name">2017</div>
+                    <div className={`mobile-head-name ${this.props.currentMode}`}>2017</div>
                     <div className="mobile-head-line">
                         <div className="mobile-line-color"></div>
                     </div>
@@ -29,7 +29,7 @@ export default class Year2017mobile extends Component {
                     </div>  
                 </div>
                 <div className="mobile-stats-foot">
-                    <Stats></Stats>
+                    <Stats currentMode={this.props.currentMode}></Stats>
                 </div> 
             </div>
         )

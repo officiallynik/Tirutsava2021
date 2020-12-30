@@ -1,10 +1,9 @@
 .movie-after-whole {
-  background-color: rgb(30, 21, 52);
   height: 400px;
-  width:90%;
+  width: 90%;
 }
 .video-box {
-  width:100%;
+  width: 100%;
   height: 100%;
   border-radius: 10px;
   padding: 25px;
@@ -12,7 +11,7 @@
   box-shadow: 0 0 10px #262626, 0 0 10px #262626, 0 0 10px #262626,
     0 0 10px #262626;
   border-radius: 27px;
-  border: 2px solid rgb(106, 90, 205);
+  border: 2px solid #df42b1;
 }
 
 .video-heading {
@@ -37,13 +36,13 @@
   box-shadow: 0 0 10px #262626, 0 0 10px #262626, 0 0 10px #262626,
     0 0 10px #262626;
   border-radius: 27px;
-  border: 2px solid rgb(106, 90, 205);
+  border: 2px solid #df42b1;
 
   border-radius: 50%;
 }
 
 .bi-youtube {
-  border: 2px solid rgb(106, 90, 205);
+  border: 2px solid #df42b1;
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -63,29 +62,28 @@
   z-index: 10000000;
 }
 
-@media(max-width: 768px) {
-.movie-after-whole{
-height: 80%;
-}
-
-.video-icon{
-  position: relative;
-  bottom:25%;
-}
-
-.video-heading{
-  position: relative;
-  bottom:25%;
-}
-
-}
-
-@media(max-height:667px){
-  .video-icon{
-   display: none;
+@media (max-width: 768px) {
+  .movie-after-whole {
+    height: 80%;
   }
 
-  .video-heading{
+  .video-icon {
+    position: relative;
+    bottom: 25%;
+  }
+
+  .video-heading {
+    position: relative;
+    bottom: 25%;
+  }
+}
+
+@media (max-height: 667px) {
+  .video-icon {
+    display: none;
+  }
+
+  .video-heading {
     display: none;
   }
 }
