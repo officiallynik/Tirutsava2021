@@ -1,5 +1,56 @@
-section{
-    height: 80vh;
-    padding: 30% 10%;
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Maven+Pro:wght@700&display=swap');
 
+.image-div{
+    height: 80vh;
+    align-items: center;
+    display: flex;
+    padding: 0 10%;
+    flex-direction: column;
+    justify-content: center;
+    border: 3px solid white;
+}
+
+
+.team-name-ContactUs{
+    background-color: rgb(30, 21, 52);
+    color: white;
+    font-size: 1.7vw;
+    border: none;
+    width:fit-content;
+    padding-left:  7vw;
+    font-family: 'Maven Pro', sans-serif;
+    padding-right: 10vw;
+    text-shadow: 5px 5px 5px rgba(0,0,0,.5);
+    
+}
+
+.scroll-spy-ContactUs a:hover{
+    /* color: #3BB5D3; */
+    text-shadow: 5px 5px 5px rgba(0,0,0,.5);
+}
+
+.active-ContactUs{
+    color: #FE9A2B;
+}
+
+.active-ContactUs:hover {
+    color: #FE9A2B;
+    
+  }
+
+.scroll-spy-ContactUs{
+    position: fixed;
+    left: 5vw;
+    top: 14vh;
+    
+
+    /* width: 40vw; */
+    
+}
+
+.team-heading-ContactUs{
+    width: fit-content;
+    padding: 3vh 7vw;
+    margin: 0;
+    font-family: 'Maven Pro', sans-serif;
 }
