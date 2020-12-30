@@ -3,15 +3,16 @@
   padding: 0;
 }
 .button-info {
-  font-size: 20px;
-  opacity: 0;
-  color: #df42b1;
+  font-size: 30px;
+  font-family: 'Itim', cursive;
+  font-weight: 1000;
+  color: white;
 }
 
 .button-2020 {
   align-items: flex-end;
   justify-content: flex-end;
-  display: flex;
+  
 }
 
 .button-2019 {
@@ -38,58 +39,111 @@
   display: flex;
 }
 
-.button-bar {
-  width: 25px;
-  border-radius: 27px;
-  height: 5px;
-  background: white;
-  position: relative;
-  bottom: 9px;
+.button-bar.day-mode {
+  background: #26e0fc;
+  color: rgb(15, 14, 14);
 }
 
-.button-bar.day-mode {
-  background: #1e1534;
-}
 
 .button-bar.night-mode {
-  background: #fff;
+  background: #1e1534
 }
 
 .button-mg {
   margin: 12px;
-}
-
-.button-2020:hover .button-info {
-  opacity: 1;
-}
-
-.button-2019:hover .button-info {
-  opacity: 1;
-}
-
-.button-2018:hover .button-info {
-  opacity: 1;
-}
-
-.button-2017:hover .button-info {
-  opacity: 1;
-}
-
-.button-2016:hover .button-info {
-  opacity: 1;
-}
-
-.activebutton {
-  width: 40px;
-  border-radius: 27px;
-  height: 5px;
-  background: #df42b1;
+  background-color: #1e1534;
+  color: white;
+  font-size: 35px;
   position: relative;
-  bottom: 9px;
+  left: 10px;
+  font-family: 'Itim', cursive;
+  font-weight: 1000;
+  cursor: pointer;
 }
+
+.activebutton{
+  font-size: 45px;
+  background: linear-gradient(45deg, #f3ec78, #af4261);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.activebutton.day-mode{
+  background: linear-gradient(45deg, black, #af4261);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
 
 .hamburger-whole {
   position: absolute;
   right: 0;
-  top: 40%;
+  top: 30%;
+}
+
+@media(max-width:1255px) and (min-width:1103px){
+  .button-mg {
+    margin: 12px;
+    background-color: #1e1534;
+    color: white;
+    font-size: 30px;
+    position: relative;
+    left: 10px;
+    font-family: 'Itim', cursive;
+    font-weight: 1000;
+    cursor: pointer;
+  }
+  
+  .activebutton{
+    font-size: 40px;
+    background: linear-gradient(45deg, #f3ec78, #af4261);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+}
+
+@media(max-width:1103px) and (min-width:955px){
+  .button-mg {
+    margin: 12px;
+    background-color: #1e1534;
+    color: white;
+    font-size: 25px;
+    position: relative;
+    left: 10px;
+    font-family: 'Itim', cursive;
+    font-weight: 1000;
+    cursor: pointer;
+  }
+  
+  .activebutton{
+    font-size: 35px;
+    background: linear-gradient(45deg, #f3ec78, #af4261);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+}
+
+@media(max-width:955px){
+  .button-mg {
+    margin: 12px;
+    background-color: #1e1534;
+    color: white;
+    font-size: 20px;
+    position: relative;
+    left: 10px;
+    font-family: 'Itim', cursive;
+    font-weight: 1000;
+    cursor: pointer;
+  }
+  
+  .activebutton{
+    font-size: 30px;
+    background: linear-gradient(45deg, #f3ec78, #af4261);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
 }

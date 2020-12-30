@@ -9,8 +9,8 @@
   width: 95%;
   height: 100%;
   overflow: hidden;
+  background-image: url('./event.jpg');
   background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .hide {
@@ -100,7 +100,8 @@
 }
 
 .tirutsavaLegacy.day-mode {
-  background: #26e0fc;
+  background-image: url('./event.jpg');
+  background-size: cover;
 }
 .legacy-10.day-mode {
   background-color: #26e0fc;

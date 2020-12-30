@@ -592,7 +592,7 @@ class TirutsavaLegacy extends Component {
 
                  
              </div>
-             <div className={`legacy-10 ${this.state.currentMode}`}><Hamburger currentpage={this.state.currentPage} Handle2020={this.clicked2020}  Handle2019={this.clicked2019}  Handle2018={this.clicked2018}   Handle2017={this.clicked2017}  Handle2016={this.clicked2016} currentMode={this.state.currentMode}></Hamburger></div> 
+             <div className={`legacy-10 ${this.state.currentMode}`}><Hamburger currentMode={this.state.currentMode} currentpage={this.state.currentPage} Handle2020={this.clicked2020}  Handle2019={this.clicked2019}  Handle2018={this.clicked2018}   Handle2017={this.clicked2017}  Handle2016={this.clicked2016} currentMode={this.state.currentMode}></Hamburger></div> 
             </div>
         )
     }

@@ -1,5 +1,5 @@
 .Year2020 {
-  height: 89vh;
+  height: 90vh;
 }
 
 .year-head {
@@ -22,11 +22,11 @@
   position: relative;
   bottom: 4px;
   height: 3px;
-  background-color: #df42b1;
+  background-color: #ae0700;
 }
 
 .line-color.day-mode {
-  background-color: #df42b1;
+  background-color: black
 }
 
 .head-name {
@@ -40,7 +40,7 @@
 }
 
 .head-name.day-mode {
-  background: linear-gradient(45deg, #df42b1, #1e1534);
+  background: linear-gradient(45deg, black, #1e1534);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -51,6 +51,7 @@
 }
 
 .stats-foot {
+  position: absolute;
   height: 10%;
   width: 100%;
 }

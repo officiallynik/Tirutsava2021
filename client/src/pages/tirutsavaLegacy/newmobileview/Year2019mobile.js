@@ -6,7 +6,7 @@ import Movieafter from './../Movieafter';
 export default class Year2019mobile extends Component {
     render() {
         return (
-            <div className={`year-2019-mobile ${this.props.currentMode}}`}>
+            <div className="year-2019-mobile" style={this.props.currentMode=="day-mode" ? {backgroundColor:"#26e0fc"} : {backgroundColor:"#1e1534"}}>
                 <div className="mobile-year-head">
                     <div className="mobile-head-line">
                         <div className="mobile-line-color"></div>

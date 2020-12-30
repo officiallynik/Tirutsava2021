@@ -8,7 +8,7 @@ export default class Stats extends Component {
       
         return (
             <div className="stats-whole">
-              <div  className="footer-abouts ">                       
+              <div  className={`footer-abouts ${this.props.currentMode} `}>                       
                 <div className="events">
                   <div className={`events-heading ${this.props.currentMode}`}>
                     <p className="heading-mg">Footfall</p>
