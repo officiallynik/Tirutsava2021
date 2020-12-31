@@ -9,8 +9,6 @@
   width: 95%;
   height: 100%;
   overflow: hidden;
-  background-image: url('./event.jpg');
-  background-size: cover;
 }
 
 .hide {
