@@ -5,15 +5,16 @@ import { Route, Redirect } from "react-router-dom";
 import Sponsors from './components/sponsers/sponsers.js';
 
 // import Legacy from "./pages/tirutsavaLegacy/TirutsavaLegacy";
+import Homepage from './components/Homepage/Homepage';
 
 function Routes() {
     return (
         <div>
             <Route exact path="/">
-                <Redirect to="/Home" />
+                <Redirect to="/Home" exact component={Homepage}/>
             </Route>
-            
             <Route path="/sponsors" exact  component={Sponsors} />
+            <Route path="/Home" exact  component={Homepage} />
             {/* <Route path="/aboutus" component={Legacy} /> */}
         </div>
     )
