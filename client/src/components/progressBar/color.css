@@ -1,0 +1,6 @@
+.color{
+    background-color: chartreuse;
+    height: 100%;
+    transition: ease-in-out;
+    border-radius: 10px;
+}

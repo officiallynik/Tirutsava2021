@@ -1,0 +1,12 @@
+.div1{
+    height: 20px;
+    border: 1px solid black;
+    width: 20%;
+    top:40%;
+    border-radius: 10px;
+}
+.all-bars{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 400px;
+}
