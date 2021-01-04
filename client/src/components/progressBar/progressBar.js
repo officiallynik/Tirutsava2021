@@ -19,10 +19,6 @@ const ProgressBar = () => {
         setCurrent((current+1)%3);
     },1000);
 
-    useEffect(() => {
-        setCard(10);
-    },[current])
-
     if(current===0){
 
         allState[0]=false;

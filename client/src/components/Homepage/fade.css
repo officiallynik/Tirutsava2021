@@ -1,0 +1,141 @@
+.whole-fade{
+    width:100%;
+    height: 90vh;
+ position: relative;
+}
+
+.whole-fade img{
+    width:100%;
+    height: 100%;
+}
+
+.logo{
+    width:70%;
+    margin: auto;
+    position: absolute;
+    top:5vh;
+    height:30vh;
+    z-index: 10000;
+}
+
+
+.bird{
+    position: absolute;
+    top:40vh;
+}
+.logo img{
+    width:100%;
+    height:100%;
+    z-index: 10000;
+}
+
+.img-back{
+    position: absolute;
+    bottom:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(0,0,0,0.5);
+    height:8vh;
+    width:100%;
+    z-index: 100000;
+}
+
+.fa{
+    width:60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    font-size: 25px;
+    margin: 0 25px;
+    border-width: 3px;
+    border-style: solid;
+    border-image: 
+      linear-gradient(
+        to bottom, 
+        red, 
+        rgba(0, 0, 0, 0)
+      ) 1 100%;
+      background: wheat;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+  
+}
+
+
+.fa::before{
+    font-size: 35px;
+   
+}
+
+
+.rocket{
+    width: fit-content;
+    height: 60vh;
+    position: absolute;
+    bottom: 0.5vh;
+    right:0;
+}
+
+.rocket img{
+    width: 100%;
+    height: 100%;
+}
+
+.wind{
+    border:2px solid red;
+}
+
+.live{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    overflow: hidden;
+    position: absolute;
+    right:20px;
+}
+
+.sig-l{
+    position: relative;
+    transform: rotate(-90deg);
+    animation:animate2 4s linear infinite;
+}
+
+
+.sig{
+    width:10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #3aff06;
+}
+.sig-r{
+    position: relative;
+    transform: rotate(90deg);
+    animation:animate1 4s linear infinite;
+}
+
+@keyframes animate1 {
+ 
+    0%{
+        right:0%;
+    }
+    100%{
+      right:-50%;
+    }
+}
+
+@keyframes animate2 {
+ 
+    0%{
+        left:0%;
+    }
+    100%{
+      left:-50%;
+    }
+}
+
+
+
