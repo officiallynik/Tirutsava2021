@@ -16,9 +16,9 @@ const [props, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension:
         return (
             <div className="music">
             <div className="music-whole">
-                <div className="icon-1" ><animated.img  onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })} style={{ transform: props.xy.interpolate(trans1) }} src="dj.png"></animated.img></div>
+                <div className="icon-1" ><animated.img  onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })} style={{ transform: props.xy.interpolate(trans1) }} src="headphone.png"></animated.img></div>
                 <div className="text"><animated.div onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })} style={{ transform: props.xy.interpolate(trans1) }}className="cont-text">Music</animated.div></div>
-                <div className="icon-2"><animated.img onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })} style={{ transform: props.xy.interpolate(trans1) }}src="headphone.png"></animated.img></div>               
+                           
             </div>
             <div className="music-phone-view">
             <div className="phone-icon-1" ><animated.img  onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })} style={{ transform: props.xy.interpolate(trans1) }} src="headphone.png"></animated.img></div>

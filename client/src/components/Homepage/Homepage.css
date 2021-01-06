@@ -1,15 +1,441 @@
-.home-whole{
+@import url(//db.onlinewebfonts.com/c/7e96eba370659b4e4563309dc4ebb33f?family=Samarkan);
+@font-face {font-family: "Samarkan"; src: url("//db.onlinewebfonts.com/t/7e96eba370659b4e4563309dc4ebb33f.eot"); src: url("//db.onlinewebfonts.com/t/7e96eba370659b4e4563309dc4ebb33f.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/7e96eba370659b4e4563309dc4ebb33f.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/7e96eba370659b4e4563309dc4ebb33f.woff") format("woff"), url("//db.onlinewebfonts.com/t/7e96eba370659b4e4563309dc4ebb33f.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/7e96eba370659b4e4563309dc4ebb33f.svg#Samarkan") format("svg"); }
+.home-whole-night-mode{
     width:100%;
-    height: 90vh;
+    height: 100vh;
     background-color:rgb(30,21,52);
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    
+}
+
+.home-whole-day-mode{
+    width:100%;
+    height: 100vh;
+    background-color:rgb(240,255,255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .Auto-swipe{
     width:100%;
+    height: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.cont-home{
+    width:100%;
+    height: 70vh;
+}
+
+.hm{
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+}
+
+.head-home-night-mode{
+    font-family: "samarkan";
+    text-align: center;
+    font-size: 9em;
+    background: linear-gradient(45deg, #f3ec78, #af4261);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: left;
+}
+
+.head-home-day-mode{
+    font-family: "samarkan";
+    text-align: center;
+    font-size: 9em;
+    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+    text-align: left;
+}
+
+.head-home-cont-night-mode{
+    color: white;
+    padding: 20px;
+    font-size: 25px;
+}
+.head-home-cont-day-mode{
+    color: black;
+    padding: 20px;
+    font-size: 25px;
+}
+
+.home-btn{
+    cursor: pointer;
+    width:150px;
+    height: 50px;
+    background-color:#10A5F9;
+    color: white;
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 27px;
+    -webkit-box-shadow: 5px 5px 2px 0px black;
+-moz-box-shadow:    5px 5px 2px 0px black;
+box-shadow:         5px 5px 2px 0px black;
+}
+
+.home-btn p{
+    position: relative;
+    top:5px;
+}
+
+.circle-night-mode{
+    position: absolute;
+    right:0;
+    width:100%;
+    height:100%;
+    clip-path: circle(600px at right 800px);
+    background-color:#171515; 
+}
+.circle-day-mode{
+    position: absolute;
+    right:0;
+    width:100%;
+    height:100%;
+    clip-path: circle(600px at right 800px);
+    background-color:rgb(135,206,250);
+}
+
+.event-detail-night-mode{
+    z-index: 10000;
+   color: white;
+   position: absolute;
+   bottom: 90px;
+   right:220px;
+   letter-spacing: 3px;
+   font-weight: 600;
+   font-size: 60px;
+   background: linear-gradient(45deg, #f3ec78, #af4261);
+   background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+.event-detail-day-mode{
+    z-index: 10000;
+   color: white;
+   position: absolute;
+   bottom: 90px;
+   right:220px;
+   letter-spacing: 3px;
+   font-weight: 600;
+   font-size: 60px;
+   background: black;
+   background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+.cont-event img{
+    z-index:10000;
+    height: 500px;
+    position: absolute;
+    right: 75px;
+    top:60px;
+    
+}
+
+
+.logo-social{
+    display: block;
+    width:70px;
+    position: absolute;
+    bottom: 150px;
+    right:5px;
+}
+
+.fas-night-mode{
+    margin-top:25px;
+    padding: 10px;
+    color: white;
+    display: block;
+    
+}
+
+    
+.fas-day-mode{
+    margin-top:25px;
+    padding: 10px;
+    color:black;
+    display: block;
+    background: black;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+    
+}
+
+
+
+.fas-day-mode::before{
+    font-size: 25px;
+    color:black;
+}
+
+.change-img{
+    display: flex;
+    position: absolute;
+    bottom: 5px;
+}
+.headphone{
+    width:60px;
+    height: 60px;
+}
+
+.technical{
+    width:60px;
+    height: 60px;
+
+}
+.online{
+    width:60px;
+    height: 60px;
+    overflow: hidden;
+
+}
+
+.headphone img{
+    width: 100%;
+    height: 100%;
+}
+.technical img{
+    width: 100%;
+    height: 100%;
+}
+.online img{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.cm{
+    margin: 0 25px;
+    cursor: pointer;
+}
+
+.live-home{
+    display: flex;
+    justify-content:center;
+    width:120px;
+    align-items: center;
+    padding: 0 10px;
+    overflow: hidden;
+
+    position: relative;
+    right:50px;
+    top:10px;
+
+  
+}
+
+.sig-l-home{
+    position: relative;
+    transform: rotate(-90deg);
+    animation:animate2 4s linear infinite;
+
+}
+
+
+.sig-home{
+    width:10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #39ff14;
+}
+.sig-r-home{
+    position: relative;
+
+    transform: rotate(90deg);
+    animation:animate1 4s linear infinite;
+}
+
+.active img{
+    position: relative;
+    bottom: 15px;
+}
+.shadow-night-mode{
+    width:80%;
+    margin: auto;
+    height: 10px;
+    position: relative;
+    bottom:15px;
+    background-color: #DFDFDF;
+    opacity: 0.2;
+    border-radius: 100%;
+}
+
+.shadow-day-mode{
+    width:80%;
+    margin: auto;
+    height: 10px;
+    position: relative;
+    bottom:15px;
+    background-color: #171515;
+    opacity: 0.2;
+    border-radius: 100%;
+}
+
+
+
+@keyframes animate1 {
+ 
+    0%{
+        right:0%;
+    }
+    100%{
+      right:-50%;
+    }
+}
+
+@keyframes animate2 {
+ 
+    0%{
+        left:0%;
+    }
+    100%{
+      left:-50%;
+    }
+}
+
+@media(max-width:1243px) and (min-width:1105px){
+    .head-home{
+        font-size: 8em;
+    }
+
+    .head-home-cont{
+        font-size: 23px;
+    }
+
+    .circle-night-mode{
+        position: absolute;
+        right:0;
+        width:100%;
+        height:100%;
+        clip-path: circle(500px at right 700px);
+        background-color: black;
+        
+    }
+
+    .cont-event img{
+        width:400px;
+        height: 400px;
+    }
+    
+}
+
+@media(max-width:1105px) and (min-width:974px) {
+    .head-home{
+        font-size: 7em;
+    }
+    .head-home-cont{
+        font-size: 22px;
+    }
+    .circle-night-mode{
+        position: absolute;
+        right:0;
+        width:100%;
+        height:100%;
+        clip-path: circle(450px at right 650px);
+        background-color: black;
+        
+    }
+
+    .cont-event img{
+        width:400px;
+        height: 400px;
+    }
+
+    
+.hm{
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow:auto;
+}
+    
+}
+
+@media(max-width:974px) and (min-width:852px){
+    .head-home{
+        font-size: 6em;
+    }
+
+    .head-home-cont{
+        font-size: 20px;
+    }
+    .cont-event img{
+        width:350px;
+        height: 350px;
+        position: relative;
+        top: 100px;
+        left: 5px;
+    }
+
+  
+    .circle-night-mode{
+        position: absolute;
+        right:0;
+        width:100%;
+        height:100%;
+        clip-path: circle(450px at right 650px);
+        background-color: black;
+        
+    }
+
+    .cont-event img{
+        width:400px;
+        height: 400px;
+        position: relative;
+        right: 30px;
+    }
+
+}
+
+@media(max-width:852px) and (min-width:768px){
+    .head-home{
+        font-size: 5.5em;
+    }
+
+    .head-home-cont{
+        font-size: 20px;
+    }
+    .circle-night-mode{
+        position: absolute;
+        right:0;
+        width:100%;
+        height:100%;
+        clip-path: circle(342px at right 614px);
+        background-color: black;
+        
+    }
+
+    .cont-event img{
+        width:320px;
+        height: 320px;
+        position: relative;
+        top: 210px;
+        left: 20px;
+    }
+
+    .event-detail{
+        position: absolute;
+        font-size: 35px;
+        right:150px;
+    }
+
 }
 
 

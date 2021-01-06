@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './fade.css'
+import './Night.css'
 import Particles from 'react-particles-js';
 import BigBangStarField from 'react-big-bang-star-field'
 import StarfieldAnimation from 'react-starfield-animation'
@@ -12,12 +12,11 @@ const defaults = {
   animate: true
 };
 
-export default class Fade extends Component {
+export default class Night extends Component {
   render() {
     return (
       <div className="whole-fade">
 		  <img src="./night3.png"></img>
-    
  
 		  <div className="logo">
 			  <img src="logo2.png"></img>
@@ -43,7 +42,7 @@ export default class Fade extends Component {
        </div>
   
        
-     </div>
+    </div> 
     
 	
       </div>
