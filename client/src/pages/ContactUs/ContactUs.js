@@ -19,7 +19,7 @@ class ContactUs extends React.Component {
 
 	render() {
 		return (
-			<div style={{overflowY: "hidden"}}>
+			<div style={{overflowX: "hidden"}}>
 				<MDBRow>
 
 					<MDBCol lg="5" >
