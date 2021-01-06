@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,600&family=Roboto+Slab:wght@600&display=swap');
+
+.registration .modal-header{
+    border: none;
+}
+
+.signIn-Heading-registration{
+    color: #333333;
+    font-weight: 500;
+    margin-left: 5%;
+    font-family: 'Roboto Slab',sans-serif;
+    width: 100%;
+   
+
+}
+
+.secondary-Heading-registration{
+    color: #333333;
+    font-family: 'Roboto Slab',sans-serif;
+}
