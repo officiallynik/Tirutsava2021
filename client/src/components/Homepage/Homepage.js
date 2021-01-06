@@ -46,7 +46,7 @@ var onClickOnline = () => {
 
 const [props, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 950, friction: 140}}))
 
-var currentMode = !((new Date()).getHours() < 18 &&
+var currentMode = ((new Date()).getHours() < 18 &&
 (new Date()).getHours() >= 6) ? 
 'day-mode' : 
 'night-mode'
@@ -70,10 +70,10 @@ console.log("crntmode",currentMode)
                         <animated.img onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })} style={{ transform: props.xy.interpolate(trans1) }} src={imgname}></animated.img>
                         <div className={`event-detail-${currentMode}`}>{eventdet}</div>
                         <div className="logo-social">
-                        <i class={`fa fas-${currentMode} fa-facebook-${currentMode}`} aria-hidden="true"></i>
-                        <i class={`fa fas-${currentMode} fa-instagram-${currentMode}`} aria-hidden="true"></i>
-                        <i class={`fa fas-${currentMode} fa-twitter-${currentMode}`} aria-hidden="true"></i>
-                        <i class={`fa fas-${currentMode} fa-youtube-${currentMode}`} aria-hidden="true"></i>
+                        <i class={`fa fas-${currentMode} fa-facebook`} aria-hidden="true"></i>
+                        <i class={`fa fas-${currentMode} fa-instagram`} aria-hidden="true"></i>
+                        <i class={`fa fas-${currentMode} fa-twitter`} aria-hidden="true"></i>
+                        <i class={`fa fas-${currentMode} fa-youtube`} aria-hidden="true"></i>
                         <div className="live-home">
          <div className="sig-l-home">
        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#ff073a" class="bi bi-wifi" viewBox="0 0 16 16">
