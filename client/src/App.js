@@ -6,11 +6,12 @@ import '@fortawesome/fontawesome-free/css/all.min.css'; import
 'mdbreact/dist/css/mdb.css';
 import ContactUs from './pages/ContactUs/ContactUs';
 import Faqs from './pages/Faqs/Faqs';
+import Sponsors from './pages/Sponsors/Sponsors';
 
 function App() {
   return (
     <div className="App">
-      <Faqs />
+      <Sponsors />
     </div>
   );
 }

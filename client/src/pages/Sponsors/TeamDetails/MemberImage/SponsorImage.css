@@ -1,0 +1,47 @@
+.root-SponsorImage{
+    background-color: #faf9f9;
+    padding-bottom: 2%;
+    margin-top: 12%;
+}
+
+.mask-SponsorImage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.name-SponsorImage{
+    
+    text-transform: uppercase;
+   
+    color: #f45b69;
+
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+.email-SponsorImage{
+    
+
+    font-family: 'Nunito', sans-serif;
+
+
+    text-transform: lowercase;
+   
+    color: white;
+
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+
+.position-SponsorImage{
+    
+
+    font-family: 'Roboto Slab', serif;
+
+    text-transform: uppercase;
+   
+    color: #456990;
+
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}

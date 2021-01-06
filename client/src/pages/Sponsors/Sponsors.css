@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+
+.sponsors-page {
+    font-family: 'Paytone One', sans-serif;
+    overflow-x: hidden;
+}
+
+.image-div{
+    height: auto;
+    align-items: center;
+    display: flex;
+    padding:  10%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.team-name-Sponsors{
+    background-color: rgb(30, 21, 52);
+    display: block;
+    color: white;
+    font-size: 1.7vw;
+    border: none;
+    width:fit-content;
+    padding-left:  7vw;
+    /* font-family: 'Maven Pro', sans-serif; */
+    font-family: 'Paytone One', sans-serif;
+    padding-right: 10vw;
+    margin: 1.5% 0;
+    text-align: start;
+   
+    text-shadow: 5px 5px 5px rgba(0,0,0,.5);
+    
+}
+/* a:not([href]):not([tabindex]), a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover{
+    color: #3BB5D3;
+    text-shadow: 5px 5px 5px rgba(0,0,0,.5);
+} */
+.scroll-spy-Sponsors a:hover{
+    color: #3BB5D3 !important;
+}
+
+.active-Sponsors{
+    color: #FE9A2B !important;;
+}
+
+.active-Sponsors:hover {
+    color: #FE9A2B !important;;
+    
+  }
+
+.scroll-spy-Sponsors{
+    position: fixed;
+    left: 5vw;
+    top: 14vh;
+    
+
+    /* width: 40vw; */
+    
+}
+
+
+.team-heading-Sponsors{
+    width: fit-content;
+    padding: 3vh 7vw;
+    margin: 0;
+}
+
+@media (max-width:990px){
+    .scroll-spy-Sponsors{
+        display: none;
+    }
+}
+
+.prev-sponsors {
+    background-color: #fff;
+    max-width: 1200px;
+    border-radius: 4px;
+    box-shadow: 0 0 60px 0 rgba(0,0,0,.1);
+    padding: 60px 40px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+
+.prev-sponsors-header {
+    font-size: 35px;
+    text-align: center;
+    padding: 0 20px;
+    margin: 0 0 10px;
+}
+ 
+.prev-sponsors-subheader {
+    text-align: center;
+    margin: 0 0 50px;
+    font-size: 18px;
+}
+
+.scroll-main {
+    position: relative;
+    overflow: hidden;
+    flex: 0 0 230px;
+    display: flex;
+    flex-direction: row;
+}
+
+.side-margin-left {
+    min-width: 40px;
+    min-height: 100%;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(90deg,#fff 30%,hsla(0,0%,100%,0));
+    z-index: 1;
+}
+
+.side-margin-right {
+    position: absolute;
+    min-width: 40px;
+    min-height: 100%;
+    right: 0;
+    top: 0;
+    background-image: linear-gradient(270deg,#fff 30%,hsla(0,0%,100%,0));
+    z-index: 1;
+}
+
+.scroller-div {
+    position: relative;
+    width: 1400px;
+    height: 100px;
+    margin: 0 0 20px;
+    flex: 0 0 auto;
+}
+
+.scroll-sponsors {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    left: -100%;
+}
+
+.scroll-sponsors1 {
+    animation-name: infinitescroller1;
+}
+
+.scroll-sponsors2 {
+    animation-name: infinitescroller2;
+    left: 100%;
+}
+
+@keyframes infinitescroller1 {
+    from{
+        left: 0%
+    }
+    to{
+        left: -100%
+    }
+}
+
+@keyframes infinitescroller2 {
+    from{
+        left: 100%
+    }
+    to{
+        left: 0%
+    }
+}
+
+.scroll-partners{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    left: 100%;
+}
+
+.scroll-partners1 {
+    animation-name: infinitescrollerp1;
+    left: -100%;
+}
+
+.scroll-partners2 {
+    animation-name: infinitescrollerp2;
+}
+
+@keyframes infinitescrollerp1 {
+    from{
+        left: -100%
+    }
+    to{
+        left: 0%
+    }
+}
+
+@keyframes infinitescrollerp2 {
+    from{
+        left: 0%
+    }
+    to{
+        left: 100%
+    }
+}
+
+.scroll-image-div {
+    flex: 1 1 200px;
+    margin: 20px;
+    width: 120px;
+}
+
+.scroll-image {
+    /* filter: grayscale(100%) brightness(0);
+    user-select: none;
+    pointer-events: none;
+    opacity: .2;
+    object-fit: contain; */
+    max-width: 90px;
+}
