@@ -14,7 +14,9 @@ function Header(props) {
 			</div>
 
 			<div className="faq-ask">
-				ASK NEW
+				<div className="faq-ask-btn">
+					ASK NEW
+				</div>
 			</div>
 
 		</header>
