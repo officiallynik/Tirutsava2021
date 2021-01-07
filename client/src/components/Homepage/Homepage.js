@@ -55,7 +55,7 @@ console.log("crntmode",currentMode)
      return (
             <div className={`home-whole-${currentMode}`}> 
                 <div className="Auto-swipe row">
-                    <dicv className={`circle-${currentMode}`}></dicv>
+                    <div className={`circle-${currentMode}`}></div>
                     <div className="col-sm-6 hm">
                         <div className="cont-home">
                             <div className={`head-home-${currentMode}`}>Tirutsava</div>
