@@ -15,7 +15,7 @@
 .signIn-Heading-registration{
     color: #DB4437;
     /* font-weight: 500; */
-    margin-left: 5%;
+    /* margin-left: 5%; */
     font-family: 'Roboto Slab',sans-serif;
     width: 100%;
    
@@ -35,4 +35,10 @@
 
 .modal-body-registration{
     padding: 5%;
+    padding-top: 0%;
+}
+
+.logo-registration{
+    width: 50%;
+    
 }

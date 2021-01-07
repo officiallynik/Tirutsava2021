@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import GoogleButton from 'react-google-button'
 import "./Registration.css"
+import TirutsavaLogo from "./tirutsava.png"
 import { MDBContainer, MDBBtn, MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter } from 'mdbreact';
 
 class Registration extends Component {
@@ -21,10 +22,13 @@ class Registration extends Component {
         {/* MODAL */}
         <MDBModal className="registration" isOpen={this.state.modal} toggle={this.toggle}    >
           <MDBModalHeader toggle={this.toggle}>
-            <h5 className="signIn-Heading-registration">Sign In to Tirutsava Brand</h5>
+            
+            <img className="logo-registration" src={TirutsavaLogo}/>
+            {/* <h5 className="signIn-Heading-registration">Sign In to Tirutsava Brand</h5> */}
             </MDBModalHeader>
           <MDBModalBody>
             <div className="modal-body-registration">
+              <p className="signIn-Heading-registration">Sign In to Tirutsava Brand</p>
               <p className="secondary-Heading-registration">Log in with your Google account to access all the goodies!</p>
               <GoogleButton
                 
