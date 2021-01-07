@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Burger from "./Burger";
 import "./Toolbar.css";
-import logo from "../../images/logo/tirutsava_logo.png";
 
 const Toolbar = props => (
   <div className="toolbar">
@@ -11,7 +10,7 @@ const Toolbar = props => (
       <div className="toolbar__logo">
         <a className="navbar-brand" href="/">
           <img
-            src={logo}
+            src="/logo/tirutsava_logo.png"
             style={{ height: "100%", width: "324px" }}
             alt="Tirutsava Logo"
           />
