@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+
+.contact-page-main {
+    font-family: 'Paytone One', sans-serif;
+    overflow-x: hidden;
+}
+
+.image-div{
+    height: auto;
+    align-items: center;
+    display: flex;
+    padding:  10%;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.team-name-ContactUs{
+    background-color: rgb(30, 21, 52);
+    display: block;
+    color: white;
+    font-size: 1.7vw;
+    border: none;
+    width:fit-content;
+    padding-left:  7vw;
+    padding-right: 10vw;
+    margin: 1.5% 0;
+    text-align: start;
+   
+    text-shadow: 5px 5px 5px rgba(0,0,0,.5);
+    
+}
+/* a:not([href]):not([tabindex]), a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover{
+    color: #3BB5D3;
+    text-shadow: 5px 5px 5px rgba(0,0,0,.5);
+} */
+.scroll-spy-ContactUs a:hover{
+    color: #3BB5D3 !important;
+}
+
+.active-ContactUs{
+    color: #FE9A2B !important;;
+}
+
+.active-ContactUs:hover {
+    color: #FE9A2B !important;;
+    
+  }
+
+.scroll-spy-ContactUs{
+    position: fixed;
+    left: 5vw;
+    top: 14vh;
+    
+
+    /* width: 40vw; */
+    
+}
+
+
+.team-heading-ContactUs{
+    width: fit-content;
+    padding: 3vh 7vw;
+    margin: 0;
+}
+
+@media (max-width:990px){
+    .scroll-spy-ContactUs{
+        display: none;
+    }
+}
