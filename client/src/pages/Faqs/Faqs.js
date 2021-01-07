@@ -2,9 +2,6 @@ import React, { useState } from "react";
 import Header from "./Header";
 import FAQ from "./Faq";
 import "./Faqs.css";
-import { MDBContainer, MDBJumbotron } from "mdbreact";
-import { Link } from "react-router-dom";
-import Search from "./searchbar/search";
 
 const Faqs = () => {
 	const [faqs, setfaqs] = useState([

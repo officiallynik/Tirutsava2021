@@ -1,10 +1,9 @@
 import React from "react";
-import "./ContactUs.css"
-import Scrollspy from 'react-scrollspy'
-import { Link, animateScroll as scroll } from "react-scroll";
-import { MDBContainer, MDBListGroup, MDBListGroupItem, MDBRow, MDBCol } from "mdbreact";
+import "./ContactUs.css";
+import { Link } from "react-scroll";
+import { MDBListGroup, MDBRow, MDBCol } from "mdbreact";
 import TeamDetails from "./TeamDetails/TeamDetails";
-
+import Team from "./Team";
 
 class ContactUs extends React.Component {
 
@@ -53,13 +52,13 @@ class ContactUs extends React.Component {
 
 						<div>
 
-							<TeamDetails sectionName="FEST HEADS" />
-							<TeamDetails sectionName="CONTENT DEVELOPMENT" />
-							<TeamDetails sectionName="EVENT MANAGEMENT" />
-							<TeamDetails sectionName="GRAPHICS AND DESIGN" />
-							<TeamDetails sectionName="MARKETING" />
-							<TeamDetails sectionName="SPONSORSHIP" />
-							<TeamDetails sectionName="WEB DEVELOPMENT" />
+							<TeamDetails sectionName="FEST HEADS" heads={Team.overall} />
+							<TeamDetails sectionName="CONTENT DEVELOPMENT" heads={Team.content} />
+							<TeamDetails sectionName="EVENT MANAGEMENT" heads={Team.event} />
+							<TeamDetails sectionName="GRAPHICS AND DESIGN" heads={Team.design} />
+							<TeamDetails sectionName="MARKETING" heads={Team.marketing} />
+							<TeamDetails sectionName="SPONSORSHIP" heads={Team.sponsorship} />
+							<TeamDetails sectionName="WEB DEVELOPMENT" heads={Team.web} />
 
 						</div>
 					</MDBCol>

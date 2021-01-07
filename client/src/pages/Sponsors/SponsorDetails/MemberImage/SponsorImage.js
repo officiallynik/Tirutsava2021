@@ -1,5 +1,5 @@
 import React from 'react';
-import { MDBMask, MDBView, MDBContainer, MDBRow, MDBCol,MDBBtn,MDBIcon } from "mdbreact";
+import { MDBMask, MDBView,MDBBtn,MDBIcon } from "mdbreact";
 import "./SponsorImage.css"
 
 

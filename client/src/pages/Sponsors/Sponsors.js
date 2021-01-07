@@ -1,8 +1,8 @@
 import React from "react";
 import "./Sponsors.css"
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 import { MDBListGroup, MDBRow, MDBCol } from "mdbreact";
-import TeamDetails from "./TeamDetails/SponsorDetail";
+import TeamDetails from "./SponsorDetails/SponsorDetail";
 
 const Sponsors = () => {
 
