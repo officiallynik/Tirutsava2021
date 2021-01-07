@@ -1,16 +1,18 @@
 import './App.css';
-import '@fortawesome/fontawesome-free/css/all.min.css'; import
-'bootstrap-css-only/css/bootstrap.min.css'; import
-'mdbreact/dist/css/mdb.css';
-import ContactUs from './pages/ContactUs/ContactUs';
-import Faqs from './pages/Faqs/Faqs';
-import Sponsors from './pages/Sponsors/Sponsors';
+import '@fortawesome/fontawesome-free/css/all.min.css'; 
+import 'bootstrap-css-only/css/bootstrap.min.css'; 
+import 'mdbreact/dist/css/mdb.css';
+
+import { BrowserRouter as Router } from 'react-router-dom';
+import Routes from './Routes';
 
 function App() {
   return (
-    <div className="App">
-      <ContactUs />
-    </div>
+    <Router>
+      <div className="App">
+        <Routes />
+      </div>
+    </Router>
   );
 }
 
