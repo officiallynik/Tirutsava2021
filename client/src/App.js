@@ -9,7 +9,7 @@ import Sponsors from './pages/Sponsors/Sponsors';
 function App() {
   return (
     <div className="App">
-      <Sponsors />
+      <ContactUs />
     </div>
   );
 }

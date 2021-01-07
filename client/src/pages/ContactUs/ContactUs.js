@@ -18,7 +18,7 @@ class ContactUs extends React.Component {
 
 	render() {
 		return (
-			<div style={{overflowX: "hidden"}}>
+			<div className="contact-page-main">
 				<MDBRow>
 
 					<MDBCol lg="5" >

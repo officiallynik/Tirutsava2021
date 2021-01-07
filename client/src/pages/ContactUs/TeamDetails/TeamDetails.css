@@ -9,11 +9,6 @@
 
 .team-name-TeamDetails{
     display: block;
-    color: #FE9A2B !important;;
-    
-    
-    font-family: 'Maven Pro', sans-serif;
-    
-   
+    color: #FE9A2B !important;
     text-shadow: 5px 5px 5px rgba(0,0,0,.5);
 }
