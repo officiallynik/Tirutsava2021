@@ -9,7 +9,7 @@ const MemberImage=(props)=>{
         <div className="root-MemberImage rounded">
         <MDBView hover zoom>
               <img
-                src={props.url || "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=80"}
+                src={props.url || "/heads/dummy_person.png"}
                 className="img-fluid memberImage rounded"
                 alt=""
               />
