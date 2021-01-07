@@ -24,16 +24,16 @@ const Toolbar = props => (
             <Link to="/proshows">PROSHOWS</Link>
           </li>
           <li>
-            <Link to="/aboutus">LEGACY</Link>
+            <Link to="/events">EVENTS</Link>
           </li>
           <li>
-            <Link to="/events">EVENTS</Link>
+            <Link to="/contactus">CONTACT US</Link>
           </li>
           <li>
             <Link to="/sponsors">SPONSORS</Link>
           </li>
           <li>
-            <Link to="/faq">FAQs</Link>
+            <Link to="/faqs">FAQs</Link>
           </li>
         </ul>
       </div>

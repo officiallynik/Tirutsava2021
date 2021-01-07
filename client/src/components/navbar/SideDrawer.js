@@ -27,16 +27,16 @@ const SideDrawer = props => {
           <Link to="/proshows">PROSHOWS</Link>
         </li>
         <li className="move" onClick={props.click}>
-          <Link to="/aboutus">LEGACY</Link>
+          <Link to="/events">EVENTS</Link>
         </li>
         <li className="move" onClick={props.click}>
-          <Link to="/events">EVENTS</Link>
+          <Link to="/contactus">CONTACT US</Link>
         </li>
         <li className="move" onClick={props.click}>
           <Link to="/sponsors">SPONSORS</Link>
         </li>
         <li className="move" onClick={props.click}>
-          <Link to="/faq">FAQs</Link>
+          <Link to="/faqs">FAQs</Link>
         </li>
       </ul>
     </nav>

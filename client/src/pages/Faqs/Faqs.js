@@ -139,7 +139,7 @@ const Faqs = () => {
 	return (
 		<div className="faqs-screen">
 			<div className="bcgrnd">
-				<div style={{position: "sticky", top: "0px", backgroundColor: "rgb(30, 21, 52)", zIndex: 100}}>
+				<div style={{backgroundColor: "rgb(30, 21, 52)"}}>
 					<Header handleChange={handleChange} />
 				</div>
 
