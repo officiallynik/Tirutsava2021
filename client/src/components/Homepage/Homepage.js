@@ -6,6 +6,7 @@ import Games from './Games';
 import ProgressBar from '../progressBar/progressBar';
 import Night from './Night';
 import Rellax from 'rellax';
+import HomepagePhone from './../HomepagePhone/homepage.phone';
 var rellax = new Rellax('.rellax');
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
@@ -46,7 +47,7 @@ var onClickOnline = () => {
 
 const [props, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 950, friction: 140}}))
 
-var currentMode = !((new Date()).getHours() < 18 &&
+var currentMode = ((new Date()).getHours() < 18 &&
 (new Date()).getHours() >= 6) ? 
 'day-mode' : 
 'night-mode'
@@ -83,6 +84,8 @@ if(width>1400){
 var inpx = Math.floor(newwidth)
 console.log(inpx)
      return (
+         <div>
+             <div className="desktop-screen">
             <div className={`home-whole-${currentMode}`}> 
                 <div className="Auto-swipe row">
                   
@@ -141,6 +144,9 @@ console.log(inpx)
                         </div>
                 </div>
             </div>
-        )
-    
+</div>
+<div className="phone-screen"><HomepagePhone></HomepagePhone></div>
+</div>
+           
+     )
 }
