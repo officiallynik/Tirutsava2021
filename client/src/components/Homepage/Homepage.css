@@ -13,7 +13,7 @@
 .home-whole-day-mode{
     width:100%;
     height: 100vh;
-    background-color:rgb(250,235,215);
+    background-color:rgb(240,255,240);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,7 +55,7 @@
     font-family: "samarkan";
     text-align: center;
     font-size: 9em;
-    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+    background: linear-gradient(45deg, #f3ec78, #af4261);
   background-clip: text;
   -webkit-text-fill-color: transparent;
     text-align: left;
@@ -95,19 +95,26 @@ box-shadow:         5px 5px 2px 0px black;
 
 .circle-night-mode{
     position: absolute;
+    bottom: 0;
     right:0;
-    width:100%;
-    height:100%;
-    clip-path: circle(600px at right 800px);
+    border:2px solid transparent;
+  background-color: #10A5F9;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 0;
+  border-bottom-left-radius:0 ;
+  border-bottom-right-radius: 0;
     background-color:#171515; 
 }
 .circle-day-mode{
     position: absolute;
+    bottom: 0;
     right:0;
-    width:100%;
-    height:100%;
-    clip-path: circle(600px at right 800px);
-    background-color:rgb(135,206,250);
+  border:2px solid transparent;
+  background-color: #10A5F9;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 0;
+  border-bottom-left-radius:0 ;
+  border-bottom-right-radius: 0;
 }
 
 .event-detail-night-mode{
@@ -138,13 +145,26 @@ box-shadow:         5px 5px 2px 0px black;
    -webkit-text-fill-color: transparent;
 }
 
-.cont-event img{
+.music-img{
     z-index:10000;
     height: 500px;
     position: absolute;
     right: 75px;
-    top:60px;
-    
+    top:60px;  
+}
+.technical-img{
+    z-index:10000;
+    height: 500px;
+    position: absolute;
+    right: 75px;
+    top:60px;  
+}
+.online-img{
+    z-index:10000;
+    height: 500px;
+    position: absolute;
+    right: 75px;
+    top:60px;  
 }
 
 
@@ -161,6 +181,8 @@ box-shadow:         5px 5px 2px 0px black;
 .fas-night-mode{
     margin-top:25px;
     padding: 10px;
+    position: relative;
+    left:25px;
     width: fit-content;
     display: block;
     background: white;
@@ -176,6 +198,8 @@ box-shadow:         5px 5px 2px 0px black;
     display: block;
     background: white;
     background-clip: text;
+    position: relative;
+    left:25px;
     -webkit-text-fill-color: transparent;
     
 }
@@ -236,23 +260,19 @@ box-shadow:         5px 5px 2px 0px black;
 .live-home{
     display: flex;
     justify-content:center;
-    width:120px;
     align-items: center;
     padding: 0 10px;
+    z-index: 10000;
     overflow: hidden;
-
     position: relative;
-    right:50px;
+    left:5px;
     top:10px;
-
-  
 }
 
 .sig-l-home{
     position: relative;
     transform: rotate(-90deg);
     animation:animate2 4s linear infinite;
-
 }
 
 
@@ -318,53 +338,84 @@ box-shadow:         5px 5px 2px 0px black;
 }
 
 @media(max-width:1243px) and (min-width:1105px){
-    .head-home{
+    .head-home-night-mode{
         font-size: 8em;
     }
 
-    .head-home-cont{
+    .head-home-day-mode{
+        font-size: 8em;
+    }
+
+    .head-home-cont-night-mode{
         font-size: 23px;
     }
 
-    .circle-night-mode{
-        position: absolute;
-        right:0;
-        width:100%;
-        height:100%;
-        clip-path: circle(500px at right 700px);
-        background-color: black;
-        
+    .head-home-cont-day-mode{
+        font-size: 23px;
     }
 
-    .cont-event img{
+
+    .music-img{
         width:400px;
         height: 400px;
     }
     
-}
-
-@media(max-width:1105px) and (min-width:974px) {
-    .head-home{
-        font-size: 7em;
-    }
-    .head-home-cont{
-        font-size: 22px;
-    }
-    .circle-night-mode{
-        position: absolute;
-        right:0;
-        width:100%;
-        height:100%;
-        clip-path: circle(450px at right 650px);
-        background-color: black;
-        
-    }
-
-    .cont-event img{
+    .technical-img{
         width:400px;
         height: 400px;
     }
 
+    .online-img{
+        width:400px;
+        height: 400px;
+    }
+
+
+    
+}
+
+@media(max-width:1105px) and (min-width:974px) {
+    .head-home-night-mode{
+        font-size: 7em;
+    }
+    
+    .head-home-day-mode{
+        font-size: 7em;
+    }
+
+    .head-home-cont-day-mode{
+        font-size: 22px;
+    }
+
+    .head-home-cont-night-mode{
+        font-size: 22px;
+    }
+
+
+    .music-img{
+        width:400px;
+        height: 400px;
+    }
+
+    .technical-img{
+        width:400px;
+        height: 400px;
+    }
+
+    .online-img{
+        width:400px;
+        height: 400px;
+    }
+
+    .fas-day-mode{
+        position: relative;
+        left: 30px;
+    }
+    
+    .fas-night-mode{
+        position: relative;
+        left: 30px;
+    }
     
 .hm{
     width:100%;
@@ -378,65 +429,187 @@ box-shadow:         5px 5px 2px 0px black;
 }
 
 @media(max-width:974px) and (min-width:852px){
-    .head-home{
+    .head-home-night-mode{
         font-size: 6em;
     }
 
-    .head-home-cont{
+    .head-home-day-mode{
+        font-size: 6em;
+    }
+
+    .head-home-cont-day-mode{
         font-size: 20px;
     }
-    .cont-event img{
-        width:350px;
-        height: 350px;
-        position: relative;
-        top: 100px;
-        left: 5px;
-    }
 
+    .head-home-cont-night-mode{
+        font-size: 20px;
+    }
   
-    .circle-night-mode{
-        position: absolute;
-        right:0;
-        width:100%;
-        height:100%;
-        clip-path: circle(450px at right 650px);
-        background-color: black;
-        
-    }
 
-    .cont-event img{
+  .logo-social{
+      position: absolute;
+      bottom: 90px;
+      right: 0;
+  }
+
+  .fas-day-mode{
+    position: relative;
+    left: 30px;
+}
+
+.fas-night-mode{
+    position: relative;
+    left: 30px;
+}
+
+    .music-img{
         width:400px;
         height: 400px;
         position: relative;
+        top:100px;
+        right: 30px;
+    }
+
+    .technical-img{
+        width:400px;
+        height: 400px;
+        position: relative;
+        top:100px;
+        right: 30px;
+    }
+
+    .online-img{
+        width:400px;
+        height: 400px;
+        position: relative;
+        top:100px;
         right: 30px;
     }
 
 }
 
-@media(max-width:852px) and (min-width:768px){
-    .head-home{
+
+@media(max-width:852px) and (min-width:825px){
+    .head-home-night-mode{
         font-size: 5.5em;
     }
 
-    .head-home-cont{
-        font-size: 20px;
-    }
-    .circle-night-mode{
-        position: absolute;
-        right:0;
-        width:100%;
-        height:100%;
-        clip-path: circle(342px at right 614px);
-        background-color: black;
-        
+    .head-home-day-mode{
+        font-size: 5.5em;
     }
 
-    .cont-event img{
-        width:320px;
-        height: 320px;
+    .head-home-cont-night-mode{
+        font-size: 20px;
+    }
+
+    .head-home-cont-day-mode{
+        font-size: 20px;
+    }
+
+
+    .music-img{
+        width:400px;
+        height: 400px;
         position: relative;
-        top: 210px;
-        left: 20px;
+        top:100px;
+        right: 30px;
+    }
+    .technical-img{
+        width:400px;
+        height: 400px;
+        position: relative;
+        top:100px;
+        right: 35px;
+    }
+    .online-img{
+        width:400px;
+        height: 400px;
+        position: relative;
+        top:100px;
+        right: 45px;
+    }
+
+    .logo-social{
+        position: absolute;
+        bottom: 90px;
+        right: 0;
+    }
+
+    .fas-day-mode{
+        position: relative;
+        left: 30px;
+    }
+    
+    .fas-night-mode{
+        position: relative;
+        left: 30px;
+    }
+
+    .event-detail{
+        position: absolute;
+        font-size: 35px;
+        right:150px;
+    }
+
+}
+
+@media(max-width:825px) and (min-width:768px){
+    .head-home-night-mode{
+        font-size: 5.5em;
+    }
+
+    .head-home-day-mode{
+        font-size: 5.5em;
+    }
+
+    .head-home-cont-night-mode{
+        font-size: 20px;
+    }
+
+    .head-home-cont-day-mode{
+        font-size: 20px;
+    }
+
+
+    .music-img{
+        width:350px;
+        height: 350px;
+        position: relative;
+        top:150px;
+        right: 0;
+    }
+
+    .technical-img{
+        width:350px;
+        height: 350px;
+        position: relative;
+        top:150px;
+        right: 15px;
+    }
+
+    .online-img{
+        width:350px;
+        height: 350px;
+        position: relative;
+        top:150px;
+        right: 35px;
+    }
+
+    .logo-social{
+        position: absolute;
+        bottom: 50px;
+        right: 0;
+      
+    }
+
+    .fas-day-mode{
+        position: relative;
+        left: 30px;
+    }
+    
+    .fas-night-mode{
+        position: relative;
+        left: 30px;
     }
 
     .event-detail{
