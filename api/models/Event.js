@@ -5,10 +5,6 @@ const EventSchema = mongoose.Schema({
 		type: String,
 		required: true
 	},
-	eventId: {
-		type: Number,
-		default: 0
-	},
 	typeOfEvent: {
 		type: Number,
 		required: true
@@ -20,10 +16,6 @@ const EventSchema = mongoose.Schema({
 	participants: {
 		type: Array,
 		default: []
-	},
-	entryfee: {
-		type: Number,
-		required: true
 	},
 	entryfee: {
 		type: Number,
@@ -55,4 +47,4 @@ const EventSchema = mongoose.Schema({
 	}
 });
 
-module.exports = Event = mongoose.model('Event', EventSchema);
+module.exports = mongoose.model('events', EventSchema);

@@ -2,9 +2,8 @@ const express = require('express');
 const router = express.Router();
 const Insta = require('instamojo-nodejs');
 const loggedin = require('../services/middleware');
-const GoogleUser = require('../models/GoogleUser');
-const LocalUser = require('../models/LocalUser');
-const Event = require('../models/Event.js');
+const User = require('../models/User');
+const Event = require('../models/Event');
 
 const url = require('url');
 

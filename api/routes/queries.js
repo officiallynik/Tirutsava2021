@@ -26,7 +26,7 @@ router.post('/create', loggedin ,(req,res) => {
   });
   newQuery.save()
   .then(ques => res.json(ques))
-  .catch(err => res.json({"error":"Somethin went wrong in queries/create"}));
+  .catch(err => res.json({"error": "Something went wrong in queries/create"}));
 });
 
 
