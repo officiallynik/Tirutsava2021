@@ -90,8 +90,15 @@
   -webkit-text-fill-color: transparent;
 }
 
+.login__toggle-button {
+  position: fixed;
+  right: 8px;
+  top: calc((10vh - 24px)/2);
+  z-index: 10;
+}
+
 @media (max-width: 1023px) {
-  .toolbar_navigation-items {
+  .hidden-nav {
     display: none;
   }
   .toolbar__logo {
@@ -101,6 +108,9 @@
 
 @media (min-width: 1023px) {
   .toolbar__toggle-button {
+    display: none;
+  }
+  .login__toggle-button {
     display: none;
   }
 }
@@ -119,3 +129,4 @@
 #navit li:hover a {
   color: #df42b1;
 }
+
