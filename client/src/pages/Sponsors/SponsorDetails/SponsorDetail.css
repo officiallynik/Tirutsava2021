@@ -1,0 +1,15 @@
+.root-SponsorDetail{
+    height: auto;
+    align-items: center;
+    display: flex;
+    padding:  10%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.team-name-SponsorDetail{
+    display: block;
+    color: #FE9A2B !important;;
+   
+    text-shadow: 5px 5px 5px rgba(0,0,0,.5);
+}
