@@ -1,24 +1,12 @@
 const mongoose = require('mongoose');
 
 const UserSchema = mongoose.Schema({
-    completedRegistration: {
-        type: Boolean,
-        default: false
-    },
     googleId: {
         type: String,
         required: true
     },
-    name: {
-        type: String,
-        required: true
-    },
-    email: {
-        type: String,
-        required: true
-    },
     dob: {
-        type: Date
+        type: String
     },
     institute: {
         type: String,

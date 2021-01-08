@@ -1,48 +1,92 @@
 const express = require('express');
 const router = express.Router();
-const passport = require('passport');
-const loggedin = require('../services/middleware');
 const User = require('../models/User');
+const verifyToken = require('../services/auth');
 
-router.get('/status', (req, res) => {
-	if (req.isAuthenticated())
-		res.send({ loggedin: true });
-	else
-		res.send({ loggedin: false });
-});
+// router.get('/status', (req, res) => {
+// 	if (req.isAuthenticated())
+// 		res.send({ loggedin: true });
+// 	else
+// 		res.send({ loggedin: false });
+// });
 
-router.get('/google', passport.authenticate('google', {
-	scope: ['profile', 'email']
-}));
+router.post('/login', async (req, res) => {
+	const { tokenId, googleId } = req.body;
+	const verifyRes = await verifyToken(tokenId);
+	// console.log(verifyRes);
 
-router.post('/register', loggedin, (req,res) => {
-	var user = req.session.passport.user;
-	// console.log("[user]", user);
-	if(user){
-		User.updateOne({_id: user}, {
-			$set: {
-				college: req.body.college,
-				city: req.body.city,
-				state: req.body.state,
-				phone: req.body.phone,
-				gender: req.body.gender,
-				dob: req.body.dob,
-				completedRegistration: true
-			}
-		})
-		.then(u => {
-			res.send({googleAuth: true, completedRegistration: true})
-		})
-		.catch(err=> res.send({googleAuth: true, completedRegistration: false}));
-	} else {
-		res.send({googleAuth: false});
+	if(verifyRes[0]){
+		const user = await User.findOne({googleId: googleId});
+		// console.log(user);
+		if(!user) {
+			res.json({
+				newUser: true
+			});
+		}
+		else {
+			res.json(user);
+		}
 	}
+	else {
+		res.status(400).json({ err: "google verification failed" });
+	}
+	
 });
 
-router.get('/logout', loggedin, (req, res) => {
-	req.logout();
-	res.send({ logout: true });
+router.post('/register', async (req, res) => {
+	const { googleId, dob, institute, city, state, phone, gender } = req.body;
+
+	try {
+		const newUser = await new User({
+			googleId,
+			dob,
+			institute,
+			city,
+			state,
+			phone,
+			gender
+		}).save(); 
+
+		res.json({msg: "registration successfull", newUser});
+	} 
+	catch (error) {
+		res.status(400).json({err: "registration failed"});
+	}
+
 });
+
+// router.get('/google', passport.authenticate('google', {
+// 	scope: ['profile', 'email']
+// }));
+
+// router.post('/register', loggedin, (req,res) => {
+// 	var user = req.session.passport.user;
+// 	// console.log("[user]", user);
+// 	if(user){
+// 		User.updateOne({_id: user}, {
+// 			$set: {
+// 				college: req.body.college,
+// 				city: req.body.city,
+// 				state: req.body.state,
+// 				phone: req.body.phone,
+// 				gender: req.body.gender,
+// 				dob: req.body.dob,
+// 				completedRegistration: true
+// 			}
+// 		})
+// 		.then(u => {
+// 			res.send({googleAuth: true, completedRegistration: true})
+// 		})
+// 		.catch(err=> res.send({googleAuth: true, completedRegistration: false}));
+// 	} else {
+// 		res.send({googleAuth: false});
+// 	}
+// });
+
+// router.get('/logout', loggedin, (req, res) => {
+// 	req.logout();
+// 	res.send({ logout: true });
+// });
 
 // router.get('/dashboard', loggedin, (req, res) => {
 // 	var person = {};
@@ -154,12 +198,12 @@ router.get('/logout', loggedin, (req, res) => {
 // });
 
 // Call back Route
-router.get('/google/callback', passport.authenticate('google'), (req, res) => {
-	// res.redirect('http://tirutsava.com/dashboard'); //'http://localhost'
-	// console.log("[user]", req.user);
-	res.json({
-		completedRegistration: req.user.completedRegistration
-	});
-});
+// router.get('/google/callback', passport.authenticate('google'), (req, res) => {
+// 	// res.redirect('http://tirutsava.com/dashboard'); //'http://localhost'
+// 	// console.log("[user]", req.user);
+// 	res.json({
+// 		completedRegistration: req.user.completedRegistration
+// 	});
+// });
 
 module.exports = router;
