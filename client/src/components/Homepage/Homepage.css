@@ -630,8 +630,10 @@ box-shadow:         5px 5px 2px 0px black;
         display: none;
     }
 
-    .phone-mode{
+    .phone-screen{
         display: block;
+        width: 100%;
+        height: 100%;
     }
 
 

@@ -1,21 +1,33 @@
 @import url(//db.onlinewebfonts.com/c/7e96eba370659b4e4563309dc4ebb33f?family=Samarkan);
 @font-face {font-family: "Samarkan"; src: url("//db.onlinewebfonts.com/t/7e96eba370659b4e4563309dc4ebb33f.eot"); src: url("//db.onlinewebfonts.com/t/7e96eba370659b4e4563309dc4ebb33f.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/7e96eba370659b4e4563309dc4ebb33f.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/7e96eba370659b4e4563309dc4ebb33f.woff") format("woff"), url("//db.onlinewebfonts.com/t/7e96eba370659b4e4563309dc4ebb33f.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/7e96eba370659b4e4563309dc4ebb33f.svg#Samarkan") format("svg"); }
 
-
 .phone-body-day-mode{
-    width:110%;
-    background-color:wheat;
-    height: 150vh;
+    background-color:whitesmoke;
+    overflow-x: hidden;
     position: relative;
 }
 
 .phone-body-night-mode{
-    width:110%;
-    background-color: rgb(31,52,21);
-    height: 150vh;
+    background-color:rgb(30,21,52);
+    overflow-x: hidden;
     position: relative;
 }
 
+.events-phone-box1{
+    height: 70vh;
+}
+
+
+.img-class{
+    width: 70%;
+    height: 65vh;
+}
+
+.img-class img{
+    width:60%;
+    height: 100%;
+    margin:auto;
+}
 
 .learn-more{
     cursor: pointer;
@@ -46,46 +58,31 @@
     text-align: center;
     justify-content: center;
 }
-.texts{
+
+.texts-day-mode{
+    font-family: 'Work Sans', sans-serif;
+    color: black;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.texts-night-mode{
     font-family: 'Work Sans', sans-serif;
     color: white;
     padding: 20px;
     font-size: 20px;
 }
 
-.social-media-phone{
-    display: flex;
-    flex-direction: row;
-    font-size: 50px;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 10px;
-    position: absolute;
-    bottom:5px;
-    z-index: 1px;
-}
 .events-phone-box{
     height: 400px;
     margin-left: 10px;
+
 }
 
-.images-phone-slider{
+.social-phone{
     width: 100%;
-}
-
-.mr-2{
-    margin: 0 20px;
-}
-
-/* .half-circle{
-    height: 300px;
-    width: 300px;
-    border-radius: 50%;
-    background-color: black; 
-}
-
-.circle-wrapper{
     position: absolute;
     bottom: 0;
-    z-index: -1;
-} */
+  
+}
+
