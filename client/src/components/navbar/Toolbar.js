@@ -36,9 +36,14 @@ const Toolbar = props => (
 						<Link to="/faqs">FAQs</Link>
 					</li>
 					<Registration
-						btn={
+						btnLogin={
 							<li>
 								<Link to="#">LOGIN</Link>
+							</li>
+						}
+						btnLogout={
+							<li>
+								<Link to="#">LOGOUT</Link>
 							</li>
 						}
 					/>
@@ -51,9 +56,14 @@ const Toolbar = props => (
 
 			<div className="login__toggle-button toolbar_navigation-items">
 				<Registration
-					btn={
+					btnLogin={
 						<li>
 							<Link to="#">LOGIN</Link>
+						</li>
+					}
+					btnLogout={
+						<li>
+							<Link to="#">LOGOUT</Link>
 						</li>
 					}
 				/>

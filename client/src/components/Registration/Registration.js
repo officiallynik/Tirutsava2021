@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import GoogleButton from 'react-google-button';
 import "./Registration.css";
 import { MDBContainer, MDBModal, MDBModalBody, MDBModalHeader } from 'mdbreact';
-import GoogleLogin from 'react-google-login';
+import GoogleLogin, { GoogleLogout } from 'react-google-login';
 import config from '../../config/keys';
 import axios from 'axios';
 import { TextField } from '@material-ui/core';
@@ -11,6 +11,8 @@ import Autocomplete from '@material-ui/lab/Autocomplete';
 import list from './list';
 import DateFnsUtils from '@date-io/date-fns';
 import { Button } from 'react-bootstrap';
+import * as actions from '../../store/actions';
+import { connect } from 'react-redux';
 
 class Registration extends Component {
 	state = {
@@ -22,6 +24,7 @@ class Registration extends Component {
 		gender: null,
 		dob: null,
 		googleId: null,
+		tokenId: null,
 		dob: new Date('2000-01-01'),
 		loading: false,
 		phone: null
@@ -37,7 +40,8 @@ class Registration extends Component {
 		console.log(res);
 		
 		this.setState({
-			googleId: res.googleId 
+			googleId: res.googleId,
+			tokenId: res.tokenId 
 		})
 
 		axios.post("/auth/login", {
@@ -52,7 +56,12 @@ class Registration extends Component {
 					})
 				}
 				else {
-					console.log(res.data)
+					console.log(res.data);
+					this.props.authSuccessCallback(this.state.tokenId, this.state.googleId);
+					this.setState({
+						modal: false
+					});
+					alert("Logged In Successfully");
 				}
 			})
 			.catch(err => {
@@ -78,6 +87,11 @@ class Registration extends Component {
 		axios.post("/auth/register", data)
 		.then(res => {
 			console.log(res);
+			this.props.authSuccessCallback(this.state.tokenId, this.state.googleId);
+			this.setState({
+				modal: false
+			});
+			alert("Logged In Successfully");
 		})
 		.catch(err => {
 			console.log(err);
@@ -98,7 +112,6 @@ class Registration extends Component {
 							disabled={renderProps.disabled}
 						/>
 					)}
-
 					onSuccess={this.responseGoogleSuccess}
 					onFailure={this.responseGoogleFailure}
 					cookiePolicy={'single_host_origin'}
@@ -127,6 +140,16 @@ class Registration extends Component {
 		this.setState({
 		  institute: values
 		})
+	}
+
+	handleLogoutSuccess = (res) => {
+		// console.log(res);
+		this.props.authLogoutCallback();
+		alert("Logout successfull");
+	}
+
+	handleLogoutFailure = (err) => {
+		console.log(err);
 	}
 
 	render() {
@@ -266,27 +289,57 @@ class Registration extends Component {
 
 		return (
 			<div>
-				<div onClick={this.toggle}>{this.props.btn}</div>
-				<MDBContainer >
-					{/* BUTTON */}
-					{/* MODAL */}
-					<MDBModal className="registration" isOpen={this.state.modal} toggle={this.toggle}    >
-						<MDBModalHeader toggle={this.toggle}>
+				{
+					!this.props.isAuthenticated?
+					<>
+						<div onClick={this.toggle}>{this.props.btnLogin}</div>
+						<MDBContainer >
+							{/* BUTTON */}
+							{/* MODAL */}
+							<MDBModal className="registration" isOpen={this.state.modal} toggle={this.toggle}    >
+								<MDBModalHeader toggle={this.toggle}>
 
-							<img className="logo-registration" src="/logo/tirutsava_big.png" />
-							{/* <h5 className="signIn-Heading-registration">Sign In to Tirutsava Brand</h5> */}
-						</MDBModalHeader>
+									<img className="logo-registration" src="/logo/tirutsava_big.png" />
+									{/* <h5 className="signIn-Heading-registration">Sign In to Tirutsava Brand</h5> */}
+								</MDBModalHeader>
 
-						{this.loginArea}
+								{this.loginArea}
 
-						{/* <MDBModalFooter>
-            <MDBBtn color="secondary" onClick={this.toggle}>Close</MDBBtn>
-            <MDBBtn color="primary">Save changes</MDBBtn>
-          </MDBModalFooter> */}
-					</MDBModal>
-				</MDBContainer>
+								{/* <MDBModalFooter>
+					<MDBBtn color="secondary" onClick={this.toggle}>Close</MDBBtn>
+					<MDBBtn color="primary">Save changes</MDBBtn>
+				</MDBModalFooter> */}
+							</MDBModal>
+						</MDBContainer>
+					</>:
+					<GoogleLogout
+						clientId={config.googleClientID}
+						render={renderProps => (
+							<div disabled={renderProps.disabled} onClick={renderProps.onClick}>
+								{this.props.btnLogout}
+							</div>
+						)}
+						buttonText="Logout"
+						onLogoutSuccess={this.handleLogoutSuccess}
+						onFailure={this.handleLogoutFailure}
+					/>
+				}
 			</div>
 		);
 	}
 }
-export default Registration;
+
+const mapStateToProps = (state) => {
+	return {
+		isAuthenticated: state.auth.tokenId !== null
+	}
+}
+
+const mapDispatchToProps = dispatch => {
+	return {
+		authSuccessCallback: (tokenId, googleId) => dispatch(actions.authSuccess(tokenId, googleId)),
+		authLogoutCallback: () => dispatch(actions.logout())
+	}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Registration);
