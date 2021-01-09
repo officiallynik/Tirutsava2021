@@ -1,10 +1,6 @@
 import { useSpring ,animated } from 'react-spring';
 import React,  { useState , useEffect } from 'react'
 import './Homepage.css'
-import Music from './Music.js'
-import Games from './Games';
-import ProgressBar from '../progressBar/progressBar';
-import Night from './Night';
 import Rellax from 'rellax';
 import HomepagePhone from './../HomepagePhone/homepage.phone';
 var rellax = new Rellax('.rellax');
