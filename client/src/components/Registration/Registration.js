@@ -15,6 +15,7 @@ import * as actions from '../../store/actions';
 import { connect } from 'react-redux';
 
 class Registration extends Component {
+
 	state = {
 		modal: false,
 		isRegistration: false,
@@ -53,7 +54,7 @@ class Registration extends Component {
 				if(res.data.newUser) {
 					this.setState({
 						isRegistration: true
-					})
+					});
 				}
 				else {
 					console.log(res.data);

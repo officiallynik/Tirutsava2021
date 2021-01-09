@@ -22,7 +22,9 @@ function App(props) {
 
 	const responseGoogleSuccess = (res) => {
 		// console.log(res);
-		props.autoSignIn(res.tokenId, res.googleId);
+		if(!!localStorage.getItem("tokenId")){
+			props.autoSignIn(res.tokenId, res.googleId);
+		}
 	}
 
 	const responseGoogleFailure = (err) => {
@@ -33,19 +35,19 @@ function App(props) {
 		<div className="App">
 			<div style={{ display: "none" }}>
 				<GoogleLogin
-						clientId={config.googleClientID}
-						render={renderProps => (
-							<GoogleButton
-								className="google-Button-registration"
-								onClick={renderProps.onClick}
-								disabled={renderProps.disabled}
-							/>
-						)}
-						isSignedIn={true}
-						onSuccess={responseGoogleSuccess}
-						onFailure={responseGoogleFailure}
-						cookiePolicy={'single_host_origin'}
-					/>
+					clientId={config.googleClientID}
+					render={renderProps => (
+						<GoogleButton
+							className="google-Button-registration"
+							onClick={renderProps.onClick}
+							disabled={renderProps.disabled}
+						/>
+					)}
+					isSignedIn={true}
+					onSuccess={responseGoogleSuccess}
+					onFailure={responseGoogleFailure}
+					cookiePolicy={'single_host_origin'}
+				/>
 			</div>
 			<Navbar />
 			<Routes />
