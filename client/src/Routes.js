@@ -4,7 +4,7 @@
 import { Route, Redirect } from "react-router-dom";
 import Sponsors from './components/sponsers/sponsers.js';
 import EventsPage from './pages/events/EventsPage'
-
+import CulturalPage from './pages/events/CulturalPage'
 // import Legacy from "./pages/tirutsavaLegacy/TirutsavaLegacy";
 
 function Routes() {
@@ -13,9 +13,10 @@ function Routes() {
             <Route exact path="/">
                 <Redirect to="/Home" />
             </Route>
-            
+
             <Route path="/sponsors" exact  component={Sponsors} />
             <Route path="/events" exact  component={EventsPage} />
+            <Route path="/cultural" exact  component={CulturalPage} />
             {/* <Route path="/aboutus" component={Legacy} /> */}
         </div>
     )
