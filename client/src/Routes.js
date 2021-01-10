@@ -5,7 +5,7 @@ import { Route, Redirect } from "react-router-dom";
 import Sponsors from './components/sponsers/sponsers.js';
 
 // import Legacy from "./pages/tirutsavaLegacy/TirutsavaLegacy";
-import Homepage from './components/Homepage/Homepage';
+import Homepage from './pages/Homepage/Homepage';
 
 function Routes() {
     return (

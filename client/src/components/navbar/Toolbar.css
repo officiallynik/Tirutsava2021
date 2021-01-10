@@ -99,6 +99,12 @@
   }
 }
 
+.toolbar__toggle-button {
+  position: fixed;
+  left: 16px;
+  top: calc((10vh - 24px)/2);
+}
+
 @media (min-width: 1023px) {
   .toolbar__toggle-button {
     display: none;
