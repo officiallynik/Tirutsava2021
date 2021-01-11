@@ -149,16 +149,18 @@ export default function Homepage() {
 								{boolproshows ? <div className="img-animate"><animated.img className="online-img img-animate" onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })} style={{ transform: props.xy.interpolate(trans1) }} src={imgname}></animated.img></div> : null}
 								<div className={`event-detail-${currentMode}`} style={{ opacity: 0 }}>{eventdet}</div>
 
-								<div className="logo-social">
-									<i class={`fa fas-${currentMode} fa-facebook`} aria-hidden="true"></i>
-									<i class={`fa fas-${currentMode} fa-instagram`} aria-hidden="true"></i>
-									<i class={`fa fas-${currentMode} fa-twitter`} aria-hidden="true"></i>
-									<i class={`fa fas-${currentMode} fa-youtube`} aria-hidden="true"></i>
-								</div>
-
-
 							</div>
 						</div>
+
+						<div>
+							<div className="logo-social">
+								<i class={`fa fas-${currentMode} fa-facebook shift-l`} aria-hidden="true"></i>
+								<i class={`fa fas-${currentMode} fa-instagram shift-l`} aria-hidden="true"></i>
+								<i class={`fa fas-${currentMode} fa-twitter shift-l`} aria-hidden="true"></i>
+								<i class={`fa fas-${currentMode} fa-youtube shift-l`} aria-hidden="true"></i>
+							</div>
+						</div>
+
 
 					</div>
 
