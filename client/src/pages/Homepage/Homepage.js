@@ -4,6 +4,8 @@ import './Homepage.css'
 import HomepagePhone from '../../components/HomepagePhone/homepage.phone';
 import SideDrawer from '../../components/navbar/SideDrawer';
 import Burger from '../../components/navbar/Burger';
+import NavbarNew from './Navbar/Navbarnew';
+
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
 const trans1 = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`
@@ -42,7 +44,7 @@ export default function Homepage() {
 
 	const [props, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 950, friction: 140 } }))
 
-	var currentMode = ((new Date()).getHours() < 18 &&
+	var currentMode = !((new Date()).getHours() < 18 &&
 		(new Date()).getHours() >= 6) ?
 		'day-mode' :
 		'night-mode'
@@ -125,18 +127,14 @@ export default function Homepage() {
 	var inpx = Math.floor(newwidth)
 	console.log(inpx)
 	return (
-		<div>
-			<div className="burger-btn">
-				<Burger click={() => {setFullNavBar(prevState => !prevState)}} xbtn={fullNavBar} />
-			</div>
-			<div>
-				<SideDrawer
-					show={fullNavBar}
-					click={() => setFullNavBar(false)}
-				/>
-			</div>
+		<div className="whole-home">
+			
 
 			<div className="desktop-screen">
+				
+	
+
+				<div className="navbar-section"><NavbarNew></NavbarNew></div>
 				<div className={`home-whole-${currentMode}`}>
 					<div className="Auto-swipe row">
 

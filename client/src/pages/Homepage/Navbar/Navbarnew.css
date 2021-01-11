@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
+.nav-whole{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+   
+}
+
+.animate-nav{
+    width: 100vw;
+    height: 100vh;
+    background-color:black;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    clip-path: circle(100%);
+    transition: all 2s ease-in-out;
+}
+
+
+
+.hamburger-whole{
+    width:90px;
+    height:40px;
+    position: absolute;
+    left:93%;
+    top:2%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 40;
+  
+}
+
+.hamburger-whole .ln1{
+    transition: 1s ease-in-out;
+}
+.hamburger-whole .ln2{
+    transition: 1s ease-in-out;
+}
+.hamburger-whole .ln3{
+    transition: 1s ease-in-out;
+}
+
+.animate-ham{
+    width: fit-content;
+    position: absolute;
+    right:30px;
+    top:30px;
+    cursor: pointer;
+    z-index: 40;
+}
+
+.animate-ham .ln1{
+    transition:all 1s ease-in-out;
+   transform: rotate(-45deg)
+}
+.animate-ham .ln3{
+   transform: rotate(45deg);
+   position: relative;
+   bottom: 16px;
+   transition:all 1s ease-in-out;
+}
+
+.animate-ham .ln2{
+opacity: 0;
+}
+
+
+
+.line{
+    width:30px;
+    margin:auto;
+    height: 3px;
+    background-color:white;
+    margin: 5px 0;
+    border-radius: 27px;
+  
+}
+
+.nav-cont-whole{
+    height:100vh;
+    width:100vw;
+    transition: all 3s ease-in-out;
+    background-color: red;
+    clip-path: circle(30px at 96% -20%);
+    overflow: hidden;
+}
+
+.animate-drop{
+    height:100vh;
+    width:100vw;
+    transition: all 3s ease-in-out;
+    background-color: black;
+    clip-path: circle(10000px at 96% 10%); 
+    z-index: 2;
+    overflow: hidden;
+}
+
+.animated-row{
+    position: relative;
+    top:20%;
+}
+
+.img-col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-box{
+    width:50%;
+    height: 100%;
+    background-color: orange;
+}
+
+.cont-col{
+    display: flex;
+    align-items: center;
+}
+
+.list{
+
+    margin: 25px 0;
+    display: flex;
+}
+
+.heading-no{
+    color: white;
+}
+
+.list-item{
+    font-size: 35px;
+    letter-spacing: 5px;
+    position: relative;
+    left:7px;
+    font-family: 'Yeon Sung', cursive;
+    text-align: center;
+  color: white;
+  cursor: pointer;
+}
+

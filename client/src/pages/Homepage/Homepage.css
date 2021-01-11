@@ -8,7 +8,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    top:0
     
+}
+
+.whole-home{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #171515;
 }
 
 .home-whole-day-mode{
@@ -19,6 +28,16 @@
     justify-content: center;
     align-items: center;
     
+}
+
+.desktop-screen{
+    position: relative;
+}
+
+.navbar-section{
+    position: absolute;
+    top:0;
+    z-index: 10;
 }
 
 .Auto-swipe{
@@ -152,6 +171,7 @@ box-shadow:         5px 5px 2px 0px black;
     position: absolute;
     right: 75px;
     top:60px;  
+    z-index: 2;
 }
 .technical-img{
     z-index:10000;
@@ -662,8 +682,28 @@ box-shadow:         5px 5px 2px 0px black;
     font-size: 20px;
     letter-spacing: 1px;
     align-items: center;
+    z-index: 20;
 }
 
+
+.ham-icon{
+    position: absolute;
+    top:15px;
+    left:95%;
+    z-index: 30;
+    border: 2px solid red;
+}
+
+.fa-bars{
+    z-index: 30;
+    color: white;
+    font-size: 35px;
+}
+
+.fa-bars::before{
+    font-size: 35px;
+   
+}
 .bottom-nav-btn {
     opacity: 0.6;
     cursor: pointer;
@@ -693,4 +733,21 @@ box-shadow:         5px 5px 2px 0px black;
     left: 5vw;
     top: 5vh;
     z-index: 100;
+}
+
+.home-nav-sec{
+    height: 60px;
+    position: relative;
+    top:10px;
+    width:100%;
+    margin: auto;
+    z-index: 100000000000000;
+    border: 2px solid red;
+}
+
+.home-nav-sec img{
+    width: 60px;
+    margin: auto;
+    position: absolute;
+    left:90%;
 }
