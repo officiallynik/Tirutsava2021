@@ -1,9 +1,9 @@
 import React, { Component , useState , useEffect} from 'react'
-import './Navbarnew.css'
+import './Navbarnewphone.css'
 import Homepage from './../Homepage';
 
 
-export default function NavbarNew(props){
+export default function NavbarNewphone(props){
     
 
 
@@ -22,11 +22,9 @@ var [width, setwidth] = useState(window.innerWidth)
                 
                 <div className={props.boolshownav ? "animate-drop" : "nav-cont-whole"}>
                     <div className="row animated-row">
-                    <div className="col-sm-6 img-col">
-                        <div className="img-box"></div>
-                    </div>
-                    <div className="col-sm-6 cont-col">
-                        <div className="cont-list">
+                    
+                    <div className="col-sm-12 cont-col-phone">
+                        <div className="cont-list-phone">
                             <div className="list">
                                 <div className="heading-no">01.</div>
                                 <div className="list-item">Home</div>

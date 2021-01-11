@@ -179,6 +179,7 @@ box-shadow:         5px 5px 2px 0px black;
     position: absolute;
     right: 75px;
     top:60px;  
+    z-index: 2;
 }
 .online-img{
     z-index:10000;
@@ -186,6 +187,7 @@ box-shadow:         5px 5px 2px 0px black;
     position: absolute;
     right: 75px;
     top:60px;  
+    z-index: 2;
 }
 
 
@@ -268,14 +270,17 @@ box-shadow:         5px 5px 2px 0px black;
 .headphone img{
     width: 100%;
     height: 100%;
+    z-index: 5;
 }
 .technical img{
     width: 100%;
     height: 100%;
+    z-index: 5;
 }
 .online img{
     width: 100%;
     height: 100%;
+    z-index: 5;
     
 }
 
@@ -499,7 +504,7 @@ box-shadow:         5px 5px 2px 0px black;
     .music-img{
         width:400px;
         height: 400px;
-        position: relative;
+        position: absolute;
         top:100px;
         right: 30px;
     }
@@ -507,7 +512,7 @@ box-shadow:         5px 5px 2px 0px black;
     .technical-img{
         width:400px;
         height: 400px;
-        position: relative;
+        position: absolute;
         top:100px;
         right: 30px;
     }
@@ -515,7 +520,7 @@ box-shadow:         5px 5px 2px 0px black;
     .online-img{
         width:400px;
         height: 400px;
-        position: relative;
+        position: absolute;
         top:100px;
         right: 30px;
     }
@@ -544,21 +549,22 @@ box-shadow:         5px 5px 2px 0px black;
     .music-img{
         width:400px;
         height: 400px;
-        position: relative;
+        position: absolute;
         top:100px;
         right: 30px;
     }
     .technical-img{
         width:400px;
         height: 400px;
-        position: relative;
+        position: absolute;
         top:100px;
         right: 35px;
+        z-index: 5;
     }
     .online-img{
         width:400px;
         height: 400px;
-        position: relative;
+        position: absolute;
         top:100px;
         right: 45px;
     }
@@ -615,7 +621,7 @@ box-shadow:         5px 5px 2px 0px black;
     .music-img{
         width:350px;
         height: 350px;
-        position: relative;
+        position: absolute;
         top:150px;
         right: 0;
     }
@@ -623,7 +629,7 @@ box-shadow:         5px 5px 2px 0px black;
     .technical-img{
         width:350px;
         height: 350px;
-        position: relative;
+        position: absolute;
         top:150px;
         right: 15px;
     }
@@ -631,7 +637,7 @@ box-shadow:         5px 5px 2px 0px black;
     .online-img{
         width:350px;
         height: 350px;
-        position: relative;
+        position: absolute;
         top:150px;
         right: 35px;
     }
@@ -779,6 +785,68 @@ box-shadow:         5px 5px 2px 0px black;
 }
 
 
+.hamburger-whole{
+    width:90px;
+    height:40px;
+    position: absolute;
+    left:94%;
+    top:12px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 40000000000000000000;
+}
+
+.hamburger-whole .ln1{
+    transition: 1s ease-in-out;
+}
+.hamburger-whole .ln2{
+    transition: 1s ease-in-out;
+}
+.hamburger-whole .ln3{
+    transition: 1s ease-in-out;
+}
+
+.animate-ham{
+    width: fit-content;
+    position: absolute;
+    right:30px;
+    top:30px;
+    cursor: pointer;
+    z-index: 4000000000000;
+}
+
+.animate-ham .ln1{
+    transition:all 1s ease-in-out;
+   transform: rotate(-45deg);
+   z-index: 4000000000;
+}
+.animate-ham .ln3{
+   transform: rotate(45deg);
+   position: relative;
+   bottom: 16px;
+   transition:all 1s ease-in-out;
+   z-index: 40000000000000;
+}
+
+.animate-ham .ln2{
+opacity: 0;
+}
+
+
+
+.line{
+    width:30px;
+    margin:auto;
+    height: 3px;
+    background-color:white;
+    margin: 5px 0;
+    border-radius: 27px;
+  
+}
+
+
 
 @media(max-width:768px){
     .logo-social{
@@ -796,3 +864,4 @@ box-shadow:         5px 5px 2px 0px black;
 
 
 }
+

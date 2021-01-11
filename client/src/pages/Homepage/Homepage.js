@@ -44,7 +44,7 @@ export default function Homepage() {
 
 	const [props, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 950, friction: 140 } }))
 
-	var currentMode = !((new Date()).getHours() < 18 &&
+	var currentMode = ((new Date()).getHours() < 18 &&
 		(new Date()).getHours() >= 6) ?
 		'day-mode' :
 		'night-mode'
@@ -78,6 +78,10 @@ export default function Homepage() {
 	if (width > 1400) {
 		newwidth = 0.35 * width
 	}
+
+
+
+	console.log("zindex",zindex)
 
 	let mainPage = (
 		<div className="homepage-animate">
@@ -126,15 +130,30 @@ export default function Homepage() {
 
 	var inpx = Math.floor(newwidth)
 	console.log(inpx)
+	var [boolshow,setbool] = useState(false)
+var clickedham = () => {
+    setbool(!boolshow)
+}
+
+var zindex = 20;
+if(boolshow){
+	zindex=5;
+}
+else 
+zindex=20;
 	return (
 		<div className="whole-home">
 			
 
 			<div className="desktop-screen">
 				
-	
+			<div className={boolshow ? "animate-ham" :"hamburger-whole"} onClick={clickedham}>
+                    <div className="line ln1"></div>
+                    <div className="line ln2"></div>
+                    <div className="line ln3"></div>
+                </div>
 
-				<div className="navbar-section"><NavbarNew></NavbarNew></div>
+				<div className="navbar-section"><NavbarNew boolshownav={boolshow}></NavbarNew></div>
 				<div className={`home-whole-${currentMode}`}>
 					<div className="Auto-swipe row">
 
@@ -164,7 +183,7 @@ export default function Homepage() {
 
 					</div>
 
-					<div className="bottom-nav">
+					<div className="bottom-nav" style={{zIndex:zindex}}>
 						<div className={boolhome ? "bottom-nav-btn bottom-nav-active" : "bottom-nav-btn"} onClick={onClickHome}>
 							Tirutsava 2021
 						</div>
