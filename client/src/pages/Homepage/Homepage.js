@@ -87,7 +87,7 @@ export default function Homepage() {
 		<div className="homepage-animate">
 			<div className="col-sm-6 hm">
 				<div className="cont-home">
-					<div className={`head-home-${currentMode}`}>TIRUTSAVA</div>
+					<div className={`head-home-${currentMode} shift-right`}>TIRUTSAVA</div>
 				</div>
 			</div>
 		</div>
@@ -114,9 +114,9 @@ export default function Homepage() {
 			<div className="proshows-animate">
 				<div className="col-sm-6 hm">
 					<div className="cont-home">
-						<div className={`head-home-${currentMode}`}>Proshows</div>
-						<div className={`head-home-cont-${currentMode}`}>When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic </div>
-						<div className="discover-btn">
+						<div className={`head-home-${currentMode} shift-right`}>Proshows</div>
+						<div className={`head-home-cont-${currentMode} shift-right`}>When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic </div>
+						<div className="discover-btn shift-right">
 							Discover
 						</div>
 					</div>
