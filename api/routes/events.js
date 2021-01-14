@@ -12,7 +12,7 @@ const { GoogleSpreadsheet } = require('google-spreadsheet');
 const { promisify } = require('util');
 
 const sheetIds = {
-	"prefest": "1KUYl-QF54AXn9iq_zwbEjLkASFEq9q6VE48tvnitACs"
+	"prefest": "1v4gDVCLG5x7O7EsEQrX1ZgK6JP7TJVWs7K5TNITcESw"
 }
 
 router.get('/type/:id', (req, res) => {
