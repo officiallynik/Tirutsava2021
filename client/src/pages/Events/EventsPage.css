@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.events-category {
+  overflow: hidden;
+  background-color: #1e1534;
+  height: 100vh;
+}
+
+.events-bg__vid {
+  min-width: 100vw;
+  min-height: 100vh;
+  opacity: 0.7;
+}
+
+.bottom__nav {
+  position: fixed;
+  bottom: 3vh;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+@media (max-width: 720px) {
+  .bottom__nav {
+    bottom: 0;
+  }
+}
+
+.events__all {
+  position: fixed;
+  bottom: 8vh;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  padding: 0 10vw;
+}
+
+.event__preview {
+  flex: 1;
+  width: 100%;
+  opacity: 0.8;
+  margin: 0 3px;
+  overflow: hidden;
+  backface-visibility: hidden;
+  cursor: pointer;
+  animation-name: eventopen;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in;
+  transition: flex 500ms;
+}
+
+.event__preview:hover {
+  opacity: 1;
+}
+
+.event__preview__name {
+  width: 100%;
+  height: 100%;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  text-transform: uppercase;
+  color: white;
+  font-family: 'Paytone One', sans-serif;
+  font-size: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .events__all {
+    flex-direction: column;
+  }
+  .event__preview__name {
+    writing-mode: horizontal-tb;
+    text-orientation: upright;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  right: 12vw;
+  opacity: 0.8;
+  z-index: 3;
+  padding-top: 8px;
+}
+
+.close-btn:hover {
+  opacity: 1;
+}
+
+.event__details {
+  width: 100%;
+  height: 100%;
+  animation-name: imgfade;
+  animation-duration: 1000ms;
+  animation-timing-function: ease-out;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  overflow: auto;
+}
+
+@keyframes imgfade {
+  0% {background: transparent; opacity: 0;}
+  100% {background: rgba(0, 0, 0, 0.5); opacity: 1;}
+}
+
+.event__name {
+  font-family: 'Paytone One', sans-serif;
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px 20px;
+}
+
+.event__rules__tab {
+  width: 100%;
+  height: 100%;
+}
+
+.event__details__tab {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 20px;
+  align-items: flex-start;
+  overflow: auto;
+}
+
+.event__info {
+  display: flex;
+  flex-direction: row-reverse;
+  overflow: auto;
+}
+
+.event__details__main {
+  font-weight: 400;
+  flex: 2;
+  width: 100%;
+  padding-top: 20px;
+  text-align: left;
+  overflow: auto;
+}
+
+.event__type {
+  font-family: 'Paytone One', sans-serif;
+}
+
+.event__details__btn {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 900px) {
+  .event__info {
+    flex-direction: column;
+  }
+  .event__details__btn {
+    justify-content: center;
+  }
+}
+
+.event__desc {
+  font-size: 18px;
+}
+
+.event__prize {
+  padding-top: 20px;
+}
+
+.event__entry {
+  padding-top: 20px;
+}
+
+.event__time {
+  padding-top: 20px;
+}
+
+.event__participants {
+  padding-top: 20px;
+} 
+
+.events__comingsoon {
+  font-family: 'Paytone One', sans-serif;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.events__loading {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.registration__success {
+  color: black;
+  font-weight: 400;
+  font-size: 18px;
+}

@@ -5,12 +5,8 @@ const EventSchema = mongoose.Schema({
 		type: String,
 		required: true
 	},
-	eventId: {
-		type: Number,
-		default: 0
-	},
 	typeOfEvent: {
-		type: Number,
+		type: String,
 		required: true
 	},
 	description: {
@@ -21,25 +17,13 @@ const EventSchema = mongoose.Schema({
 		type: Array,
 		default: []
 	},
-	entryfee: {
+	entryFee: {
 		type: Number,
 		required: true
-	},
-	entryfee: {
-		type: Number,
-		required: true
-	},
-	eventDate: {
-		type: String,
-		default: ""
 	},
 	eventTime: {
 		type: String,
 		default: ""
-	},
-	venue: {
-		type: String,
-		value: ""
 	},
 	registrationClose: {
 		type: String,
@@ -49,10 +33,21 @@ const EventSchema = mongoose.Schema({
 		type: String,
 		default: ""
 	},
-	cashPrize: {
+	eventPrize: {
+		type: Array,
+		default: []
+	},
+	maxParticipants: {
 		type: Number,
-		default: 0
+		default: 1
+	},
+	registrationLink: {
+		type: String
+	},
+	registrationOpen: {
+		type: Boolean,
+		default: false
 	}
 });
 
-module.exports = Event = mongoose.model('Event', EventSchema);
+module.exports = mongoose.model('events', EventSchema);

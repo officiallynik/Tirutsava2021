@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,600&family=Roboto+Slab:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+.registration .modal-header{
+    border: none;
+}
+.registration .modal-header .close:focus{
+    outline: none;
+}
+.registration .modal-content{
+    background-color: #faf9f9;
+    border-radius:  1rem;
+}
+
+.signIn-Heading-registration{
+    color: #DB4437;
+    /* font-weight: 500; */
+    /* margin-left: 5%; */
+    font-family: 'Roboto Slab',sans-serif;
+    width: 100%;
+   
+
+}
+
+.secondary-Heading-registration{
+    color: #456990;
+    font-weight: 500;
+    font-family: 'Roboto',sans-serif;
+}
+
+.google-Button-registration{
+    margin: auto;
+    margin-top: 10%;
+}
+
+.modal-body-registration{
+    padding: 5%;
+    padding-top: 0%;
+}
+
+.logo-registration{
+    width: 50%;
+    
+}

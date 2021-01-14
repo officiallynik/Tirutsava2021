@@ -19,4 +19,4 @@ const QuerySchema = mongoose.Schema({
   }
 });
 
-module.exports = Query = mongoose.model('Query',QuerySchema);
+module.exports = mongoose.model('queries', QuerySchema);

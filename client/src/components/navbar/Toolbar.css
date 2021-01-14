@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: #1e1534;
+  background: linear-gradient(#1e1534, transparent);
   z-index: 2; 
   height: 10vh;
 }
@@ -90,8 +90,15 @@
   -webkit-text-fill-color: transparent;
 }
 
+.login__toggle-button {
+  position: fixed;
+  right: 8px;
+  top: calc((10vh - 24px)/2);
+  z-index: 10;
+}
+
 @media (max-width: 1023px) {
-  .toolbar_navigation-items {
+  .hidden-nav {
     display: none;
   }
   .toolbar__logo {
@@ -101,6 +108,9 @@
 
 @media (min-width: 1023px) {
   .toolbar__toggle-button {
+    display: none;
+  }
+  .login__toggle-button {
     display: none;
   }
 }
@@ -118,4 +128,15 @@
 
 #navit li:hover a {
   color: #df42b1;
+}
+
+.tirutsava__navbar__logo{
+  height: 100%; 
+  width: 324px; 
+}
+
+@media(max-width: 490px) {
+  .tirutsava__navbar__logo {
+    width: 250px;
+  }
 }

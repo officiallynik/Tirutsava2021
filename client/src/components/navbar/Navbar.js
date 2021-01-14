@@ -26,12 +26,10 @@ class Navbar extends Component {
         <Toolbar
           drawer={this.sideDrawerHandler}
           xbtn={this.state.sideDrawerOpen}
-          login={this.state.login}
         />
         <SideDrawer
           show={this.state.sideDrawerOpen}
           click={this.backdropHandler}
-          login={this.state.login}
         />
       </div>
     );

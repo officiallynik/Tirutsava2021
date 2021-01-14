@@ -1,0 +1,157 @@
+@import url(//db.onlinewebfonts.com/c/7e96eba370659b4e4563309dc4ebb33f?family=Samarkan);
+@font-face {font-family: "Samarkan"; src: url("//db.onlinewebfonts.com/t/7e96eba370659b4e4563309dc4ebb33f.eot"); src: url("//db.onlinewebfonts.com/t/7e96eba370659b4e4563309dc4ebb33f.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/7e96eba370659b4e4563309dc4ebb33f.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/7e96eba370659b4e4563309dc4ebb33f.woff") format("woff"), url("//db.onlinewebfonts.com/t/7e96eba370659b4e4563309dc4ebb33f.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/7e96eba370659b4e4563309dc4ebb33f.svg#Samarkan") format("svg"); }
+
+.phone-body-day-mode{
+    background-color:whitesmoke;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.phone-body-night-mode{
+    background-color:rgb(30,21,52);
+    overflow-x: hidden;
+    position: relative;
+}
+
+.events-phone-box1{
+    height: 70vh;
+}
+
+
+.img-class{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.img-class img{
+    width:60%;
+    height: 100%;
+}
+
+.discover-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    background-color:#10A5F9;
+    color: white;
+    font-size: 18px;
+    border-radius: 27px; 
+    box-shadow: 5px 5px 2px 0px black;   
+}
+.btn-box{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+.tirutsava-title{
+    font-family: "samarkan";
+    text-align: center;
+    font-size: 60px;
+    background: linear-gradient(45deg, #f3ec78, #af4261);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 20px;
+}
+.tirutsava-box{
+    margin-top: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+.texts-day-mode{
+    font-family: 'Work Sans', sans-serif;
+    color: black;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.texts-night-mode{
+    font-family: 'Work Sans', sans-serif;
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.events-phone-box{
+    height: 400px;
+    margin-left: 10px;
+
+}
+
+.social-phone{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  
+}
+
+
+.hamburger-whole-phone{
+    width:90px;
+    height:40px;
+    position: absolute;
+    left:94%;
+    top:12px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 40000000000000000000;
+}
+
+.hamburger-whole-phone .ln1-phone{
+    transition: 1s ease-in-out;
+}
+.hamburger-whole-phone .ln2-phone{
+    transition: 1s ease-in-out;
+}
+.hamburger-whole-phone .ln3-phone{
+    transition: 1s ease-in-out;
+}
+
+.animate-ham-phone{
+    width: fit-content;
+    position: absolute;
+    right:30px;
+    top:30px;
+    cursor: pointer;
+    z-index: 4000000000000;
+}
+
+.animate-ham-phone .ln1-phone{
+    transition:all 1s ease-in-out;
+   transform: rotate(-45deg);
+   z-index: 4000000000;
+}
+.animate-ham-phone .ln3-phone{
+   transform: rotate(45deg);
+   position: relative;
+   bottom: 16px;
+   transition:all 1s ease-in-out;
+   z-index: 40000000000000;
+}
+
+.animate-ham-phone .ln2-phone{
+opacity: 0;
+}
+
+
+
+.line-phone{
+    width:30px;
+    margin:auto;
+    height: 3px;
+    background-color:white;
+    margin: 5px 0;
+    border-radius: 27px;
+  
+}
+
+.coming-soon {
+    color: white;
+    text-align: center;
+}
+

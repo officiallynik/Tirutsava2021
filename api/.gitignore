@@ -104,3 +104,9 @@ dist
 .tern-port
 
 dump/
+
+# dev config file
+config/dev.js
+
+# secret
+client_secret.json
