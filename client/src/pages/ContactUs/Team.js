@@ -28,6 +28,12 @@ const Team = {
             phone: "9306666215",
             url: "/heads/tapish.png"
         },
+        {
+            name: "Apoorv Sonarghare",
+            email: "ce18b004@iittp.ac.in",
+            phone: "7620381765",
+            url: "/heads/apoorv.jpeg"
+        },
     ],
     design: [
         {
@@ -43,6 +49,11 @@ const Team = {
             email: "ce17b004@iittp.ac.in",
             phone: "9491555463",
             url: "/heads/ravindra.jpeg"
+        },
+        {
+            name: "Aditya T Deepak",
+            email: "ch18b004@iittp.ac.in",
+            phone: "6362938161",
         },
     ],
     sponsorship: [
