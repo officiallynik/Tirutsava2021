@@ -142,6 +142,8 @@ class Registration extends Component {
 					onFailure={this.responseGoogleFailure}
 					cookiePolicy={'single_host_origin'}
 				/>
+				<br />
+				Note: IITT students please use your college id to register/login.
 
 			</div>
 		</MDBModalBody>

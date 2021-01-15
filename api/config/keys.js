@@ -1,7 +1,12 @@
-if (process.env.NODE_ENV === 'production') {
-    // we are in production - return the prod set of keys
-    module.exports = require('./prod');
-} else {
-    // we are in development - return the dev keys!!!
-    module.exports = require('./dev');
-}  
+// dev.js - development keys here!!
+module.exports = {
+    googleClientID: "",
+    googleClientSecret: "",
+    mongoURI: "mongodb://localhost:27017/tirutsava",
+    cookieKey: "cookie_key",
+    port: 8080,
+    instaAPIKey: "",
+    instaAuthKey: "",
+    sheetClientEmail: "",
+    sheetPrivateKey: ""
+};  
