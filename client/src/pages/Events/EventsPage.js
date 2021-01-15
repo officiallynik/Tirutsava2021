@@ -173,6 +173,7 @@ const EventsPage = props => {
             case 0:
                 axios.get("/api/events/type/0")
                     .then(res => {
+                        console.log(res);
                         setEvents(res.data);
                     })
                     .catch(err => {

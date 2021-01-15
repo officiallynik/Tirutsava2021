@@ -35,9 +35,9 @@ app.get('/jsonfail', (req, res) => {
 	res.send({ valid: false });
 })
 
-app.use('/api', (req, res) => {res.json({msg: "API for Tirutsava 2021"})});
 app.use('/api/auth', require('./routes/auth.js'));
 app.use("/api/events", require("./routes/events.js"));
+app.use('/api', (req, res) => {res.json({msg: "API for Tirutsava 2021"})});
 // app.use("/api/queries", require("./routes/queries.js"));
 // app.use("/api/seeder", require("./routes/seeder.js"));
 app.use(express.static("public"));
