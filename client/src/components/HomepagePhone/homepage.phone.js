@@ -1,6 +1,7 @@
 import React , {useState} from 'react';
 import './homepage.phone.css';
 import Navbar from '../navbar/Navbar';
+import { withRouter } from 'react-router-dom';
 // import NavbarNew from './../../pages/Homepage/Navbar/Navbarnew';
 // var currentMode = ((new Date()).getHours() < 18 &&
 // (new Date()).getHours() >= 6) ? 
@@ -10,7 +11,7 @@ import Navbar from '../navbar/Navbar';
 var currentMode = "night-mode";
 
 
-const HomepagePhone = () => {
+const HomepagePhone = props => {
     var [boolshow,setbool] = useState(false)
 var clickedham = () => {
     setbool(!boolshow)
@@ -37,7 +38,11 @@ var clickedham = () => {
 							cool prizes, registration for prefest events is now open. Visit the link below.
                         </div>
                     </div>
-                    <div className="btn-box"><button className="discover-btn">Discover</button></div>
+                    <div className="btn-box"
+                        onClick={() => {
+                            props.history.push('/events');
+                        }}
+                    ><button className="discover-btn">Discover</button></div>
 
                     <div className="tirutsava-box"><p className="tirutsava-title">Workshops</p></div>
                     <div className="img-class">
@@ -66,4 +71,4 @@ var clickedham = () => {
      );
 }
  
-export default HomepagePhone;
+export default withRouter(HomepagePhone);

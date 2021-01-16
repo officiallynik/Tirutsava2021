@@ -73,6 +73,7 @@
 @media (max-width: 900px) {
   .events__all {
     flex-direction: column;
+    padding: 0 10px;
   }
   .event__preview__name {
     writing-mode: horizontal-tb;
