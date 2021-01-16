@@ -26,6 +26,7 @@ class Navbar extends Component {
         <Toolbar
           drawer={this.sideDrawerHandler}
           xbtn={this.state.sideDrawerOpen}
+          isHomePage={this.props.isHomePage || false}
         />
         <SideDrawer
           show={this.state.sideDrawerOpen}

@@ -4,12 +4,11 @@ import './Homepage.css'
 import HomepagePhone from '../../components/HomepagePhone/homepage.phone';
 import { withRouter } from 'react-router-dom';
 import ReactTooltip from 'react-tooltip';
-import SideDrawer from '../../components/navbar/SideDrawer';
-import Burger from '../../components/navbar/Burger';
+import Navbar from '../../components/navbar/Navbar';
 
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
-const trans1 = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`
+const trans1 = (x, y) => `translate3d(${x / 10}px, 0, 0)`
 
 
 const Homepage = props => {
@@ -64,7 +63,6 @@ const Homepage = props => {
 	// 	'night-mode';
 	var currentMode = 'night-mode';
 
-	var width = window.innerWidth;
 	var [width, setwidth] = useState(window.innerWidth)
 	const handleresize = () => {
 		setwidth(window.innerWidth)
@@ -173,17 +171,10 @@ const Homepage = props => {
 		);
 	}
 
-	const [fullNavBar, setFullNavBar] = useState(false);
-
-	const [openDrawer, setOpenDrawer] = useState(false);
-
 
 	var inpx = Math.floor(newwidth)
 	// console.log(inpx)
-	var [boolshow, setbool] = useState(false)
-	var clickedham = () => {
-		setbool(!boolshow)
-	}
+	var [boolshow, ] = useState(false)
 
 	var zindex = 20;
 	if (boolshow) {
@@ -197,14 +188,9 @@ const Homepage = props => {
 
 			<div className="desktop-screen" style={{ width: "100vw", height: "100vh", overflow: "hidden" }}>
 
-				{
-					!boolhome ?
-						<div style={{ position: "fixed", top: "15px", zIndex: 10, left: "110px" }}>
-							<div>
-								<img src="/homepage/logo.png" style={{ width: "180px" }} />
-							</div>
-						</div> : null
-				}
+				<div>
+					<Navbar isHomePage={true} />
+				</div>
 
 
 				{/* <div className="navbar-section"><NavbarNew boolshownav={boolshow}></NavbarNew></div> */}
@@ -216,7 +202,7 @@ const Homepage = props => {
 
 						<div className="evn">
 
-							<div className="cont-event" style={fullNavBar ? { zIndex: 1 } : {}}>
+							<div className="cont-event" style={{ zIndex: 1 }}>
 								{boolevents ? <div className="img-animate">
 									<animated.img className="music-img img-animate"
 										onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
@@ -268,11 +254,8 @@ const Homepage = props => {
 						<div className="bottom-nav-btn" data-tip="Enabled during live events">
 							Live Now
 						</div>
-
 					</div>
-
 				</div>
-				<ReactTooltip place="bottom" effect="solid" />
 			</div>
 			<div className="phone-screen"><HomepagePhone></HomepagePhone></div>
 		</div>

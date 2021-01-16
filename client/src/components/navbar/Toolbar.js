@@ -20,35 +20,65 @@ const Toolbar = props => (
 			</div>
 
 			<div className="toolbar_navigation-items hidden-nav">
-				<ul id="navit">
-					<li>
-						<Link data-tip="Coming soon">PROSHOWS</Link>
-					</li>
-					<li>
-						<Link to="/events">EVENTS</Link>
-					</li>
-					<li>
-						<Link to="/contactus">CONTACT US</Link>
-					</li>
-					<li>
-						<Link to="/sponsors">SPONSORS</Link>
-					</li>
-					<li>
-						<Link data-tip="Enabled soon">FAQs</Link>
-					</li>
-					<Registration
-						btnLogin={
-							<li>
-								<Link to="#">LOGIN</Link>
-							</li>
-						}
-						btnLogout={
-							<li>
-								<Link to="#">LOGOUT</Link>
-							</li>
-						}
-					/>
-				</ul>
+				{
+					props.isHomePage ?
+						(
+							<ul id="navit">
+								<li>
+									<Link to="/contactus">CONTACT US</Link>
+								</li>
+								<li>
+									<Link to="/sponsors">SPONSORS</Link>
+								</li>
+								<li>
+									<Link data-tip="Enabled soon">FAQs</Link>
+								</li>
+								<Registration
+									btnLogin={
+										<li>
+											<Link to="#">LOGIN</Link>
+										</li>
+									}
+									btnLogout={
+										<li>
+											<Link to="#">LOGOUT</Link>
+										</li>
+									}
+								/>
+							</ul>
+						) :
+						(
+							<ul id="navit">
+								<li>
+									<Link data-tip="Coming soon">PROSHOWS</Link>
+								</li>
+								<li>
+									<Link to="/events">EVENTS</Link>
+								</li>
+								<li>
+									<Link to="/contactus">CONTACT US</Link>
+								</li>
+								<li>
+									<Link to="/sponsors">SPONSORS</Link>
+								</li>
+								<li>
+									<Link data-tip="Enabled soon">FAQs</Link>
+								</li>
+								<Registration
+									btnLogin={
+										<li>
+											<Link to="#">LOGIN</Link>
+										</li>
+									}
+									btnLogout={
+										<li>
+											<Link to="#">LOGOUT</Link>
+										</li>
+									}
+								/>
+							</ul>
+						)
+				}
 			</div>
 
 			<ReactTooltip place="bottom" effect="solid" />
