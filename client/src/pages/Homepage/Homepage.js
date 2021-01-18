@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react'
 import './Homepage.css'
 import HomepagePhone from '../../components/HomepagePhone/homepage.phone';
 import { withRouter } from 'react-router-dom';
-import ReactTooltip from 'react-tooltip';
 import Navbar from '../../components/navbar/Navbar';
 
 

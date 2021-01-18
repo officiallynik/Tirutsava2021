@@ -16,7 +16,7 @@ function Routes() {
             <Route exact path="/"><Redirect to="/home" /></Route>
             <Route exact path="/home" exact component={HomePage}></Route>
             <Route path="/sponsors" exact  component={Sponsors} />
-            {/* <Route path="/faqs" exact component={FAQs} /> */}
+            <Route path="/faqs" exact component={FAQs} />
             <Route path="/contactus" exact  component={ContactUs} />
             <Route path="/events" component={Events} />
             {/* <Route path="/aboutus" component={Legacy} /> */}

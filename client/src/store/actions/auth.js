@@ -27,3 +27,9 @@ export const authCheckState = () => {
         }
     };
 };
+
+export const authPopup = () => {
+    return {
+        type: actionTypes.AUTH_POPUP,
+    }
+}

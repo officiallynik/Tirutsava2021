@@ -46,7 +46,14 @@ const Event = props => {
                     <div className="event__type">{props.eventType}</div>
                     <div className="event__info">
 
-                        <div>
+                        <div className="event__registration_section">
+                            <div className="event__entry">
+                                {
+                                    props.entryFee === 0 ?
+                                        <div>No Entry Fee</div> :
+                                        <div>Entry: Rs. {props.entryFee}</div>
+                                }
+                            </div>
                             <div className="event__details__btn">
                                 {
                                     props.registerLoader ?
@@ -82,17 +89,19 @@ const Event = props => {
                                     <Button>Poster</Button>
                                 </a>
                             </div>
-                            <div style={{textAlign: "right"}}>
+                            <div style={{ textAlign: "left" }}>
                                 * Events cannot be unregistered
                                 <br />
                                 Note: If the participation is very less, the prize money will be reduced by half of the total amount
                                 {
-                                    !props.registrationOpen?
-                                    <div style={{fontSize: "20px"}}>Registration Opening Soon</div>:
-                                    null
+                                    !props.registrationOpen ?
+                                        <div style={{ fontSize: "20px" }}>Registration Opening Soon</div> :
+                                        null
                                 }
                             </div>
                         </div>
+
+                        <div className="col__separator"></div>
 
                         <div className="event__details__main">
 
@@ -125,15 +134,8 @@ const Event = props => {
                                 }
                             </div>
 
-                            <div className="event__entry">
-                                {
-                                    props.entryFee === 0 ?
-                                        <div>No Entry Fee</div> :
-                                        <div>Entry: Rs. {props.entryFee}</div>
-                                }
-                            </div>
-
                             <div className="event__time">
+                                Event schedule info:
                                 {
                                     dates.map((date, idx) => {
                                         return <div key={idx}>{date}</div>
@@ -142,15 +144,21 @@ const Event = props => {
                             </div>
 
                             <div className="event__participants">
-                                Max. Number of Participants: {props.maxParticipants}
+
                                 {
                                     props.maxParticipants > 1 ?
                                         <div>
-                                            <em>
-                                                * Only team leader has to register
-                                        </em>
+                                            Max. participants (per team): {props.maxParticipants}
+                                            <div>
+                                                <em>
+                                                    * Only team leader has to register
+                                                </em>
+                                            </div>
                                         </div> :
-                                        null
+                                        <div>
+                                            <div>Participants info.</div>
+                                            Single player event
+                                        </div>
                                 }
                             </div>
 

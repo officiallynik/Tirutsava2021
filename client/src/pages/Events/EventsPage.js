@@ -9,6 +9,7 @@ import * as actions from '../../store/actions';
 import { connect } from 'react-redux';
 import url from 'url';
 import { MDBContainer, MDBModal, MDBModalBody, MDBModalHeader } from 'mdbreact';
+import { Button } from 'react-bootstrap';
 
 const useStyles = makeStyles({
     root: {
@@ -114,57 +115,54 @@ const EventsPage = props => {
     const [registerLoader, setRegisterLoader] = useState(false);
     const [registeredIds, setRegisteredIds] = useState([]);
     const [paymentSuccess, setPaymentSuccess] = useState([false, null]);
+    const [registerForId, setRegisterForId] = useState([false, null, null, null]);
 
     const handleRegister = (eventId, eventNo) => {
-        if(!props.tokenId || !props.googleId) {
-            props.notifyAction("login to register", 3000, "warning");
+        let eventType = "prefest";
+        switch (cat) {
+            case 0:
+                eventType = "prefest";
+                break;
+            case 1:
+                eventType = "workshops";
+                break;
+            case 2:
+                eventType = "cultural";
+                break;
+            case 3:
+                eventType = "technical";
+                break;
+            case 4:
+                eventType = "literary";
+                break;
+            default:
+
         }
-        else {
-            let eventType = "prefest";
-            switch (cat) {
-                case 0:
-                    eventType = "prefest";
-                    break;
-                case 1:
-                    eventType = "workshops";
-                    break;
-                case 2:
-                    eventType = "cultural";
-                    break;
-                case 3:
-                    eventType = "technical";
-                    break;
-                case 4:
-                    eventType = "literary";
-                    break;
-                default:
-                    
-            }
-            // console.log("pinging", `/api/events/register/${props.tokenId}/${eventId}`);
-            setRegisterLoader(true);
-            axios.post(`/api/events/register/${props.tokenId}/${props.googleId}/${eventId}`, {
-                eventType: eventType,
-                eventNo: eventNo
+        // console.log("pinging", `/api/events/register/${props.tokenId}/${eventId}`);
+        setRegisterLoader(true);
+        axios.post(`/api/events/register/${props.tokenId}/${props.googleId}/${eventId}`, {
+            eventType: eventType,
+            eventNo: eventNo
+        })
+            .then(res => {
+                // console.log(res);
+                if (res.data.redirectUrl) {
+                    window.location.href = res.data.redirectUrl
+                }
+                else {
+                    setRegisteredIds(prevState => {
+                        return [...prevState, res.data.eventId];
+                    });
+                    setPaymentSuccess([true, res.data.eventName]);
+                }
             })
-                .then(res => {
-                    // console.log(res);
-                    if(res.data.redirectUrl){
-                        window.location.href = res.data.redirectUrl
-                    }
-                    else{
-                        setRegisteredIds(prevState => {
-                            return [...prevState, res.data.eventId];
-                        });
-                        setPaymentSuccess([true, res.data.eventName]);
-                    }
-                })
-                .catch(err => {
-                    console.log(err);
-                })
-                .finally(() => {
-                    setRegisterLoader(false);
-                })
-        }
+            .catch(err => {
+                console.log(err);
+            })
+            .finally(() => {
+                setRegisterLoader(false);
+                setRegisterForId([false, null, null, null]);
+            })
     }
 
     useEffect(() => {
@@ -237,37 +235,36 @@ const EventsPage = props => {
                         setLoading(false);
                     })
                 break;
-            
+
             default:
-                
+
         }
     }, [cat]);
 
     useEffect(() => {
-        if(props.tokenId && props.googleId){
+        if (props.tokenId && props.googleId) {
             axios.get(`/api/auth/info/${props.tokenId}/${props.googleId}`)
-            .then(res => {
-                setRegisteredIds(res.data.registeredeventids);
-            })
-            .catch(err => {
-                console.log(err);
-            })
+                .then(res => {
+                    setRegisteredIds(res.data.registeredeventids);
+                })
+                .catch(err => {
+                    console.log(err);
+                })
         }
     }, [props.tokenId, props.googleId]);
 
-    
 
     useEffect(() => {
         const url_parts = url.parse(window.location.href, true),
-        query = url_parts.query;
-        
-        if(query.eventName && query.payment_id) {
+            query = url_parts.query;
+
+        if (query.eventName && query.payment_id) {
             setRegisteredIds(prevState => {
                 return [...prevState, query.eventId];
             })
-			setPaymentSuccess([true, query.eventName]); 
+            setPaymentSuccess([true, query.eventName]);
         }
-        
+
     }, []);
 
     const handlePaymentSuccessClose = () => {
@@ -275,25 +272,83 @@ const EventsPage = props => {
         props.history.replace({
             search: "",
         });
-    }
+    };
+
+    const handleConfirmation = (eventId, eventNo, eventName) => {
+        if (!props.tokenId || !props.googleId) {
+            // props.notifyAction("login to register", 3, "warning");
+            props.authPopup();
+        }
+        else {
+            setRegisterForId([true, eventId, eventNo, eventName]);
+        }
+    };
+
+    const paymentSuccessModal = (
+        <MDBContainer>
+            <MDBModal className="registration" isOpen={paymentSuccess[0]} toggle={handlePaymentSuccessClose}>
+                <MDBModalHeader toggle={handlePaymentSuccessClose}>
+                    <img className="logo-registration" src="/logo/tirutsava_big.png" />
+                </MDBModalHeader>
+
+                <MDBModalBody>
+                    <div className="registration__success">
+                        Successfully registered to {paymentSuccess[1]}
+                    </div>
+                </MDBModalBody>
+
+            </MDBModal>
+        </MDBContainer>
+    );
+
+    const confirmRegistrationModal = (
+        <MDBContainer>
+            <MDBModal className="registration"
+                isOpen={registerForId[0]}
+                toggle={() => {
+                    setRegisterForId([false, null, null, null]);
+                }}
+            >
+                <MDBModalHeader
+                    toggle={() => {
+                        setRegisterForId([false, null, null, null]);
+                    }}
+                >
+                    <img className="logo-registration" src="/logo/tirutsava_big.png" />
+                </MDBModalHeader>
+
+                <MDBModalBody>
+                    <div className="registration__success">
+                        Confirm registration to {registerForId[3]}
+                    </div>
+                    {
+                        registerLoader ?
+                            <div className="spinner-border text-primary" role="status">
+                                <span className="sr-only">Loading...</span>
+                            </div>:
+                                <div>
+                                    <Button
+                                        onClick={() => {
+                                            handleRegister(registerForId[1], registerForId[2])
+                                        }}
+                                    >Confirm</Button>
+                                    <Button
+                                        onClick={() => {
+                                            setRegisterForId([false, null, null, null]);
+                                        }}
+                                    >Cancel</Button>
+                                </div>
+                    }
+                </MDBModalBody>
+
+            </MDBModal>
+        </MDBContainer>
+    );
 
     return (
         <div>
-            <MDBContainer>
-                <MDBModal className="registration" isOpen={paymentSuccess[0]} toggle={handlePaymentSuccessClose}>
-                    <MDBModalHeader toggle={handlePaymentSuccessClose}>
-                        <img className="logo-registration" src="/logo/tirutsava_big.png" />
-                    </MDBModalHeader>
-
-                    <MDBModalBody>
-                        <div className="registration__success">
-                            Successfully registered to {paymentSuccess[1]}
-                        </div>
-                    </MDBModalBody>
-
-                </MDBModal>
-            </MDBContainer>
-
+            {paymentSuccessModal}
+            {confirmRegistrationModal}
             {
                 categories.map(category => {
                     return (
@@ -340,7 +395,7 @@ const EventsPage = props => {
                                                         preview={viewEvent === null}
                                                         full={viewEvent === idx}
                                                         setFull={() => setViewEvent(idx)}
-                                                        handleRegister={() => handleRegister(event._id, idx)}
+                                                        handleRegister={() => handleConfirmation(event._id, idx, event.name)}
                                                         alreadyRegistered={registeredIds.includes(event._id)}
                                                         registerLoader={registerLoader}
                                                         registrationOpen={event.registrationOpen}
@@ -377,8 +432,6 @@ const EventsPage = props => {
             </div>
 
         </div>
-
-
     );
 }
 
@@ -391,7 +444,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        notifyAction: (msg, exp, type) => dispatch(actions.notifyAction(msg, exp, type))
+        notifyAction: (msg, exp, type) => dispatch(actions.notifyAction(msg, exp, type)),
+        authPopup: () => dispatch(actions.authPopup()),
     }
 }
 

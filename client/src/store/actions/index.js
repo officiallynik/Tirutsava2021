@@ -1,7 +1,8 @@
 export {
     authSuccess,
     logout,
-    authCheckState
+    authCheckState,
+    authPopup
 } from './auth';
 
 export {

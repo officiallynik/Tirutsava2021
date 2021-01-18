@@ -16,7 +16,6 @@ import { connect } from 'react-redux';
 class Registration extends Component {
 
 	state = {
-		modal: false,
 		isRegistration: false,
 		state: null,
 		city: null,
@@ -31,9 +30,7 @@ class Registration extends Component {
 	};
 
 	toggle = () => {
-		this.setState({
-			modal: !this.state.modal
-		});
+		this.props.modalToggle();
 	}
 
 	responseGoogleSuccess = (res) => {
@@ -312,7 +309,7 @@ class Registration extends Component {
 							<MDBContainer >
 								{/* BUTTON */}
 								{/* MODAL */}
-								<MDBModal className="registration" isOpen={this.state.modal} toggle={this.toggle}    >
+								<MDBModal className="registration" isOpen={this.props.modal} toggle={this.toggle}    >
 									<MDBModalHeader toggle={this.toggle}>
 
 										<img className="logo-registration" src="/logo/tirutsava_big.png" />
@@ -356,7 +353,9 @@ class Registration extends Component {
 
 const mapStateToProps = (state) => {
 	return {
-		isAuthenticated: state.auth.tokenId !== null
+		isAuthenticated: state.auth.tokenId !== null,
+		modal: state.auth.authPopup,
+		authMsg: state.auth.msg,
 	}
 }
 
@@ -364,7 +363,8 @@ const mapDispatchToProps = dispatch => {
 	return {
 		authSuccessCallback: (tokenId, googleId) => dispatch(actions.authSuccess(tokenId, googleId)),
 		authLogoutCallback: () => dispatch(actions.logout()),
-		notifyAction: (msg, exp, notifyType) => dispatch(actions.notifyAction(msg, exp, notifyType))
+		notifyAction: (msg, exp, notifyType) => dispatch(actions.notifyAction(msg, exp, notifyType)),
+		modalToggle: () => dispatch(actions.authPopup()),
 	}
 }
 

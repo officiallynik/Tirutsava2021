@@ -6,86 +6,86 @@ import "./Faqs.css";
 const Faqs = () => {
 	const [faqs, setfaqs] = useState([
 		{
-			question: "How do I register for tirutsava?",
-			answer: "You can register for tirutsava by going to the Register page on our website.",
-			open: false
+			open: false,
+			question: "How do I register for Tirutsava?",
+			answer: "You can register for Tirutsava by going to the Register page on our website www.tirutsava.com .",
 		},
 		{
-			question: "What are the dates for tirutsava?",
-			answer: "Tirutsava will be held from 31 January 2020 to 2 February 2020.",
-			open: false
+			open: false,
+			question: "What are the dates for Tirutsava 2021?",
+			answer: "This edition of Tirutsava will be held from 25 February to 28 February 2021.",
 		},
 		{
-			question: "Am I eligible to register for events at Tirutsava?",
-			answer: "Any college/school student with a valid ID card can register for events",
-			open: false
+			open: false,
+			question: "Am I eligible to register for the events at Tirutsava 2021?",
+			answer: "Any school/college student with a valid institute ID proof can register for events",
 		},
 		{
+			open: false,
 			question: "Are on-spot registrations allowed during the fest?",
-			answer: "On-spot registrations may or may not be allowed depending on the number of already registered participants. We suggest that you register online as soon as possible to prevent any unforeseen circumstances.",
-			open: false
+			answer: "On-spot registrations are subject to the view of the event coordinators. We suggest registering online as soon as possible to avoid any unforeseen circumstances.",
 		},
 		{
-			question: "Why should I give my information in registration?",
-			answer: "All the details asked are relevant and are used to keep you updated about events at Tirutsava. All the information is kept safe.",
-			open: false
+			open: false,
+			question: "Why should I give my information during registration?",
+			answer: "We respect your privacy. The details you provide are collected only to keep you updated on the proceedings and enable a comfortable experience",
 		},
 		{
-			question: "What is the artist lineup for pro nites at Tirutsava?",
-			answer: "",
-			open: false
+			open: false,
+			question: "How can I buy passes for the pro shows?",
+			answer: "You can buy passes to the pro-shows on our website homepage, which will be up very soon. Look out for some exciting offers!",
 		},
 		{
-			question: "How can I buy passes for pro nite?",
-			answer: "",
-			open: false
+			open: false,
+			question: "Am I eligible to attend the pro show?",
+			answer: "Any person having the pass is eligible to attend the pro show",
 		},
 		{
-			question: "Am I eligible to attend the pro nites?",
-			answer: "",
-			open: false
+			open: false,
+			question: "Do I need to report at IIT Tirupati for any event?",
+			answer: "No, Tirutsava 2021 is completely online",
+		},
+		
+		{
+			open: false,
+			question: "Will I receive an e-receipt or confirmation after paying money for a particular event registration?",
+			answer: " As soon as your payment is successful, you will be redirected to a page with “Payment Successful” in big, bold letters. We also suggest that you keep a screenshot of this page to avoid any discrepancies.",
 		},
 		{
-			question: "Should I carry some ID card everytime?",
-			answer: "Yes, as security check are done at random intervals",
-			open: false
+			open: false,
+			question: "Can I cancel my registration for a particular event and ask for a refund?",
+			answer: "We don’t permit cancellation and refund for any event. In case of any issue, please contact the event coordinators. We will put in our best efforts to resolve your issue. ",
 		},
-
 		{
+			open: false,
+			question: "Can I purchase Tirutsava merchandise online?",
+			answer: "Yes, you can purchase the official merchandise online. We also provide the option of home delivery.",
+		},
+		{
+			open: false,
+			question: "What happens if my internet connection is unstable during an event? Will my registration fee be refunded?",
+			answer: " Please contact the event coordinator as early as possible. We will address the issues on a case-by-case basis.",
+		},
+		{
+			open: false,
+			question: "In case I face any technical issue just before an event, will someone else be allowed to participate on my behalf ?",
+			answer: "Yes, this can be allowed if you inform the details of the substitute on time. We will also need a valid reason for your absence.",
+		},
+		{
+			open: false,
 			question: "Will I get a certificate for participation in competitions?",
 			answer: "Winners and finalists of each event will get an online certificate after Tirutsava",
-			open: false
 		},
 		{
-			question: "Will accommodation be provided by team tirutsava?",
-			answer: "Yes, accommodation will be provided.",
-			open: false
+			open: false,
+			question: "Whom should I contact in case of any discrepancy during an event?",
+			answer: "Contact the event coordinator as soon as there is any problem",
 		},
 		{
-			question: "What is the cost of accommodation facility?",
-			answer: "We charge on a night basis and we charge INR 200 for Non AC room and INR 250 for AC room.",
-			open: false
-		},
-		{
-			question: "What all does the accommodation facilities include?",
-			answer: "It includes basic hospitality facilities.",
-			open: false
-		},
-		{
-			question: "Does accommodation fee include food facility as well?",
-			answer: "No, accomodation fee doesn't include food facility.",
-			open: false
-		},
-		{
-			question: "What are the entry and exit timings of IIT-TP campus during Tirutsava?",
-			answer: "",
-			open: false
-		},
-		{
-			question: "Will parking spots be available?",
-			answer: "Yes,parking spots are available in the campus itself.",
-			open: false
-		}
+			open: false,
+			question: "Whom should I contact if I am unable to register or log into my account?",
+			answer: "Contact the Web Development Team or any other person. You can find all the details of the members on the Contact Us page of the website",
+		}		
 	]);
 
 	const [showfaqs] = useState(faqs);
@@ -151,7 +151,7 @@ const Faqs = () => {
 
 				{faqs.length === 0? 
 					<div>
-						No Such FAQ Found, You Can Ask New
+						No Such FAQ Found
 					</div>
 					:
 					null
