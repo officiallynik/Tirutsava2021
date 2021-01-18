@@ -126,10 +126,10 @@ const Event = props => {
                                         else if (idx === 1) {
                                             return <div key={idx}>Runner: Rs. {prize}</div>
                                         }
-                                        else if (idx === 3) {
+                                        else if (idx === 2) {
                                             return <div key={idx}>3rd place: Rs. {prize}</div>
                                         }
-                                        return <div key={idx}>{idx}th place: Rs. {prize}</div>
+                                        return <div key={idx}>{idx+1}th place: Rs. {prize}</div>
                                     })
                                 }
                             </div>
