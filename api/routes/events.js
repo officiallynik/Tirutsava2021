@@ -167,7 +167,7 @@ router.post("/register/:tokenId/:googleId/:eventId", async (req, res) => {
 		// console.log("event", event);
 		// console.log("user", phone, user);
 
-		let redirectUrl = `http://localhost:8080/api/events/callback?tokenId=${tokenId}&googleId=${googleId}&eventType=${eventType}&eventId=${eventId}&eventNo=${eventNo}&eventName=${eventName}`;
+		let redirectUrl = `http://www.tirutsava.com/api/events/callback?tokenId=${tokenId}&googleId=${googleId}&eventType=${eventType}&eventId=${eventId}&eventNo=${eventNo}&eventName=${eventName}`;
 
 		if (event.entryFee === 0) {
 			registerFreeEvent({
@@ -238,7 +238,7 @@ router.get('/callback/', async (req, res) => {
 		});
 
 		// Redirect the user to payment complete page.
-		return res.redirect(`http://localhost:3000/events/${eventType}?eventName=${eventName}&eventId=${eventId}&payment_id=${responseData.payment_id}`);
+		return res.redirect(`http://www.tirutsava.com/events/${eventType}?eventName=${eventName}&eventId=${eventId}&payment_id=${responseData.payment_id}`);
 	}
 
 });

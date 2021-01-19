@@ -321,6 +321,9 @@ const EventsPage = props => {
                     <div className="registration__success">
                         Confirm registration to {registerForId[3]}
                     </div>
+                    <div>
+                        Note: Please wait for redirect to this page after payment (for paid events)
+                    </div>
                     {
                         registerLoader ?
                             <div className="spinner-border text-primary" role="status">

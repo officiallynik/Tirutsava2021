@@ -6,7 +6,7 @@ const Event = props => {
 
     let name = props.eventName;
     name = name.toLowerCase();
-    name = name.replace(" ", "_");
+    name = name.replaceAll(" ", "_");
 
     const desc = props.eventDesc.split("///");
 
