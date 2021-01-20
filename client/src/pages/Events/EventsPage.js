@@ -157,7 +157,7 @@ const EventsPage = props => {
                 }
             })
             .catch(err => {
-                console.log(err);
+                // console.log(err);
             })
             .finally(() => {
                 setRegisterLoader(false);
@@ -171,7 +171,7 @@ const EventsPage = props => {
             case 0:
                 axios.get("/api/events/type/0")
                     .then(res => {
-                        console.log(res);
+                        // console.log(res);
                         setEvents(res.data);
                     })
                     .catch(err => {
@@ -248,7 +248,7 @@ const EventsPage = props => {
                     setRegisteredIds(res.data.registeredeventids);
                 })
                 .catch(err => {
-                    console.log(err);
+                    // console.log(err);
                 })
         }
     }, [props.tokenId, props.googleId]);
@@ -321,7 +321,7 @@ const EventsPage = props => {
                     <div className="registration__success">
                         Confirm registration to {registerForId[3]}
                     </div>
-                    <div>
+                    <div style={{color: "black"}}>
                         Note: Please wait for redirect to this page after payment (for paid events)
                     </div>
                     {
@@ -402,6 +402,7 @@ const EventsPage = props => {
                                                         alreadyRegistered={registeredIds.includes(event._id)}
                                                         registerLoader={registerLoader}
                                                         registrationOpen={event.registrationOpen}
+                                                        submissionLink={event.submissionMail}
                                                     />
                                                 );
                                             })

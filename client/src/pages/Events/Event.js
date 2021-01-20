@@ -98,6 +98,16 @@ const Event = props => {
                                         <div style={{ fontSize: "20px" }}>Registration Opening Soon</div> :
                                         null
                                 }
+                                {
+                                    props.alreadyRegistered && props.submissionLink !== ""?
+                                    <div style={{fontSize: "20px", fontWeight: "bold"}}>
+                                        Submission Link:
+                                        <a href={props.submissionLink} target = "_blank" rel = "noopener noreferrer"
+                                            className="event__submission__link"
+                                        > Click Here</a>
+                                    </div>:
+                                    null
+                                }
                             </div>
                         </div>
 

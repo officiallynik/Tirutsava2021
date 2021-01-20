@@ -62,7 +62,7 @@ const Toolbar = props => (
 									<Link to="/sponsors">SPONSORS</Link>
 								</li>
 								<li>
-									<Link data-tip="Enabled soon">FAQs</Link>
+									<Link to="/faqs">FAQs</Link>
 								</li>
 								<Registration
 									btnLogin={

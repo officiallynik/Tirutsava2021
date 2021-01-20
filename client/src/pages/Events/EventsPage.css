@@ -226,3 +226,13 @@
     display: none;
   }
 }
+
+.event__submission__link {
+  color: white;
+  opacity: 0.8;
+}
+
+.event__submission__link:hover {
+  color: white;
+  opacity: 1;
+}
