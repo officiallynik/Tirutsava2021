@@ -34,7 +34,7 @@
   height: 80vh;
   display: flex;
   flex-direction: row;
-  padding: 0 10vw;
+  padding: 0 5vw;
 }
 
 .event__preview {
@@ -83,7 +83,7 @@
 
 .close-btn {
   position: absolute;
-  right: 12vw;
+  right: 7vw;
   opacity: 0.8;
   z-index: 3;
   padding-top: 8px;

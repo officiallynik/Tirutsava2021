@@ -118,7 +118,7 @@ const registerEvent = ({ purpose, amount, buyer_name, email, phone, redirectUrl,
 	Insta.setKeys(config.instaAPIKey, config.instaAuthKey);
 
 	const data = new Insta.PaymentData();
-	Insta.isSandboxMode(true);
+	// Insta.isSandboxMode(true);
 
 	data.purpose = purpose;
 	data.amount = amount;

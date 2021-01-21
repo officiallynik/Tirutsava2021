@@ -22,7 +22,7 @@ const Event = props => {
                 { backgroundImage: `url("/events/${name}.jpg")`, opacity: 1 } :
                 !props.preview ?
                     { flex: 0 } :
-                    { backgroundImage: `url("/events/${name}.jpg")` }
+                    { background: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/events/${name}.jpg")` }
             }
             onClick={props.setFull}
         >
