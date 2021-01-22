@@ -25,6 +25,9 @@ const Toolbar = props => (
 						(
 							<ul id="navit">
 								<li>
+									<Link to="/merch">Buy Merch</Link>
+								</li>
+								<li>
 									<Link to="/contactus">CONTACT US</Link>
 								</li>
 								<li>
@@ -54,6 +57,9 @@ const Toolbar = props => (
 								</li>
 								<li>
 									<Link to="/events">EVENTS</Link>
+								</li>
+								<li>
+									<Link to="/merch">Buy Merch</Link>
 								</li>
 								<li>
 									<Link to="/contactus">CONTACT US</Link>

@@ -7,9 +7,7 @@ const verifyToken = require('../services/auth');
 const Insta = require('instamojo-nodejs');
 const url = require('url');
 const config = require('../config/keys');
-
 const { GoogleSpreadsheet } = require('google-spreadsheet');
-const { promisify } = require('util');
 
 const sheetIds = {
 	"prefest": "1v4gDVCLG5x7O7EsEQrX1ZgK6JP7TJVWs7K5TNITcESw"

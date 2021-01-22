@@ -1,0 +1,31 @@
+.merch-page {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+@media(max-width: 720px) {
+    .merch-page {
+        padding-top: 10vh;
+        height: 100%;
+        flex-direction: column;
+    }
+}
+
+.merch__preview {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.merch__form {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
