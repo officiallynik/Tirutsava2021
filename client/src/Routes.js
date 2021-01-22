@@ -7,6 +7,7 @@ import FAQs from './pages/Faqs/Faqs';
 import ContactUs from './pages/ContactUs/ContactUs';
 import Events from './pages/Events/EventsPage';
 import HomePage from './pages/Homepage/Homepage';
+import Cart from "./pages/Cart/Cart";
 
 // import Legacy from "./pages/tirutsavaLegacy/TirutsavaLegacy";
 
@@ -18,6 +19,7 @@ function Routes() {
             <Route path="/sponsors" exact  component={Sponsors} />
             <Route path="/faqs" exact component={FAQs} />
             <Route path="/contactus" exact  component={ContactUs} />
+            <Route path="/cart" exact component={Cart}/>
             <Route path="/events" component={Events} />
             {/* <Route path="/aboutus" component={Legacy} /> */}
         </div>
