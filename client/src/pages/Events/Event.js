@@ -95,7 +95,10 @@ const Event = props => {
                                 Note: If the participation is very less, the prize money will be reduced by half of the total amount
                                 {
                                     !props.registrationOpen ?
-                                        <div style={{ fontSize: "20px" }}>Registration Opening Soon</div> :
+                                        <div style={{ fontSize: "20px" }}>
+                                            <br />
+                                            Registrations Closed
+                                        </div> :
                                         null
                                 }
                                 {
