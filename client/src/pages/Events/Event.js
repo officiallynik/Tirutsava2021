@@ -72,7 +72,7 @@ const Event = props => {
                                         >
                                             <Button
                                                 onClick={props.handleRegister}
-                                                disabled={props.alreadyRegistered || !props.registrationOpen}
+                                                disabled={props.alreadyRegistered || !props.registrationOpen || props.entryFee > 0}
                                             >
                                                 {
                                                     props.alreadyRegistered ?
@@ -98,6 +98,11 @@ const Event = props => {
                                         <div style={{ fontSize: "20px" }}>
                                             <br />
                                             Registrations Closed
+                                        </div> :
+                                        props.entryFee > 0?
+                                        <div style={{ fontSize: "20px" }}>
+                                            <br />
+                                            Registrations will be back soon
                                         </div> :
                                         null
                                 }

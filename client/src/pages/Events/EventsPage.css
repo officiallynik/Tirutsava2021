@@ -58,7 +58,7 @@
 .event__preview__name {
   width: 100%;
   height: 100%;
-  writing-mode: vertical-rl;
+  writing-mode: vertical-lr;
   text-orientation: upright;
   text-transform: uppercase;
   color: white;
