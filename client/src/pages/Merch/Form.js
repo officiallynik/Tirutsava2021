@@ -32,6 +32,9 @@ const MerchForm = props => {
                                     <option value="XL">XL</option>
                                     <option value="XXL">XXL</option>
                                 </select>
+                                <div style={{textAlign: "left"}}>
+                                    <a href="/merch/size_chart.jpeg" target = "_blank" rel = "noopener noreferrer">Size chart for reference</a>
+                                </div>
 
                                 <label htmlFor="defaultFormContactMessageEx" className="grey-text">
                                     Delivery Address

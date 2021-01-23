@@ -85,6 +85,9 @@ router.post("/buymerch/:tokenId/:googleId", async (req, res) => {
         });
 
         const merch = await Merch.find({});
+        
+        await new Merch({googleId: googleId, paymentStatus: "pending"}).save();
+
         let redirectUrl = `http://www.tirutsava.com/api/merch/callback?googleId=${googleId}&index=${merch.length}`;
 
         buyMerch({
@@ -123,6 +126,11 @@ router.get('/callback/', async (req, res) => {
         
         await doc.loadInfo();
         const sheet = doc.sheetsByIndex[0];
+
+        const merch = await Merch.findOne({googleId: googleId})
+        merch.paymentStatus = "paid";
+
+        await merch.save();
 
         const rows = await sheet.getRows();
 
