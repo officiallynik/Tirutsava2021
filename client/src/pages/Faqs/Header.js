@@ -2,10 +2,15 @@ import React from "react";
 import Search from "./searchbar/search";
 
 function Header(props) {
+	// var currentMode = ((new Date()).getHours() < 18 &&
+	// 	(new Date()).getHours() >= 6) ?
+	// 	'day-mode' :
+	// 	'night-mode';
+	var currentMode = 'night-mode';
 	return (
-		<header className="faq-bar">
+		<header className={`faq-bar-${currentMode}`}>
 			<div className="faq-header">
-				<h1 className="text-center">FAQs</h1>
+				<h1 className={`text-center ${currentMode}`}>FAQs</h1>
 			</div>
 			
 			<div className="faq-search">

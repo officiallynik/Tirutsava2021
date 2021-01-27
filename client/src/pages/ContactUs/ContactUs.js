@@ -17,8 +17,14 @@ class ContactUs extends React.Component {
 	}
 
 	render() {
+		// var currentMode = ((new Date()).getHours() < 18 &&
+		// 	(new Date()).getHours() >= 6) ?
+		// 	'day-mode' :
+		// 	'night-mode';
+		var currentMode = 'night-mode';
+
 		return (
-			<div className="contact-page-main">
+			<div className={`contact-page-main-${currentMode}`}>
 				<MDBRow>
 
 					<MDBCol lg="5" >
@@ -28,13 +34,13 @@ class ContactUs extends React.Component {
 
 							<MDBListGroup style={{ width: "100%" }}>
 
-								<Link to="FEST HEADS" {...this.LinkConfig}>FEST HEADS</Link>
-								<Link to="CONTENT DEVELOPMENT" {...this.LinkConfig}>CONTENT DEVELOPMENT</Link>
-								<Link to="EVENT MANAGEMENT" {...this.LinkConfig}>EVENT MANAGEMENT</Link>
-								<Link to="GRAPHICS AND DESIGN" {...this.LinkConfig}>GRAPHICS AND DESIGN</Link>
-								<Link to="MARKETING" {...this.LinkConfig}>MARKETING</Link>
-								<Link to="SPONSORSHIP" {...this.LinkConfig}>SPONSORSHIP</Link>
-								<Link to="WEB DEVELOPMENT" {...this.LinkConfig}>WEB DEVELOPMENT</Link>
+								<Link to="FEST HEADS" {...this.LinkConfig} className={`team-name-ContactUs-${currentMode}`} >FEST HEADS</Link>
+								<Link to="CONTENT DEVELOPMENT" {...this.LinkConfig} className={`team-name-ContactUs-${currentMode}`} >CONTENT DEVELOPMENT</Link>
+								<Link to="EVENT MANAGEMENT" {...this.LinkConfig} className={`team-name-ContactUs-${currentMode}`} >EVENT MANAGEMENT</Link>
+								<Link to="GRAPHICS AND DESIGN" {...this.LinkConfig} className={`team-name-ContactUs-${currentMode}`} >GRAPHICS AND DESIGN</Link>
+								<Link to="MARKETING" {...this.LinkConfig} className={`team-name-ContactUs-${currentMode}`} >MARKETING</Link>
+								<Link to="SPONSORSHIP" {...this.LinkConfig} className={`team-name-ContactUs-${currentMode}`} >SPONSORSHIP</Link>
+								<Link to="WEB DEVELOPMENT" {...this.LinkConfig} className={`team-name-ContactUs-${currentMode}`} >WEB DEVELOPMENT</Link>
 
 								{/* <MDBListGroupItem href="#section1" className="team-name-ContactUs">SPONSORSHIP</MDBListGroupItem> */}
 								{/* <MDBListGroupItem href="#section2" className="team-name-ContactUs">EVENT MANAGEMENT</MDBListGroupItem>

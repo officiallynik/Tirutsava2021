@@ -20,7 +20,7 @@ const editSpreadSheet = async ({ name, email, phonenumber, timeline, hoodieSize,
     await doc.loadInfo();
     const sheet = doc.sheetsByIndex[0];
 
-    const newRowCreated = await sheet.addRow([timeline, googleId, name, email, phonenumber, hoodieSize, pincode, address, "pending"]);
+    const newRowCreated = await sheet.addRow([timeline, googleId, name, email, phonenumber, hoodieSize, pincode, address]);
     await newRowCreated.save();
 }
 
@@ -83,12 +83,10 @@ router.post("/buymerch/:tokenId/:googleId", async (req, res) => {
             pincode, 
             googleId
         });
-
-        const merch = await Merch.find({});
         
         await new Merch({googleId: googleId, paymentStatus: "pending"}).save();
 
-        let redirectUrl = `http://www.tirutsava.com/api/merch/callback?googleId=${googleId}&index=${merch.length}`;
+        let redirectUrl = `http://www.tirutsava.com/api/merch/callback?googleId=${googleId}`;
 
         buyMerch({
             purpose: "Tirutsava'21 Merch",
@@ -111,31 +109,14 @@ router.get('/callback/', async (req, res) => {
 
     if (responseData.payment_id) {
         const googleId = responseData.googleId;
-        const index = responseData.index;
 
         // console.log(index);
 
-        // console.log(googleId, index);
-        const doc = new GoogleSpreadsheet("1L9HG9OOhuHMaTQw8LlcDzqe7D_t5oJx50BB9rnC7VO8");
-
-        await doc.useServiceAccountAuth({
-            client_email: config.sheetClientEmail,
-            private_key: config.sheetPrivateKey,
-        });
-        await new Merch({googleId: googleId}).save();
-        
-        await doc.loadInfo();
-        const sheet = doc.sheetsByIndex[0];
+        // await new Merch({googleId: googleId}).save();
 
         const merch = await Merch.findOne({googleId: googleId})
         merch.paymentStatus = "paid";
-
         await merch.save();
-
-        const rows = await sheet.getRows();
-
-        rows[index]['Payment Status'] = "paid";
-        await rows[index].save();
 
         // Redirect the user to payment complete page.
         return res.redirect(`http://www.tirutsava.com/merch?payment_id=${responseData.payment_id}`);

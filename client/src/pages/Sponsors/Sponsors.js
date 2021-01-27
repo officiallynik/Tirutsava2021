@@ -19,27 +19,27 @@ const Sponsors = () => {
 		<>
 
 			<div className="scroll-partners scroll-partners1">
-			{
-				Array.from(Array(14), (e, i) => {
-					return (
+				{
+					Array.from(Array(14), (e, i) => {
+						return (
 							<div class="scroll-image-div">
 								<img class="scroll-image" src={`/sp_2020/p${i + 1}.png`} alt="company logo" />
 							</div>
-					)
-				})
-			}
+						)
+					})
+				}
 			</div>
 
 			<div className="scroll-partners scroll-partners2">
-			{
-				Array.from(Array(14), (e, i) => {
-					return (
+				{
+					Array.from(Array(14), (e, i) => {
+						return (
 							<div class="scroll-image-div">
 								<img class="scroll-image" src={`/sp_2020/p${i + 1}.png`} alt="company logo" />
 							</div>
-					)
-				})
-			}
+						)
+					})
+				}
 			</div>
 
 		</>
@@ -49,35 +49,41 @@ const Sponsors = () => {
 		<>
 
 			<div className="scroll-sponsors scroll-sponsors1">
-			{
-				Array.from(Array(13), (e, i) => {
-					return (
+				{
+					Array.from(Array(13), (e, i) => {
+						return (
 							<div class="scroll-image-div">
 								<img class="scroll-image" src={`/sp_2020/s${i + 1}.png`} alt="company logo" />
 							</div>
-					)
-				})
-			}
+						)
+					})
+				}
 			</div>
 
 			<div className="scroll-sponsors scroll-sponsors2">
-			{
-				Array.from(Array(13), (e, i) => {
-					return (
+				{
+					Array.from(Array(13), (e, i) => {
+						return (
 							<div class="scroll-image-div">
 								<img class="scroll-image" src={`/sp_2020/s${i + 1}.png`} alt="company logo" />
 							</div>
-					)
-				})
-			}
+						)
+					})
+				}
 			</div>
 
 		</>
 	);
 
+	// var currentMode = ((new Date()).getHours() < 18 &&
+	// 	(new Date()).getHours() >= 6) ?
+	// 	'day-mode' :
+	// 	'night-mode';
+	var currentMode = 'night-mode';
+
 	return (
 		<div>
-			<div className="sponsors-page">
+			<div className={`sponsors-page-${currentMode}`}>
 				<MDBRow>
 
 					<MDBCol lg="5" >
@@ -87,12 +93,12 @@ const Sponsors = () => {
 
 							<MDBListGroup style={{ width: "100%" }}>
 
-								<Link to="TITLE SPONSORS" {...LinkConfig}>TITLE SPONSORS</Link>
-								<Link to="GOLD SPONSORS" {...LinkConfig}>GOLD SPONSORS</Link>
-								<Link to="SILVER SPONSORS" {...LinkConfig}>SILVER SPONSORS</Link>
-								<Link to="COPPER SPONSORS" {...LinkConfig}>COPPER SPONSORS</Link>
-								<Link to="OTHER SPONSORS" {...LinkConfig}>OTHER SPONSORS</Link>
-								<Link to="PARTNERS" {...LinkConfig}>PARTNERS</Link>
+								<Link to="TITLE SPONSORS" {...LinkConfig} className={`team-name-Sponsors-${currentMode}`} >TITLE SPONSORS</Link>
+								<Link to="GOLD SPONSORS" {...LinkConfig} className={`team-name-Sponsors-${currentMode}`} >GOLD SPONSORS</Link>
+								<Link to="SILVER SPONSORS" {...LinkConfig} className={`team-name-Sponsors-${currentMode}`} >SILVER SPONSORS</Link>
+								<Link to="COPPER SPONSORS" {...LinkConfig} className={`team-name-Sponsors-${currentMode}`} >COPPER SPONSORS</Link>
+								<Link to="OTHER SPONSORS" {...LinkConfig} className={`team-name-Sponsors-${currentMode}`} >OTHER SPONSORS</Link>
+								<Link to="PARTNERS" {...LinkConfig} className={`team-name-Sponsors-${currentMode}`} >PARTNERS</Link>
 
 							</MDBListGroup>
 						</div>
@@ -114,7 +120,7 @@ const Sponsors = () => {
 				</MDBRow>
 
 				<div style={{ height: "5vh", width: "100%" }}></div>
-				
+
 				<MDBCol className="prev-sponsors">
 					<h2 className="prev-sponsors-header">Our Previous Year Sponsors</h2>
 					<h4 className="prev-sponsors-subheader">Checkout companies associated with Tirutsava 2020</h4>

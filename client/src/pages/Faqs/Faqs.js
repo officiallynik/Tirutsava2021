@@ -136,9 +136,15 @@ const Faqs = () => {
 		setfaqs(newList);
 	};
 
+	// var currentMode = ((new Date()).getHours() < 18 &&
+	// 	(new Date()).getHours() >= 6) ?
+	// 	'day-mode' :
+	// 	'night-mode';
+	var currentMode = 'night-mode';
+
 	return (
 		<div className="faqs-screen">
-			<div className="bcgrnd">
+			<div className={`bcgrnd ${currentMode}`}>
 				<div style={{backgroundColor: "rgb(30, 21, 52)"}}>
 					<Header handleChange={handleChange} />
 				</div>

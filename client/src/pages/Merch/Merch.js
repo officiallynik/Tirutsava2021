@@ -28,7 +28,7 @@ const MerchPage = (props) => {
             pincode
         }).then(res => {
             console.log(res.data);
-            if(res.data.redirectUrl) {
+            if (res.data.redirectUrl) {
                 window.location.href = res.data.redirectUrl
             }
         })
@@ -150,6 +150,9 @@ const MerchPage = (props) => {
                     />
                 </div>
             </div>
+            {/* <div style={{display: "flex", justifyContent: "center", width: "100%", height: "100vh", alignItems: "center"}}>
+                <h1>Back Soon</h1>
+            </div> */}
         </div>
     );
 };

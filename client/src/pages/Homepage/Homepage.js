@@ -117,7 +117,7 @@ const Homepage = props => {
 							With 30+ events Tirutsava 2021 brings a lot of fun, entertainment and learning. Participate in events and win
 							cool prizes, registration for prefest events is now open. Visit the link below.
 						</div>
-						<div className="discover-btn shift-right"
+						<div className={`discover-btn-${currentMode} shift-right`}
 							onClick={() => {
 								props.history.push("/events")
 							}}
@@ -214,44 +214,20 @@ const Homepage = props => {
 							</div>
 						</div>
 
-						{/* <div>
-							<div className="logo-social" style={{position: "flxed !important", bottom: "30vh"}}>
-								<a style={{display: "flex", alignItems: "center", textDecoration: "none"}}
-									href="https://www.facebook.com/tirutsava.IITTirupati/"
-								>
-									<i className={`fa fas-${currentMode} fa-facebook shift-l`} aria-hidden="true"></i>
-								</a>
-								<a style={{display: "flex", alignItems: "center", textDecoration: "none"}}
-									href="https://www.instagram.com/tirutsava.iittirupati/"
-								>
-									<i className={`fa fas-${currentMode} fa-instagram shift-l`} aria-hidden="true"></i>
-								</a>
-								<a style={{display: "flex", alignItems: "center", textDecoration: "none"}}
-									href="https://www.youtube.com/channel/UCgmHdDwotMlBsrgxJE9tIBA"
-								>
-									<i className={`fa fas-${currentMode} fa-youtube shift-l`} aria-hidden="true"></i>
-								</a>
-							</div>
-						</div> */}
-
 					</div>
 
 					<div className="bottom-nav" style={{ zIndex: zindex }}>
-						<div className={boolhome ? "bottom-nav-btn bottom-nav-active" : "bottom-nav-btn"} onClick={onClickHome}>
+						<div className={boolhome ? `bottom-nav-btn ${currentMode} bottom-nav-active` : "bottom-nav-btn ${currentMode}"} onClick={onClickHome}>
 							Tirutsava 2021
 						</div>
-						<div className={boolevents ? "bottom-nav-btn bottom-nav-active" : "bottom-nav-btn"} onClick={onClickEvents}>
+						<div className={boolevents ? `bottom-nav-btn ${currentMode} bottom-nav-active` : "bottom-nav-btn ${currentMode}"} onClick={onClickEvents}>
 							Events
 						</div>
-						<div className={boolworkshops ? "bottom-nav-btn bottom-nav-active" : "bottom-nav-btn"} onClick={onClickWorkshops}>
+						<div className={boolworkshops ? `bottom-nav-btn ${currentMode} bottom-nav-active` : "bottom-nav-btn ${currentMode}"} onClick={onClickWorkshops}>
 							Workshops
 						</div>
-						<div className={boolproshows ? "bottom-nav-btn bottom-nav-active" : "bottom-nav-btn"} onClick={onClickProshows}>
+						<div className={boolproshows ? `bottom-nav-btn ${currentMode} bottom-nav-active` : "bottom-nav-btn ${currentMode}"} onClick={onClickProshows}>
 							Proshows
-						</div>
-
-						<div className="bottom-nav-btn" data-tip="Enabled during live events">
-							Live Now
 						</div>
 					</div>
 				</div>

@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
 
-.sponsors-page {
+.sponsors-page-night-mode {
     font-family: 'Paytone One', sans-serif;
     overflow-x: hidden;
+}
+
+.sponsors-page-day-mode {
+    font-family: 'Paytone One', sans-serif;
+    overflow-x: hidden;
+    background-color: #10A5F9;
 }
 
 .image-div{
@@ -14,8 +20,26 @@
     justify-content: center;
 }
 
-.team-name-Sponsors{
+.team-name-Sponsors-night-mode{
     background-color: rgb(30, 21, 52);
+    display: block;
+    color: white;
+    font-size: 1.7vw;
+    border: none;
+    width:fit-content;
+    padding-left:  7vw;
+    /* font-family: 'Maven Pro', sans-serif; */
+    font-family: 'Paytone One', sans-serif;
+    padding-right: 10vw;
+    margin: 1.5% 0;
+    text-align: start;
+   
+    text-shadow: 5px 5px 5px rgba(0,0,0,.5);
+    
+}
+
+.team-name-Sponsors-day-mode{
+    background-color: #10A5F9;
     display: block;
     color: white;
     font-size: 1.7vw;

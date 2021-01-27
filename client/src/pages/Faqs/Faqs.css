@@ -4,7 +4,11 @@
   font-family: 'Paytone One', sans-serif;
 }
 
-.faq-bar {
+.faqs-screen .day-mode {
+  background-color: #10A5F9 !important;
+}
+
+.faq-bar-night-mode {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -13,11 +17,25 @@
   padding-top: 10vh;
 }
 
+.faq-bar-day-mode {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  padding-top: 10vh;
+  background-color: #10A5F9;
+}
+
 .faq-header {
   flex-grow: 1;
   display: flex;
   justify-content: flex-start;
   width: 100%;
+}
+
+.faq-header .day-mode {
+  color: rgb(30, 21, 52);
 }
 
 .faq-search {
@@ -131,8 +149,7 @@
 }
 .bcgrnd {
   /* background: #1e1534; */
-  background: -moz-linear-gradient(left, #0f0c29 0%, #302b63, #24243e 100%);
-  background: -webkit-linear-gradient(left, #0f0c29 0%, #302b63, #24243e 100%);
+  background: rgb(30, 21, 52);
   /* background-image: url("./faq1.jpg"); */
   /* position: fixed; */
   background-size: cover;
