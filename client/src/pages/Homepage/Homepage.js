@@ -156,14 +156,16 @@ const Homepage = props => {
 				<div className="hm">
 					<div className="cont-home">
 						<div className={`head-home-${currentMode} shift-right`}>Workshops</div>
-						<div className={`head-home-cont-${currentMode} shift-right`}>
-							<div className="comingsoon__homepage">
-								Coming Soon
-							</div>
+						<div className={`head-home-cont-${currentMode} shift-right`} style={{ width: "100%", textAlign: "left" }}>
+							Get informative this Tirutsava with some cool workshops.
 						</div>
-						{/* <div className="discover-btn shift-right">
+						<div className={`discover-btn-${currentMode} shift-right`}
+							onClick={() => {
+								props.history.push("/events/workshops")
+							}}
+						>
 							Discover
-						</div> */}
+						</div>
 					</div>
 				</div>
 			</div>
