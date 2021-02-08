@@ -47,6 +47,14 @@ const EventSchema = mongoose.Schema({
 	registrationOpen: {
 		type: Boolean,
 		default: false
+	},
+	links: {
+		type: Array,
+		default: []
+	},
+	redirectRegistrationUrl: {
+		type: String,
+		default: null
 	}
 });
 

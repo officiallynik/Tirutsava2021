@@ -68,10 +68,10 @@ const Event = props => {
                                             </Button>
                                         </a> :
                                         <a
-                                            href="#"
+                                            href={props.redirectRegistrationUrl || "#"}
                                         >
                                             <Button
-                                                onClick={props.handleRegister}
+                                                onClick={props.redirectRegistrationUrl? null: props.handleRegister}
                                                 disabled={props.alreadyRegistered || !props.registrationOpen}
                                             >
                                                 {
@@ -125,6 +125,17 @@ const Event = props => {
                                             return <br key={idx} />
                                         }
                                         return <div key={idx}>{line}</div>
+                                    })
+                                }
+                                {
+                                    props.links.forEach((link, idx) => {
+                                        return (
+                                            <div key={idx}>
+                                                {link.desc}:
+                                                <a href={link.href}
+                                                ></a>
+                                            </div>
+                                        )
                                     })
                                 }
                             </div>

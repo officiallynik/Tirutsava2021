@@ -10,7 +10,8 @@ const config = require('../config/keys');
 const { GoogleSpreadsheet } = require('google-spreadsheet');
 
 const sheetIds = {
-	"prefest": "1v4gDVCLG5x7O7EsEQrX1ZgK6JP7TJVWs7K5TNITcESw"
+	"prefest": "1v4gDVCLG5x7O7EsEQrX1ZgK6JP7TJVWs7K5TNITcESw",
+	"workshops": "1qvUGzQmma6vKk8ULGgiW5f46eh3oGgcgQ3PTgsfO4bE"
 }
 
 router.get('/type/:id', (req, res) => {
@@ -282,7 +283,9 @@ router.post('/create', async (req, res) => {
 			submissionMail: req.body.submissionMail || "",
 			eventPrize: req.body.eventPrize,
 			maxParticipants: req.body.maxParticipants,
-			registrationOpen: req.body.registrationOpen
+			registrationOpen: req.body.registrationOpen,
+			links: req.body.links,
+    		redirectRegistrationUrl: req.body.redirectRegistrationUrl,
 		}).save();
 
 		res.json({ msg: "event added", newEvent });

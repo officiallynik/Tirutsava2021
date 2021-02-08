@@ -403,6 +403,8 @@ const EventsPage = props => {
                                                         registerLoader={registerLoader}
                                                         registrationOpen={event.registrationOpen}
                                                         submissionLink={event.submissionMail}
+                                                        links={event.links}
+                                                        redirectRegistrationUrl={event.redirectRegistrationUrl}
                                                     />
                                                 );
                                             })
