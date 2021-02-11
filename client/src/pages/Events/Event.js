@@ -145,15 +145,15 @@ const Event = props => {
                                     prizes.map((prize, idx) => {
                                         // console.log(prize);
                                         if (idx === 0) {
-                                            return <div key={idx}>Winner: Rs. {prize}</div>
+                                            return <div key={idx}>Winner: {prize}</div>
                                         }
                                         else if (idx === 1) {
-                                            return <div key={idx}>Runner: Rs. {prize}</div>
+                                            return <div key={idx}>Runner: {prize}</div>
                                         }
                                         else if (idx === 2) {
-                                            return <div key={idx}>3rd place: Rs. {prize}</div>
+                                            return <div key={idx}>3rd place: {prize}</div>
                                         }
-                                        return <div key={idx}>{idx+1}th place: Rs. {prize}</div>
+                                        return <div key={idx}>{idx+1}th place: {prize}</div>
                                     })
                                 }
                             </div>
