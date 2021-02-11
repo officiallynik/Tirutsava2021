@@ -10,8 +10,11 @@ const config = require('../config/keys');
 const { GoogleSpreadsheet } = require('google-spreadsheet');
 
 const sheetIds = {
-	"prefest": "1v4gDVCLG5x7O7EsEQrX1ZgK6JP7TJVWs7K5TNITcESw",
-	"workshops": "1qvUGzQmma6vKk8ULGgiW5f46eh3oGgcgQ3PTgsfO4bE"
+        "prefest": "1v4gDVCLG5x7O7EsEQrX1ZgK6JP7TJVWs7K5TNITcESw",
+        "workshops": "1qvUGzQmma6vKk8ULGgiW5f46eh3oGgcgQ3PTgsfO4bE",
+        "technical": "1DCQEJwhuEAGVQVZPrydtLbkMl-rXDFFrnMkdjaBnW_g",
+        "cultural": "1H4GNnmoYaApOff9qhPGVh25iFgEmZ28UJwmTM8XAeaY",
+        "literary": "1M_wEYY12YSznJGEyb54zMV0w0DBCXQjno_tTBGDITo4"
 }
 
 router.get('/type/:id', (req, res) => {
