@@ -8,7 +8,7 @@ import { withRouter } from 'react-router-dom';
 // 'day-mode' : 
 // 'night-mode';
 
-var currentMode = "night-mode";
+var currentMode = "day-mode";
 
 
 const HomepagePhone = props => {
@@ -22,13 +22,18 @@ var clickedham = () => {
             <div>
                 <Navbar />
             </div>
+
+            <div>
+                <img src={`city-${currentMode}.png`} style={{width: "100%", position: "fixed", bottom: 0, left: 0}} />
+            </div>
+
             <div className={`phone-body-${currentMode} conatainer-fluid`}>
                 {/* <div className="navbar-section"><NavbarNewphone boolshownav={boolshow}></NavbarNewphone></div> */}
                     <div className="tirutsava-poster">
                         <img src="/homepage/tirutsava_poster.png" style={{width: "100%"}} />
                     </div>
 
-                    <div className="tirutsava-box "><p className="tirutsava-title">Events</p></div>
+                    <div className="tirutsava-box "><p className={`tirutsava-title-${currentMode}`}>Events</p></div>
                     <div className="img-class">
                         <img className="images-phone-slider" src="/homepage/games.png" alt="Events"/>
                     </div>
@@ -44,7 +49,7 @@ var clickedham = () => {
                         }}
                     ><button className="discover-btn">Discover</button></div>
 
-                    <div className="tirutsava-box"><p className="tirutsava-title">Workshops</p></div>
+                    <div className="tirutsava-box"><p className={`tirutsava-title-${currentMode}`}>Workshops</p></div>
                     <div className="img-class">
                         <img className="images-phone-slider" src="/homepage/technical2.png" alt="Events"/>
                     </div>
@@ -60,12 +65,12 @@ var clickedham = () => {
                     ><button className="discover-btn">Discover</button></div>
                     {/* <div className="btn-box"><button className="discover-btn">Discover</button></div> */}
 
-                    <div className="tirutsava-box"><p className="tirutsava-title">Proshows</p></div>
+                    <div className="tirutsava-box"><p className={`tirutsava-title-${currentMode}`}>Proshows</p></div>
                     <div className="img-class">
                         <img className="images-phone-slider" src="/homepage/dj.png" alt="Events"/>
                     </div>
-                    <div className="phone-cont-lrn">
-                        <div className="coming-soon">
+                    <div className="phone-cont-lrn" style={{marginBottom: "200px"}}>
+                        <div className={`texts-${currentMode}`}>
                             Coming Soon
                         </div>
                     </div>

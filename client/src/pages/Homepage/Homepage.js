@@ -60,7 +60,7 @@ const Homepage = props => {
 	// 	(new Date()).getHours() >= 6) ?
 	// 	'day-mode' :
 	// 	'night-mode';
-	var currentMode = 'night-mode';
+	var currentMode = 'day-mode';
 
 	var [width, setwidth] = useState(window.innerWidth)
 	const handleresize = () => {
@@ -98,12 +98,18 @@ const Homepage = props => {
 	let mainPage = (
 		<div className="homepage-animate">
 			<div className="img-animate">
-				<animated.img
-					onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
-					style={{ transform: propsSpring.xy.interpolate(trans1), width: "90%" }}
-					src={imgname}>
-				</animated.img>
+				<img 
+					src={`city-${currentMode}.png`}
+					style={{width: "100%", position: "fixed", bottom: 0, left: 0}}
+				/>
 			</div>
+			<div className="img-animate">
+					<animated.img
+						onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
+						style={{ transform: propsSpring.xy.interpolate(trans1), width: "50%" }}
+						src={imgname}>
+					</animated.img>
+				</div>
 		</div>
 	);
 
@@ -175,7 +181,7 @@ const Homepage = props => {
 
 	var inpx = Math.floor(newwidth)
 	// console.log(inpx)
-	var [boolshow, ] = useState(false)
+	var [boolshow,] = useState(false)
 
 	var zindex = 20;
 	if (boolshow) {
@@ -185,7 +191,7 @@ const Homepage = props => {
 		zindex = 20;
 	}
 	return (
-		<div className="whole-home">
+		<div className={`whole-home-${currentMode}`}>
 
 			<div className="desktop-screen" style={{ width: "100vw", height: "100vh", overflow: "hidden" }}>
 
@@ -219,16 +225,16 @@ const Homepage = props => {
 					</div>
 
 					<div className="bottom-nav" style={{ zIndex: zindex }}>
-						<div className={boolhome ? `bottom-nav-btn ${currentMode} bottom-nav-active` : "bottom-nav-btn ${currentMode}"} onClick={onClickHome}>
+						<div className={boolhome ? `bottom-nav-btn bottom-nav-active` : `bottom-nav-btn`} onClick={onClickHome}>
 							Tirutsava 2021
 						</div>
-						<div className={boolevents ? `bottom-nav-btn ${currentMode} bottom-nav-active` : "bottom-nav-btn ${currentMode}"} onClick={onClickEvents}>
+						<div className={boolevents ? `bottom-nav-btn bottom-nav-active` : `bottom-nav-btn`} onClick={onClickEvents}>
 							Events
 						</div>
-						<div className={boolworkshops ? `bottom-nav-btn ${currentMode} bottom-nav-active` : "bottom-nav-btn ${currentMode}"} onClick={onClickWorkshops}>
+						<div className={boolworkshops ? `bottom-nav-btn bottom-nav-active` : `bottom-nav-btn`} onClick={onClickWorkshops}>
 							Workshops
 						</div>
-						<div className={boolproshows ? `bottom-nav-btn ${currentMode} bottom-nav-active` : "bottom-nav-btn ${currentMode}"} onClick={onClickProshows}>
+						<div className={boolproshows ? `bottom-nav-btn bottom-nav-active` : `bottom-nav-btn`} onClick={onClickProshows}>
 							Proshows
 						</div>
 					</div>

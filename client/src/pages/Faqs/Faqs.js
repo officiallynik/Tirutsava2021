@@ -140,7 +140,7 @@ const Faqs = () => {
 	// 	(new Date()).getHours() >= 6) ?
 	// 	'day-mode' :
 	// 	'night-mode';
-	var currentMode = 'night-mode';
+	var currentMode = 'day-mode';
 
 	return (
 		<div className="faqs-screen">

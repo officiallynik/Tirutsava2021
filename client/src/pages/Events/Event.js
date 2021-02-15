@@ -170,6 +170,7 @@ const Event = props => {
                             <div className="event__participants">
 
                                 {
+                                    props.category !== 1?
                                     props.maxParticipants > 1 ?
                                         <div>
                                             Max. participants (per team): {props.maxParticipants}
@@ -182,7 +183,8 @@ const Event = props => {
                                         <div>
                                             <div>Participants info.</div>
                                             Single player event
-                                        </div>
+                                        </div>:
+                                        null
                                 }
                             </div>
 

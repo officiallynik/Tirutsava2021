@@ -1,9 +1,19 @@
-.toolbar {
+.toolbar-night-mode {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background: linear-gradient(#1e1534, transparent);
+  z-index: 2; 
+  height: 10vh;
+}
+
+.toolbar-day-mode {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(#10A5F9, transparent);
   z-index: 2; 
   height: 10vh;
 }
@@ -130,13 +140,23 @@
   color: #df42b1;
 }
 
-.tirutsava__navbar__logo{
+.tirutsava__navbar__logo-night-mode{
   height: 100%; 
   width: 324px; 
 }
 
+.tirutsava__navbar__logo-day-mode{
+  height: 100%; 
+  width: 200px;
+  margin-left: 50px;
+}
+
 @media(max-width: 490px) {
-  .tirutsava__navbar__logo {
+  .tirutsava__navbar__logo-night-mode {
     width: 250px;
+  }
+  .tirutsava__navbar__logo-day-mode {
+    width: 180px;
+    margin: 0;
   }
 }

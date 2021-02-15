@@ -12,6 +12,12 @@ import { Button } from 'react-bootstrap';
 
 const MerchPage = (props) => {
 
+    // var currentMode = ((new Date()).getHours() < 18 &&
+	// 	(new Date()).getHours() >= 6) ?
+	// 	'day-mode' :
+	// 	'night-mode';
+	var currentMode = 'day-mode';
+
     const [hoodieSize, setHoodieSize] = useState(null);
     const [addr, setAddr] = useState(null);
     const [pincode, setPincode] = useState(null);
@@ -128,7 +134,7 @@ const MerchPage = (props) => {
             {confirmMerchandise}
             {paymentSuccessModal}
 
-            <div className="merch-page">
+            <div className={`merch-page-${currentMode}`}>
                 <div className="merch__preview">
                     <MerchPreview />
                 </div>

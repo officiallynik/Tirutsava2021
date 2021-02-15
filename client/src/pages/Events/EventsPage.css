@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-.events-category {
+.events-category-night-mode {
   overflow: hidden;
   background-color: #1e1534;
+  height: 100vh;
+}
+
+.events-category-day-mode {
+  overflow: hidden;
+  background-color: #10A5F9;
   height: 100vh;
 }
 

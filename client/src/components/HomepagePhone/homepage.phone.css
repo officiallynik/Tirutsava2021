@@ -2,7 +2,7 @@
 @font-face {font-family: "Samarkan"; src: url("//db.onlinewebfonts.com/t/7e96eba370659b4e4563309dc4ebb33f.eot"); src: url("//db.onlinewebfonts.com/t/7e96eba370659b4e4563309dc4ebb33f.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/7e96eba370659b4e4563309dc4ebb33f.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/7e96eba370659b4e4563309dc4ebb33f.woff") format("woff"), url("//db.onlinewebfonts.com/t/7e96eba370659b4e4563309dc4ebb33f.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/7e96eba370659b4e4563309dc4ebb33f.svg#Samarkan") format("svg"); }
 
 .phone-body-day-mode{
-    background-color:whitesmoke;
+    background-color:#10A5F9;
     overflow-x: hidden;
     position: relative;
 }
@@ -46,11 +46,20 @@
     margin-bottom: 20px;
     margin-left: 10px;
 }
-.tirutsava-title{
+.tirutsava-title-night-mode{
     font-family: "samarkan";
     text-align: center;
     font-size: 60px;
     background: linear-gradient(45deg, #f3ec78, #af4261);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 20px;
+}
+.tirutsava-title-day-mode{
+    font-family: "samarkan";
+    text-align: center;
+    font-size: 60px;
+    background: #1e1534;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-top: 20px;

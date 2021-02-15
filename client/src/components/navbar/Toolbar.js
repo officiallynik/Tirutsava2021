@@ -5,16 +5,22 @@ import Burger from "./Burger";
 import "./Toolbar.css";
 import ReactTooltip from 'react-tooltip';
 
+// var currentMode = ((new Date()).getHours() < 18 &&
+// 	(new Date()).getHours() >= 6) ?
+// 	'day-mode' :
+// 	'night-mode';
+var currentMode = 'day-mode';
+
 const Toolbar = props => (
-	<div className="toolbar">
+	<div className={`toolbar-${currentMode}`}>
 		<nav className="toolbar__navigation">
 
 			<div className="toolbar__logo">
 				<a className="navbar-brand" href="/">
 					<img
-						src="/logo/tirutsava_logo.png"
+						src={`/logo/tirutsava-${currentMode}.png`}
 						alt="Tirutsava Logo"
-						className="tirutsava__navbar__logo"
+						className={`tirutsava__navbar__logo-${currentMode}`}
 					/>
 				</a>
 			</div>

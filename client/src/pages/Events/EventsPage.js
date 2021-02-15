@@ -348,6 +348,12 @@ const EventsPage = props => {
         </MDBContainer>
     );
 
+    // var currentMode = ((new Date()).getHours() < 18 &&
+	// 	(new Date()).getHours() >= 6) ?
+	// 	'day-mode' :
+	// 	'night-mode';
+	var currentMode = 'day-mode';
+
     return (
         <div>
             {paymentSuccessModal}
@@ -355,7 +361,7 @@ const EventsPage = props => {
             {
                 categories.map(category => {
                     return (
-                        <div key={category.id} className="events-category" style={category.id !== cat ? { display: "none" } : {}}>
+                        <div key={category.id} className={`events-category-${currentMode}`} style={category.id !== cat ? { display: "none" } : {}}>
                             <video autoPlay loop muted className="events-bg__vid">
                                 <source src={category.vid} />
                             </video>
@@ -405,6 +411,7 @@ const EventsPage = props => {
                                                         submissionLink={event.submissionMail}
                                                         links={event.links}
                                                         redirectRegistrationUrl={event.redirectRegistrationUrl}
+                                                        category={cat}
                                                     />
                                                 );
                                             })
