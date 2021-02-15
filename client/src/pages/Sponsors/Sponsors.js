@@ -94,10 +94,11 @@ const Sponsors = () => {
 							<MDBListGroup style={{ width: "100%" }}>
 
 								<Link to="TITLE SPONSORS" {...LinkConfig} className={`team-name-Sponsors-${currentMode}`} >TITLE SPONSORS</Link>
+								<Link to="CO-TITLE SPONSORS" {...LinkConfig} className={`team-name-Sponsors-${currentMode}`} >CO-TITLE SPONSORS</Link>
 								<Link to="GOLD SPONSORS" {...LinkConfig} className={`team-name-Sponsors-${currentMode}`} >GOLD SPONSORS</Link>
 								<Link to="SILVER SPONSORS" {...LinkConfig} className={`team-name-Sponsors-${currentMode}`} >SILVER SPONSORS</Link>
+								<Link to="BRONZE SPONSORS" {...LinkConfig} className={`team-name-Sponsors-${currentMode}`} >BRONZE SPONSORS</Link>
 								<Link to="COPPER SPONSORS" {...LinkConfig} className={`team-name-Sponsors-${currentMode}`} >COPPER SPONSORS</Link>
-								<Link to="OTHER SPONSORS" {...LinkConfig} className={`team-name-Sponsors-${currentMode}`} >OTHER SPONSORS</Link>
 								<Link to="PARTNERS" {...LinkConfig} className={`team-name-Sponsors-${currentMode}`} >PARTNERS</Link>
 
 							</MDBListGroup>
@@ -109,10 +110,11 @@ const Sponsors = () => {
 						<div>
 
 							<TeamDetails sectionName="TITLE SPONSORS" />
+							<TeamDetails sectionName="CO-TITLE SPONSORS" />
 							<TeamDetails sectionName="GOLD SPONSORS" />
 							<TeamDetails sectionName="SILVER SPONSORS" />
+							<TeamDetails sectionName="BRONZE SPONSORS" />
 							<TeamDetails sectionName="COPPER SPONSORS" />
-							<TeamDetails sectionName="OTHER SPONSORS" />
 							<TeamDetails sectionName="PARTNERS" />
 
 						</div>
