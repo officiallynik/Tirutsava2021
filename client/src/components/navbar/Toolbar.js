@@ -5,11 +5,11 @@ import Burger from "./Burger";
 import "./Toolbar.css";
 import ReactTooltip from 'react-tooltip';
 
-// var currentMode = ((new Date()).getHours() < 18 &&
-// 	(new Date()).getHours() >= 6) ?
-// 	'day-mode' :
-// 	'night-mode';
-var currentMode = 'day-mode';
+var currentMode = ((new Date()).getHours() < 18 &&
+	(new Date()).getHours() >= 6) ?
+	'day-mode' :
+	'night-mode';
+// var currentMode = 'day-mode';
 
 const Toolbar = props => (
 	<div className={`toolbar-${currentMode}`}>

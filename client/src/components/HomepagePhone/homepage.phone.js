@@ -3,12 +3,12 @@ import './homepage.phone.css';
 import Navbar from '../navbar/Navbar';
 import { withRouter } from 'react-router-dom';
 // import NavbarNew from './../../pages/Homepage/Navbar/Navbarnew';
-// var currentMode = ((new Date()).getHours() < 18 &&
-// (new Date()).getHours() >= 6) ? 
-// 'day-mode' : 
-// 'night-mode';
+var currentMode = ((new Date()).getHours() < 18 &&
+(new Date()).getHours() >= 6) ? 
+'day-mode' : 
+'night-mode';
 
-var currentMode = "day-mode";
+// var currentMode = "day-mode";
 
 
 const HomepagePhone = props => {

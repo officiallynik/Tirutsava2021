@@ -348,11 +348,11 @@ const EventsPage = props => {
         </MDBContainer>
     );
 
-    // var currentMode = ((new Date()).getHours() < 18 &&
-	// 	(new Date()).getHours() >= 6) ?
-	// 	'day-mode' :
-	// 	'night-mode';
-	var currentMode = 'day-mode';
+    var currentMode = ((new Date()).getHours() < 18 &&
+		(new Date()).getHours() >= 6) ?
+		'day-mode' :
+		'night-mode';
+	// var currentMode = 'day-mode';
 
     return (
         <div>

@@ -56,11 +56,11 @@ const Homepage = props => {
 
 	const [propsSpring, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 950, friction: 140 } }))
 
-	// var currentMode = ((new Date()).getHours() < 18 &&
-	// 	(new Date()).getHours() >= 6) ?
-	// 	'day-mode' :
-	// 	'night-mode';
-	var currentMode = 'day-mode';
+	var currentMode = ((new Date()).getHours() < 18 &&
+		(new Date()).getHours() >= 6) ?
+		'day-mode' :
+		'night-mode';
+	// var currentMode = 'day-mode';
 
 	var [width, setwidth] = useState(window.innerWidth)
 	const handleresize = () => {
