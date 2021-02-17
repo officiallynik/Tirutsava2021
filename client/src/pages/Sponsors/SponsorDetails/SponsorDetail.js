@@ -11,12 +11,24 @@ class SponsorDetail extends React.Component {
             <h1 className="team-name-SponsorDetail">{this.props.sectionName}</h1>
         </MDBRow>
 
-        {/* <MDBRow className="mt-4">
-          <MDBCol md="6">
-            <MemberImage url="https://mdbootstrap.com/img/Photos/Avatars/img%20(27).jpg" name="Amar Raja"/>
-          </MDBCol>
-        </MDBRow> */}
-        TBA
+        {/* <MDBRow className="mt-4"> */}
+          {
+
+            this.props.sponsors.map((sponsor, i) => {
+              return (
+                <MDBCol md="6" key={i}>
+                  <MemberImage {...sponsor} />
+                </MDBCol>			
+              );
+            })
+          }
+        {/* </MDBRow> */}
+
+        {
+          this.props.sponsors.length === 0?
+          "TBA": null
+        }
+        {/* TBA */}
       </MDBContainer>
     );
   }

@@ -27,6 +27,13 @@ const SponsorImage=(props)=>{
         <h4 className="font-weight-bold my-4 name-SponsorImage " >
             {props.name}
         </h4>
+        {
+          !props.type?
+          null:
+          <h5 style={{color: "black"}} >
+              {props.type} Partner
+          </h5>
+        }
       </div>
     )
 }

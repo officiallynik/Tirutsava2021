@@ -7,18 +7,18 @@ const SponsorsInfo = {
         },
     ],
     "co-title": [
-        {
-            name: "Axis Bank",
-            href: "https://www.axisbank.com/",
-            url: "/sp_2021/axis.jpg"
-        },
+        // {
+        //     name: "Axis Bank",
+        //     href: "https://www.axisbank.com/",
+        //     url: "/sp_2021/axis.jpg"
+        // },
     ],
     "gold": [
-        {
-            name: "Canara Bank",
-            href: "https://www.canarabank.com/",
-            url: "/sp_2021/canara.png"
-        },
+        // {
+        //     name: "Canara Bank",
+        //     href: "https://www.canarabank.com/",
+        //     url: "/sp_2021/canara.png"
+        // },
         {
             name: "Zwickroell",
             href: "https://www.zwickroell.com/",
@@ -34,13 +34,14 @@ const SponsorsInfo = {
         {
             name: "The Indus Entrepreneurs",
             href: "https://tie.org/",
+            url: "/sp_2021/tie.jpg"
         },
     ],
     "bronze": [
         {
             name: "Buythevalue",
             href: "https://buythevalue.in/",
-            url: "/sp_2021/ravindra.jpeg"
+            url: "/sp_2021/btv.png"
         },
         {
             name: "Hoverrobotics",
@@ -67,6 +68,7 @@ const SponsorsInfo = {
         {
             name: "Indian Scientific",
             href: "http://www.indianscientific.com/",
+            url: "/sp_2021/indian_scientific.jpg"
         },
         {
             name: "Britannia",
@@ -80,12 +82,6 @@ const SponsorsInfo = {
         }
     ],
     "partners": [
-        {
-            name: "Think India",
-            type: "Marketing",
-            href: "https://www.thinkindiaorg.in/",
-            url: "/sp_2021/think_india.png"
-        },
         {
             name: "Notice Bard",
             type: "Marketing",
@@ -126,6 +122,7 @@ const SponsorsInfo = {
             name: "WAC",
             type: "Workshop",
             href: "https://whataftercollege.com/",
+            url: "/sp_2021/wac.jpg"
         }
     ],
 };

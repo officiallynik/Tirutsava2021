@@ -3,6 +3,7 @@ import "./Sponsors.css"
 import { Link } from "react-scroll";
 import { MDBListGroup, MDBRow, MDBCol } from "mdbreact";
 import TeamDetails from "./SponsorDetails/SponsorDetail";
+import SponsorsInfo from './SponsorsInfo';
 
 const Sponsors = () => {
 
@@ -109,13 +110,13 @@ const Sponsors = () => {
 
 						<div>
 
-							<TeamDetails sectionName="TITLE SPONSORS" />
-							<TeamDetails sectionName="CO-TITLE SPONSORS" />
-							<TeamDetails sectionName="GOLD SPONSORS" />
-							<TeamDetails sectionName="SILVER SPONSORS" />
-							<TeamDetails sectionName="BRONZE SPONSORS" />
-							<TeamDetails sectionName="COPPER SPONSORS" />
-							<TeamDetails sectionName="PARTNERS" />
+							<TeamDetails sectionName="TITLE SPONSORS"    sponsors={SponsorsInfo.title} />
+							<TeamDetails sectionName="CO-TITLE SPONSORS" sponsors={SponsorsInfo["co-title"]} />
+							<TeamDetails sectionName="GOLD SPONSORS"     sponsors={SponsorsInfo.gold} />
+							<TeamDetails sectionName="SILVER SPONSORS"   sponsors={SponsorsInfo.silver} />
+							<TeamDetails sectionName="BRONZE SPONSORS"   sponsors={SponsorsInfo.bronze} />
+							<TeamDetails sectionName="COPPER SPONSORS"   sponsors={SponsorsInfo.copper} />
+							<TeamDetails sectionName="PARTNERS"          sponsors={SponsorsInfo.partners} />
 
 						</div>
 					</MDBCol>
