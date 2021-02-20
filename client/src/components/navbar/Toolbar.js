@@ -59,7 +59,7 @@ const Toolbar = props => (
 						(
 							<ul id="navit">
 								<li>
-									<Link data-tip="Coming soon">PROSHOWS</Link>
+									<Link to="/proshows">PROSHOWS</Link>
 								</li>
 								<li>
 									<Link to="/events">EVENTS</Link>

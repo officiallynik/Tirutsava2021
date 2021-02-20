@@ -69,10 +69,16 @@ var clickedham = () => {
                     <div className="img-class">
                         <img className="images-phone-slider" src="/homepage/dj.png" alt="Events"/>
                     </div>
-                    <div className="phone-cont-lrn" style={{marginBottom: "200px"}}>
+                    <div className="phone-cont-lrn">
                         <div className={`texts-${currentMode}`}>
-                            Coming Soon
+                            Check out the exiting proshows brought to you by Tirutsava 2021.
                         </div>
+                    </div>
+                    <div className="btn-box"
+                        onClick={() => {
+                            props.history.push('/proshows');
+                        }}
+                    ><button className="discover-btn">Discover</button>
                     </div>
                     {/* <div className="btn-box"><button className="discover-btn">Discover</button></div> */}
 

@@ -30,7 +30,10 @@ const SideDrawer = props => {
           <Link to="/events">EVENTS</Link>
         </li>
         <li className="move" onClick={props.click}>
-          <Link to="/merch">Buy Merch</Link>
+          <Link to="/proshows">PROSHOWS</Link>
+        </li>
+        <li className="move" onClick={props.click}>
+          <Link to="/merch">BUY MERCH</Link>
         </li>
         <li className="move" onClick={props.click}>
           <Link to="/contactus">CONTACT US</Link>

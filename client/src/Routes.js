@@ -8,6 +8,7 @@ import ContactUs from './pages/ContactUs/ContactUs';
 import Events from './pages/Events/EventsPage';
 import HomePage from './pages/Homepage/Homepage';
 import MerchPage from "./pages/Merch/Merch";
+import ProshowsPage from "./pages/proshows/Proshows";
 
 // import Legacy from "./pages/tirutsavaLegacy/TirutsavaLegacy";
 
@@ -21,6 +22,7 @@ function Routes() {
             <Route path="/contactus" exact  component={ContactUs} />
             <Route path="/events" component={Events} />
             <Route path="/merch" component={MerchPage} />
+            <Route path="/proshows" component={ProshowsPage} />
             {/* <Route path="/aboutus" component={Legacy} /> */}
         </div>
     );
