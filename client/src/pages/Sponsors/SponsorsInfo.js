@@ -7,18 +7,18 @@ const SponsorsInfo = {
         },
     ],
     "co-title": [
-        // {
-        //     name: "Axis Bank",
-        //     href: "https://www.axisbank.com/",
-        //     url: "/sp_2021/axis.jpg"
-        // },
+        {
+            name: "Axis Bank",
+            href: "https://www.axisbank.com/",
+            url: "/sp_2021/axis.png"
+        },
     ],
     "gold": [
-        // {
-        //     name: "Canara Bank",
-        //     href: "https://www.canarabank.com/",
-        //     url: "/sp_2021/canara.png"
-        // },
+        {
+            name: "Canara Bank",
+            href: "https://www.canarabank.com/",
+            url: "/sp_2021/canara.png"
+        },
         {
             name: "Zwickroell",
             href: "https://www.zwickroell.com/",
@@ -135,6 +135,18 @@ const SponsorsInfo = {
             type: "Outreach",
             href: "http://incampus.in/",
             url: "/sp_2021/incampus.png"
+        },
+        {
+            name: "Meraevents",
+            type: "Marketing",
+            href: "https://www.meraevents.com/",
+            url: "/sp_2021/meraevents.png"
+        },
+        {
+            name: "Skillbox",
+            type: "Streaming",
+            href: "https://www.skillboxes.com/",
+            url: "/sp_2021/skillbox.png"
         }
     ],
 };
