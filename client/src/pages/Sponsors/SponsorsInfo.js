@@ -123,6 +123,18 @@ const SponsorsInfo = {
             type: "Workshop",
             href: "https://whataftercollege.com/",
             url: "/sp_2021/wac.jpg"
+        },
+        {
+            name: "Vidyaly",
+            type: "Workshop",
+            href: "https://tirutsava.vidyaly.in/",
+            url: "/sp_2021/vidyaly.jpg"
+        },
+        {
+            name: "InCampus",
+            type: "Outreach",
+            href: "http://incampus.in/",
+            url: "/sp_2021/incampus.png"
         }
     ],
 };
