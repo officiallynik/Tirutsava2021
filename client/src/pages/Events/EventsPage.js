@@ -362,9 +362,13 @@ const EventsPage = props => {
                 categories.map(category => {
                     return (
                         <div key={category.id} className={`events-category-${currentMode}`} style={category.id !== cat ? { display: "none" } : {}}>
-                            <video autoPlay loop muted className="events-bg__vid">
-                                <source src={category.vid} />
-                            </video>
+                            {
+                                window.innerWidth > 900?
+                                <video autoPlay loop muted className="events-bg__vid">
+                                    <source src={category.vid} />
+                                </video>:
+                                null
+                            }
                             <div className="events__all">
 
                                 <div

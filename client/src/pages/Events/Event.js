@@ -14,11 +14,28 @@ const Event = props => {
 
     const dates = props.eventTime.split("///");
 
+    const width = window.innerWidth;
+
+    const colors = ["#007FFF", "#0a2351", "#f94d00", "#6a5acd", "#FF1476", "#009000"];
+
+    const randomColor = () => {
+        const rantint = Math.floor(Math.random()*5);
+        return colors[rantint];
+    }
+
     return (
         <div
             // className={props.viewEvent === null? "event__preview": viewEvent === 0? "event__full": "event__hide"}
             className="event__preview"
-            style={props.full ?
+            style={
+                width < 900?
+                    props.full ?
+                    { backgroundColor: randomColor(), opacity: 1 } :
+                    !props.preview ?
+                        { flex: 0 } :
+                        { backgroundColor: randomColor(), opacity: 0.8 }
+                :
+                props.full ?
                 { backgroundImage: `url("/events/${name}.jpg")`, opacity: 1 } :
                 !props.preview ?
                     { flex: 0 } :
