@@ -660,16 +660,6 @@ box-shadow:         5px 5px 2px 0px black;
         padding-bottom: 15px;
     }
 
-    .fas-day-mode{
-        position: relative;
-        left: 30px;
-    }
-    
-    .fas-night-mode{
-        position: relative;
-        left: 30px;
-    }
-
     .event-detail{
         position: absolute;
         font-size: 35px;
@@ -678,23 +668,10 @@ box-shadow:         5px 5px 2px 0px black;
 
 }
 
-@media(min-width:768px){
-    .phone-screen{
-        display: none;
-    }
-}
-@media(max-width:900px){
-    .desktop-screen{
-        display: none;
-    }
-
-    .phone-screen{
-        display: block;
-        width: 100%;
-        height: 100%;
-    }
-
-
+.phone-screen{
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .fa {

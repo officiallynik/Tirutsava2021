@@ -195,7 +195,10 @@ const Homepage = props => {
 	return (
 		<div className={`whole-home-${currentMode}`}>
 
-			<div className="desktop-screen" style={{ width: "100vw", height: "100vh", overflow: "hidden" }}>
+			{
+				window.innerWidth > 768?
+				<div className="desktop-screen" style={{ width: "100vw", height: "100vh", overflow: "hidden" }}>
+
 
 				<div>
 					<Navbar isHomePage={true} />
@@ -242,7 +245,9 @@ const Homepage = props => {
 					</div>
 				</div>
 			</div>
-			<div className="phone-screen"><HomepagePhone></HomepagePhone></div>
+				:
+				<div className="phone-screen"><HomepagePhone></HomepagePhone></div>
+			}
 		</div>
 
 	)
