@@ -1,14 +1,9 @@
-import { useSpring, animated } from 'react-spring';
+import { animated } from 'react-spring';
 import React, { useState, useEffect } from 'react'
 import './Homepage.css'
 import HomepagePhone from '../../components/HomepagePhone/homepage.phone';
 import { withRouter } from 'react-router-dom';
 import Navbar from '../../components/navbar/Navbar';
-
-
-const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
-const trans1 = (x, y) => `translate3d(${x / 10}px, 0, 0)`
-
 
 const Homepage = props => {
 	var [imgname, setimg] = useState("homepage/tirutsava_poster.png")
@@ -54,7 +49,7 @@ const Homepage = props => {
 		setboolworkshops(false)
 	}
 
-	const [propsSpring, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 950, friction: 140 } }))
+	// const [propsSpring, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 950, friction: 140 } }))
 
 	var currentMode = ((new Date()).getHours() < 18 &&
 		(new Date()).getHours() >= 6) ?
@@ -105,8 +100,7 @@ const Homepage = props => {
 			</div>
 			<div className="img-animate">
 					<animated.img
-						onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
-						style={{ transform: propsSpring.xy.interpolate(trans1), width: "50%" }}
+						style={{ width: "50%" }}
 						src={imgname}>
 					</animated.img>
 				</div>
@@ -217,11 +211,9 @@ const Homepage = props => {
 							<div className="cont-event" style={{ zIndex: 1 }}>
 								{boolevents ? <div className="img-animate">
 									<animated.img className="music-img img-animate"
-										onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
-										style={{ transform: propsSpring.xy.interpolate(trans1) }}
 										src={imgname}></animated.img></div> : null}
-								{boolproshows ? <div className="img-animate"><animated.img className="online-img img-animate" onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })} style={{ transform: propsSpring.xy.interpolate(trans1) }} src={imgname}></animated.img></div> : null}
-								{boolworkshops ? <div className="img-animate"><animated.img className="online-img img-animate" onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })} style={{ transform: propsSpring.xy.interpolate(trans1) }} src={imgname}></animated.img></div> : null}
+								{boolproshows ? <div className="img-animate"><animated.img className="online-img img-animate" src={imgname}></animated.img></div> : null}
+								{boolworkshops ? <div className="img-animate"><animated.img className="online-img img-animate" src={imgname}></animated.img></div> : null}
 								<div className={`event-detail-${currentMode}`} style={{ opacity: 0 }}>{eventdet}</div>
 
 							</div>
