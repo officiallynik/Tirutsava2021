@@ -79,6 +79,11 @@ const SponsorsInfo = {
             name: "Gagana Engineers Academy",
             href: "https://sreegaganaacademy.business.site/",
             url: "/sp_2021/gagana.jpg"
+        },
+        {
+            name: "SpaceInfo",
+            href: "",
+            url: "/sp_2021/spaceinfo.jpg"
         }
     ],
     "partners": [
