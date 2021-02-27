@@ -152,6 +152,12 @@ const SponsorsInfo = {
             type: "Streaming",
             href: "https://www.skillboxes.com/",
             url: "/sp_2021/skillbox.png"
+        },
+        {
+            name: "Inmovidu",
+            type: "Official Industrial Training",
+            href: "https://www.inmovidutech.com/",
+            url: "/sp_2021/inmovidu.jpg"
         }
     ],
 };
